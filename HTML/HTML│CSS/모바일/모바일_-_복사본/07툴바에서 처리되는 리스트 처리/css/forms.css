@@ -1,0 +1,117 @@
+﻿html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+.header {
+	position: relative;
+	padding: 10px;
+	height: 45px;
+	border-bottom: 1px solid #000;
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.17, rgb(134,184,219)),
+		color-stop(0.8, rgb(35,148,148))
+	);
+	background-image: linear-gradient(bottom, rgb(134,184,219) 17%, rgb(35,148,148) 80%);
+	background-image: -o-linear-gradient(bottom, rgb(134,184,219) 17%, rgb(35,148,148) 80%);
+	background-image: -moz-linear-gradient(bottom, rgb(134,184,219) 17%, rgb(35,148,148) 80%);
+	background-image: -webkit-linear-gradient(bottom, rgb(134,184,219) 17%,  rgb(35,148,148) 80%);
+	background-image: -ms-linear-gradient(bottom, rgb(134,184,219) 17%, rgb(35,148,148) 80%);
+}
+.header>.title {
+	position: absolute;
+	overflow: hidden;
+	left: 50%;
+	top: 10px;
+	margin: 1px 0 0 -75px;
+	width: 150px;
+	height: 40px;
+	line-height: 1em;
+	text-align: center;
+	text-overflow: ellipsis;
+	text-shadow: rgba(0, 0, 0, 1) 0 -1px 1px;
+	white-space: nowrap;
+	font-size: 20px;
+	font-weight: bold;
+	color: #fff;
+}
+.button {
+	position: absolute;
+	right: 10px;
+	top: 8px;
+	margin: 0;
+	padding: 0 5px;
+	width: auto;
+	height: 30px;
+	overflow: hidden;
+	line-height: 30px;
+	text-shadow: rgba(0, 0, 0, 0.5) 0 -1px 0;
+	text-decoration: none;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-family: inherit;
+	font-size: 12px;
+	font-weight: bold;
+	background: #b8860b;
+	color: #fff;
+	border-width: 0 5px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	/*
+	-webkit-border-image: url(../images/button.png) 0 5 0 5;
+	-moz-border-image: url(../images/button.png) 0 5 0 5;
+	border-image: url(../images/button.png) 0 5 0 5;
+	*/
+}
+.menu {
+	left: 6px;
+	width: 40px;
+	text-align: center;
+}
+
+/* new CSS */
+.container {
+	background-color: #8c2a34;
+}
+form ul {
+	margin: 0;
+	padding: 6px;
+}
+form ul li {
+	margin: 0 0 10px 0;
+	padding: 4px;
+	min-height: 30px;
+	list-style-type: none;
+	border: 1px solid #f8f8f8;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+input {
+	height: 30px;
+}
+input, textarea {
+	width: 100%;
+	font-family: "Roboto Condensed", sans-serif;
+	font-size: 16px;
+	border: 0;
+}
+textarea {
+	width: 99%;
+	resize: none;
+}
+.noborder {
+	padding: 0;
+	border: 0;
+}

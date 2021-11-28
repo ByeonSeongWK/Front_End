@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<title>mobile example</title>
+<meta name="description" content="" />
+<meta name="author" content="ki" />
+<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="stylesheet" href="css/default.css" />
+<link rel="stylesheet" href="css/forms.css" />
+</head>
+
+<body>
+<!-- header -->
+<div class="header">
+	<a class="button menu" href="#menu">menu</a>
+	<h1 class="title">forms</h1>
+	<a class="button" href="#settings">settings</a>
+</div>
+
+<!-- forms -->
+<div class="container">
+	<form id="taskentry" onsubmit="return false;">
+		<ul>
+			<li><input type="text" name="tname" id="tname" placeholder="Name" /></li>
+			<li><textarea name="tdesc" id="tdesc" placeholder="Description" rows="5"></textarea></li>
+			<li><input type="text" name="tdue" id="tdue" placeholder="Task Due" /></li>
+			<li class="noborder"><input type="submit" value="Save" /></li>
+		</ul>
+	</form>
+</div>
+</body>
+</html>

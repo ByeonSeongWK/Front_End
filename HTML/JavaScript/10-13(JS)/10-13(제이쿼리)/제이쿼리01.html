@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>제이쿼리 세팅</title>
+    <script src="js/jquery.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      div {
+        width: 100px;
+        height: 100px;
+        border: 1px solid #000;
+        margin: 50px;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        border: 1px solid #999;
+        margin: 50px;
+      }
+      #box {
+        width: 100px;
+        height: 100px;
+        border: 1px solid #000;
+        margin: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>div</div>
+    <div class="box">.box</div>
+    <div id="box">#box</div>
+    <script>
+      /* 
+        [jQuery 구성]
+        $(선택자).메소드();
+      */
+      $("div").css({ width: "100px" }).animate({ width: "1000px" }, 3000);
+      /*
+        animate : 애니메이션 / 1초가 1000
+        .(점)으로 여러개를 구분한다. 여러개를 사용가능.
+        $은 시작값을 지정할때.
+    */
+      $(".box").css({ width: "100px" }).animate({ width: "2000px" }, 1000);
+      $("#box").css({ width: "100px" }).animate({ width: "1500px" }, 5000);
+    </script>
+  </body>
+</html>

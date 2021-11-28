@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이벤트</title>
+    <style>
+      button {
+        background-color: darkturquoise;
+        padding: 5px 15px;
+        color: #000;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+      button:hover {
+        background-color: aquamarine;
+      }
+
+      .ball {
+        position: absolute;
+        top: 200px;
+        left: 40px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: aqua;
+      }
+    </style>
+    <script>
+      window.addEventListener("load", function () {
+        var body = document.body;
+        var container = document.getElementsByClassName("container")[0];
+        var ball = container.children[0];
+
+        // 노드의 속성
+        var x = ball.offsetLeft;
+        var y = ball.offsetTop;
+        var w = ball.offsetWidth;
+        var h = ball.offsetHeigth;
+
+        body.addEventListener("keydown", function (e) {
+          switch (e.keyCode) {
+            case 39:
+              x += 20;
+              break;
+            case 37:
+              x -= 20;
+              break;
+
+            case 38:
+              y -= 20;
+              break;
+
+            case 40:
+              y += 20;
+              break;
+
+            default:
+              break;
+          }
+          ball.style.left = x + "px";
+          ball.style.top = y + "px";
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <h1 class="title">basic :: JavaScript node access</h1>
+    <div class="container">
+      <div class="ball"></div>
+    </div>
+  </body>
+</html>

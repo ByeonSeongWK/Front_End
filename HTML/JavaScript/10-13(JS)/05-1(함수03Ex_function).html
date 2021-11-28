@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>함수3 Ex (function)</title>
+    <script>
+      // 값 두개와 연산자를 입력 받아서 연산해주는 기능
+
+      function calc(n) {
+        // return 값이라 break 생략 가능
+        switch (n) {
+          case "+":
+            return a + b;
+
+          case "-":
+            return a - b;
+
+          case "*":
+            return a * b;
+
+          case "/":
+            return a / b;
+
+          case "%":
+            return a % b;
+
+          default:
+            return "연산자를 다시 입력해주세요!";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <script>
+      var x, a, b, res;
+
+      a = prompt("값1을 입력하세요.");
+      b = prompt("값2을 입력하세요.");
+      x = prompt("연산자를 입력하세요.");
+
+      a = parseInt(a);
+      b = parseInt(b);
+      res = calc(x);
+
+      document.write("값은 : " + res);
+    </script>
+  </body>
+</html>

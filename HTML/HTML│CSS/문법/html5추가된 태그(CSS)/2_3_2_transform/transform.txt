@@ -1,0 +1,7 @@
+[transform]
+transform : 요소의 형태를 변경함(상대적, 전체 움직임을 줄때 힘듦)
+
+translate([dx]. [dy]) : 지정한 크기 만큼 이동 시킴
+scale([ds]) : 지정한 배율 만큼 확대함
+rotate([deg]) : 지정한 각도만큼 회전 시킴(rotate는 X, Y 값이 같이 안줘진다.)
+skew([degx], [degy]) : 지정한 경사로 기울림

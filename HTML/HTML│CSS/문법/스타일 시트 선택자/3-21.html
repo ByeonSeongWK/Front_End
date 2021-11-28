@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS3 Selector Basic</title>
+    <style>
+      /* h1 태그의 바로 뒤에 위치하는 h2 태그의 color 속성에 red 키워드를 적용합니다. */
+      h1 + h2 {
+        color: red;
+      }
+      /* 앞에 있는 h1은 기준이 된다.(h1 바로 뒤에 있는 h2만 적용) */
+
+      /* h1 태그의 뒤에 위치하는 h4 태그의 background-color 속성에 orange 키워드를 적용합니다. */
+      h1 ~ h4 {
+        background-color: orange;
+      }
+      /* 앞에 있는 h1은 기준이 된다.(h1 멀리 떨어져 있는 h4만 적용) */
+    </style>
+  </head>
+  <body>
+    <h1>Header - 1</h1>
+    <h2>Header - 2</h2>
+    <h2>Header - 2</h2>
+    <h2>Header - 2</h2>
+    <h4>Header - 2</h4>
+  </body>
+</html>

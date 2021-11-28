@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스크롤 위치를 읽고 설정하기</title>
+    <style>
+      body {
+        width: 2000px;
+        height: 3000px;
+      }
+      #wrapper {
+        position: fixed;
+        top: 50px;
+        left: 50px;
+        border: 1px solid #333;
+      }
+
+    </style>
+
+    <script src="js/jquery.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        // $(window).scroll(function() {})
+        $(window).on({
+          scroll: function () {
+            var sl = $(window).scrollLeft();
+            var st = $(window).scrollTop();
+
+            $(".scrollLeft").text(sl);
+            $(".scrollTop").text(st);
+            },
+          });
+          $(".btn").click(function(){
+              $(window).scrollLeft(parseInt($(".xField").val()));
+              $(window).scrollTop(parseInt($(".yField").val()));
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div class="info">
+        <span>scrllLeft = </span><span class="scrollLeft">0</span><br />
+        <span>scrllTop = </span><span class="scrollTop">0</span>
+      
+            <div id="form">
+                  <span>이동시킬 스크롤의 위치값을 입력해 주세요.</span>
+                  <input type = "text" class = "xField" value = "" />
+                  <input type = "text" class = "yField" value = "" />
+                  <input type = "button" class = "btn" value = "입력" />
+
+            </div>
+      </div>
+
+      <div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+node.js
+───────────────────────────────────────────────────────────────────────
+[response 객체]
+서버에서 클라이언트로 응답 메세지를 전송시켜주는 객체이다.
+writeHead() : 응답 헤더를 작성
+end() : 응답 본문을 작성
+
+
+[익스프레스 모듈]
+http 모듈만 사용해서 웹 서버를 구성하면 직접 많은 기능을 개발해야 한다.
+이 문제를 해결하기 위해 만들어진 모듈이 익스프레스
+익스프레스 모듈을 사용하면 간단한 코드로 웹 서버의 기능을 대부분 구현할 수 있고,
+미들웨어와 라우터를 사용하여 편리하게 웹 서버를 구성할 수 있다.
+
+
+[메소드]
+use()   : 미들웨어 함수를 사용
+get()   : get으로 사용자 정보를 전달 받는다.
+set())  : 서버 설정을 위한 속성을 설정
+redirect() : 웹 페이지의 경로를 강제로 이동시킨다.
+send()  : 클라이언트에 응답 데이터를 보낸다.
+            전달 할 수 있는 데이터는 html, buffer, json, json 배열... 등 이 있다.
+header(): 헤더를 확인
+
+
+[package설치하기]
+npm install 모듈명(npm i 모듈명)
+npm i express <-- 터미널에 입력
+
+query : 클라이언트에서 GET방식으로 전송한 요청 파라미터를 확인
+body : 클라이언트에서 POST방식으로 전송한 요청 파라미터를 확인
+(단, post방식을 통한 요청 파라미터를 확인하려면 body-parser와 같은 모듈을 사용해야 한다.)
+
+
+[nodemon](필수!)
+서버코드를 변경할 때마다 서버를 재시작하도록 하는 모듈
+npm install -g nodemon
+-g : 글로벌 설치
+package.json 에서 test -> start로 변경
+start에 : 파일명 입력
+ex)
+    "scripts": {
+    "start": "nodemon express04.js"
+    },
+npm start 라고 실행하고 그 다음부터는 저장하기만 해도 서버열지 않고 업데이트 된다.
+
+
+[모듈 복원/package 복원하기]
+모듈을 다른 폴더에서 사용하고 싶을땐
+package.json 파일만 복사해서 폴더에 넣고 터미널에 npm install 을 치면 복원이 된다.
+
+
+[포스트맨 다운로드]
+https://www.postman.com/downloads/
+
+
+npm install body-parser
+
+
+
+[Router 미들웨어]
+사용자의 다양한 요청이 들어왔을때 use() 메소드로 설정한 미들웨어가 항상 호출되는 불편한 점이 있습ㄴ디ㅏ.
+이를 해결하고자 사용하는 미들웨어가 Router 미들웨어입니다.
+
+Router 객체 만들기
+const 라우터객체 = express.Router();
+
+http://localhost:3000/member/login
+

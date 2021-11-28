@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>ToolTip 도움말 효과</title>
+    <script type="text/javascript" src="jquery.js"></script>
+
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+      }
+      body {
+        margin: 20px auto;
+        padding: 0;
+        width: 400px;
+        font-size: 13px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      p {
+        line-height: 1.5;
+        margin-bottom: 5px;
+      }
+
+      #tip {
+        position: absolute;
+        width: 300px;
+        color: #fff;
+        padding: 5px;
+        display: none;
+
+        background: #05184d;
+        border-radius: 5px;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <p>
+        There are many variations of passages of Lorem Ipsum available, but the
+        majority have suffered alteration in some form, by injected humour, or
+        randomised words which don't look even slightly believable.
+      </p>
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an unknown printer took a
+        <a
+          href="#"
+          title="There are many variations of passages of Lorem Ipsum available passages of Lorem Ipsum available passages of Lorem Ipsum available passages of "
+          >galley</a
+        >
+        of type and scrambled it to make a type specimen book. It has survived
+        not only five centuries, but also the leap into electronic typesetting,
+        remaining essentially unchanged.
+      </p>
+      <p>
+        Contrary to popular belief,
+        <a href="http://www.lipsum.com/" title="img/site.jpg" class="img"
+          >Lorem Ipsum</a
+        >
+        is not simply random text. It has roots in a piece of classical Latin
+        literature from 45 BC, making it over 2000 years old.
+      </p>
+    </div>
+
+    <!------------------------ jQuery 코드 ----------------------->
+    <script>
+      var tempTitle; // 각각의 title 속성에 내용을 저장하는 공간
+      var type; // 이미지일 경우 특정 속성에 값을 설정하고 저장하는 변수
+
+      $("a").hover(
+        function () {
+          tempTitle = $(this).attr("title");
+          type = $(this).attr("class");
+          // console.log(tempTitle); : console.log 사용시 값이 들어갔는지 안들어 갔는지 확인가능
+
+          if (type == "img") {
+            tempImg =
+              "<img src= '" + tempTitle + "' width = '100px' height :'100px'/>";
+          }
+          // console.log(type);
+
+          $("body").append("<div id = 'tip'></div>");
+
+          // 추가된 태그에 형식을 선택
+          if (type == "img") {
+            $("#tip").html(tempImg); // 이미지일 경우 미리 선언된 이미지 태그 형식을 대입
+            $("#tip").css("width", "100px");
+          } else {
+            $("#tip").text(tempTitle); // 텍스트일 경우 원래 변수 글자 변수를 그대로 대입
+          }
+          // 추가된 태그에 위치를 설정
+          var pageY = $(this).offset().top - $("#tip").innerHeight(); // 본인 기준 - 는 위로 +는 아래로
+          var pageX = $(this).offset().left - 20;
+
+          // jQuery로 위치를 잡았기 때문에 animate보다는 css로 설정해야한다.
+          $("#tip")
+            .css({ left: pageX + "px", top: pageY + "px" })
+            .fadeIn(500);
+        },
+        function () {
+          $("#tip").remove();
+        }
+      );
+    </script>
+  </body>
+</html>

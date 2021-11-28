@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이벤트</title>
+    <style>
+      container input[type="text"] {
+        display: inline-block;
+        margin: 0 6px 18px 0;
+        padding: 10px;
+        width: 200px;
+        line-height: 1.2;
+        font-size: 0.875em;
+        border-radius: 4px;
+        box-sizing: border-box;
+        /* 
+        border-box : 테두리 선 마진에 대한것
+        contents-box : 테두리 선 패딩에 대한것
+         */
+      }
+    </style>
+    <script>
+      window.addEventListener("load", function () {
+        var container = document.getElementsByClassName("container")[0];
+
+        for (var i = 0; i < container.children.length; i++) {
+          if (container.children[i].tagName == "FORM") {
+            var formArea = container.children[i];
+          } else if (container.children[i].tagName == "DIV") {
+            var triggerBtn = container.children[i];
+          }
+        }
+
+        for (i = 0; i < formArea.children.length; i++) {
+          if (formArea.children[i].className == "target1") {
+            var target1 = formArea.children[i];
+          } else if (formArea.children[i].className == "target2") {
+            var target2 = formArea.children[i];
+          }
+        }
+        // input1 focus 시 실행
+        target1.addEventListener("focus", function (e) {
+          e.target.value = "target1 focus event!!";
+        });
+
+        // input2 click 시 실행
+        target2.addEventListener("click", function (e) {
+          e.target.value = "target2 click event!!";
+        });
+        triggerBtn.addEventListener("click", function () {
+          target2.focus();
+          target1;
+          target2;
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <h1 class="title">basic :: JavaScript node access</h1>
+    <div class="container">
+      <form>
+        <!--               placeholder : 시작시 실행 -->
+        <input type="text" placeholder="input1" class="target1" />
+        <input type="text" placeholder="input2" class="target2" />
+      </form>
+      <div class="trigger">Trigger the handler.</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이벤트</title>
+
+    <style>
+      button {
+        padding: 5px 15px;
+        background-color: #666;
+        color: #000;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: all 0.5s;
+      }
+      button:hover {
+        background-color: #888;
+      }
+
+      .gallery {
+        margin-top: 60px;
+      }
+    </style>
+    <script>
+      window.addEventListener("load", function () {
+        var n = 0;
+        var btn = document.getElementById("append");
+        var gallery = document.getElementsByClassName("gallery")[0];
+
+        btn.addEventListener("click", function () {
+          var photo = document.createElement("img");
+          // 이미지 속성에는 src, alt가 들어가야 한다.
+          photo.setAttribute("src", "images/zoo" + (n + 1) + ".jpg");
+          photo.setAttribute("alt", "zoo" + (n + 1));
+          gallery.appendChild(photo);
+          n = (n + 1) % 3; // 0 1 2
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class="container">
+      <button id="append" title="append">append</button>
+      <div class="gallery"></div>
+    </div>
+  </body>
+</html>

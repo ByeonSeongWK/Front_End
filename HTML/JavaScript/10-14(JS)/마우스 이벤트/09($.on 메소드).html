@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>on 메소드</title>
+    <script src="../js/jquery.js"></script>
+    <!--head에 script를 넣으면 자동실행!-->
+    <script>
+      $(document).ready(function () {
+        // .on() 메소드
+        $("p").on({
+          // 클릭했을때 실행할 함수
+          click: function () {
+            $(this).css("border", "3px solid lightgreen");
+          },
+          // 마우스를 올렸을때 실행할 함수
+          mouseover: function () {
+            $(this).css({ "background-color": "skyblue", "font-size": "20px" });
+          },
+          // 마우스가 벗어났을때 실행할 함수
+          mouseout: function () {
+            $(this).css("color", "#fff");
+          },
+        });
+      });
+    </script>
+    <style>
+      p {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <p></p>
+    <p>마우스 포인터를 이곳에 대 보세요.</p>
+  </body>
+</html>

@@ -1,0 +1,345 @@
+#wrap {
+  width: 100%;
+  height: 1000px;
+}
+/***** 상단 메뉴 *****/
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  /* 1920x1080(모니터 기준으로 100% 계산) */
+  width: 100%;
+  height: 60px;
+  background: #666;
+}
+#header .all_btn {
+  float: left;
+}
+
+#header .logo {
+  float: left;
+  line-height: 70px;
+  margin-left: 25px;
+}
+#header .main_nav {
+  float: left;
+  /* 반응형으로 변경 */
+  /* margin-left: 200px; */
+  margin-left: 11%;
+  /* width: 750px; */
+  width: 50%;
+  /* 1920 / 19.2 / 39% */
+}
+#header .main_nav li {
+  float: left;
+  /* 반응형으로 변경 */
+  /* margin-right: 50px; */
+  margin-right: 4%;
+  /* 750 / 7.5  */
+  line-height: 60px;
+}
+
+#header .main_nav a {
+  font-size: 18px;
+  color: #fff;
+}
+
+#header .group {
+  float: right;
+}
+#header .sitemap_btn {
+  float: left;
+  font-size: 13px;
+  color: #fff;
+  line-height: 60px;
+  padding: 0 20px;
+}
+#header .search_btn {
+  float: left;
+}
+/***** 메인 메뉴 *****/
+#main {
+  float: left;
+  margin-top: 60px;
+  width: 100%;
+  height: 800px;
+}
+#main_img {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../images/main_kv01_1600.jpg) no-repeat 0 0;
+}
+#main_img .txt_box {
+  float: left;
+  /* margin: 80px 0 0 120px; */
+  margin: 80px 0 0 10%;
+  color: #fff;
+}
+#main_img .txt_box h4 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+#main_img .txt_box h3 {
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+#main_img .txt_box p {
+  font-size: 13px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+#main_img .txt_box a {
+  font-size: 13px;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 6px 15px;
+}
+/***** 콘텐츠 *****/
+#contents {
+  position: relative;
+  top: 0;
+  z-index: 1000;
+  float: right;
+  width: 660px;
+  background-color: #fff;
+}
+#contents > div {
+  float: left;
+  width: 300px;
+}
+#contents > div img {
+  float: left;
+}
+#contents .notice {
+  width: 300px;
+  background: rgb(0, 255, 0);
+}
+#contents .notice figcaption {
+  padding: 15px;
+}
+#contents .notice h3 {
+  font-size: 21px;
+  margin-bottom: 15px;
+}
+#contents .notice p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+#contents .notice a {
+  size: 12px;
+}
+
+#contents .news {
+  width: 300px;
+  background: rgb(51, 153, 255);
+}
+#contents .news_h {
+  margin: 0 auto;
+  padding-top: 25px;
+  width: 240px;
+  height: 25px;
+  border-bottom: 2px solid rgb(102, 102, 120);
+}
+#contents .news_h h3 {
+  float: left;
+  font-size: 17px;
+}
+#contents .news_h a {
+  float: right;
+  font-size: 11px;
+  margin-top: 6px;
+}
+#contents .news_b {
+  margin: 0 auto;
+  margin-top: 30px;
+  padding-bottom: 37px;
+  width: 240px;
+}
+#contents .news_b li {
+  border-bottom: 1px solid #333;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+}
+#contents .news_b li h4 {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+#contents .news_b li span {
+  font-size: 10px;
+  margin-bottom: 8px;
+}
+#contents .news_b li p {
+  font-size: 12px;
+}
+#contents .news_b li:last-child {
+  border-bottom: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+#contents .q_mn {
+  float: left;
+  width: 60px;
+  height: 1030px;
+  background-color: #ccc;
+}
+#contents .top_btn {
+  float: left;
+  display: block;
+  width: 100%;
+  padding: 8px 0;
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+}
+#contents .sns_btns {
+  float: left;
+  margin-top: 10px;
+  width: 100%;
+}
+#contents .sns_btns > li {
+  width: 100%;
+  text-align: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #fff;
+}
+#contents .sns_btns > li:last-child {
+  border-bottom: 0;
+}
+/***** 하단 메뉴 *****/
+#footer {
+  float: right;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  min-width: 998px;
+  height: 60px;
+  background: rgb(89, 94, 107);
+  z-index: 9999;
+}
+#footer .img1 {
+  float: left;
+  /* margin: 5px 0 0 20px; */
+  margin: 5px 0 0 1%;
+}
+#footer .img2 {
+  float: left;
+  /* margin: 7px 0 0 20px; */
+  margin: 7px 0 0 1%;
+}
+#footer .info {
+  float: left;
+  /* margin: 23px 0 0 30px; */
+  margin: 23px 0 0 1.5%;
+  color: #fff;
+}
+
+#footer .info > li {
+  float: left;
+}
+#footer .info > li:after {
+  display: inline-block;
+  content: "|";
+  padding: 0 10px;
+  font-size: 13px;
+}
+#footer .info li:last-child:after {
+  content: none;
+}
+#footer .info li a {
+  font-size: 13px;
+  color: #fff;
+}
+#footer .group {
+  float: right;
+}
+#footer .address {
+  float: left;
+  line-height: 60px;
+  padding: 0 15px;
+  font-size: 13px;
+  color: #fff;
+  font-style: normal;
+}
+#footer .group .top_btn {
+  float: left;
+}
+/* 반응형 */
+/* width 값이 1500px 일때 */
+@media screen and (max-width: 1500px) {
+  #header .main_nav {
+    float: left;
+    /* margin-left: 200px; */
+    margin-left: 10%;
+  }
+}
+/* width 값이 1330px 일때 */
+@media screen and (max-width: 1330px) {
+  #header .main_nav {
+    float: left;
+    /* margin-left: 200px; */
+    margin-left: 7%;
+  }
+  #header .main_nav li {
+    float: left;
+    /* margin-right: 50px; */
+    margin-right: 2%;
+    /* 750 / 7.5  */
+    line-height: 60px;
+  }
+}
+/* width 값이 1160px 일때 */
+@media screen and (max-width: 1160px) {
+  #header .logo {
+    float: left;
+    line-height: 70px;
+    margin-left: 15px;
+  }
+  #header .main_nav {
+    float: left;
+    /* margin-left: 200px; */
+    margin-left: 3%;
+    width: 56%;
+  }
+  #header .main_nav li {
+    float: left;
+    /* margin-right: 50px; */
+    margin-right: 1.5%;
+    /* 750 / 7.5  */
+    line-height: 60px;
+  }
+  #main_img .txt_box {
+    float: left;
+    /* margin: 80px 0 0 120px; */
+    margin: 80px 0 0 10%;
+    color: #fff;
+  }
+  /* footer 반응형 */
+  #footer .img1,
+  footer .img2 {
+    float: left;
+    margin-right: 0.2%;
+    /* 1160이하로 내려가면 없어진다. */
+    display: none;
+  }
+  #footer .info {
+    float: left;
+    /* margin: 23px 0 0 30px; */
+    margin: 23px 0 0 0.5%;
+    color: #fff;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #main_img .txt_box {
+    float: left;
+    /* margin: 80px 0 0 120px; */
+    margin: 80px 0 0 1.5%;
+    color: #fff;
+  }
+}

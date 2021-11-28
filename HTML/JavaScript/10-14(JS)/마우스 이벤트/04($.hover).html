@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hover 마우스 이벤트</title>
+    <script src="../js/jquery.js"></script>
+    <!--head에 script를 넣으면 자동실행!-->
+    <script>
+      $(document).ready(function () {
+        $("p").hover(
+          function () {
+            // 마우스를 올렸을때
+            $(this).css("background-color", "yellow"); // $(this)를 넣는게 원칙
+          },
+          function () {
+            // , 마우스가 떠났을때
+            $(this).css({ "background-color": "pink" });
+          }
+        );
+      });
+    </script>
+    <style>
+      p {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <p>이곳에 마우스를 가져다 대 보세요.</p>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>inner, outer</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #wrapper {
+        border: 5px solid blue;
+        padding: 30px;
+        margin: 20px;
+        font-size: 30px;
+      }
+    </style>
+
+    <script src="js/jquery.js"></script>
+    <script>
+      $(document).ready(function () {
+        var box = $("#wrapper");
+        $(window).resize(function () {
+          // 순수 크기값
+          $("#width").text(box.width());
+          $("#height").text(box.height());
+
+          // inner는 안에 있는 패딩값이 포함되서 알려줌
+          $("#innerWidth").text(box.innerWidth());
+          $("#innerHeight").text(box.innerHeight());
+
+          // $(어떤대상).width();       : 어떤 대상의 순수 가로값
+          // $(어떤대상).text();        : 어떤 대상의 글자
+          // $(어떤대상).innerWidth();  : 어떤 대상의 패딩, 마진값까지 포함한 가로값
+          // $(어떤대상).outerWidth();  : 어떤 대상의 패딩, 마진, 보더값까지 포함한 가로값
+
+          $("#outerWidth").text(box.outerWidth());
+          $("#outerHeight").text(box.outerHeight());
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- <span>
+      브라우저 창의 크기를 변경해 보고 박스의 크기가 각 메서드에 따라 어떻게
+      다른지 확인해보세요.
+    </span> -->
+    <div id="wrapper">
+      <span>박스의 width = </span><span id="width">0</span><br />
+      <span>박스의 height = </span><span id="height">0</span><br />
+      <span>박스의 innerWidth = </span><span id="innerWidth">0</span><br />
+      <span>박스의 innerHeight = </span><span id="innerHeight">0</span><br />
+      <span>박스의 outerWidth = </span><span id="outerWidth">0</span><br />
+      <span>박스의 outerHeight = </span><span id="outerHeight">0</span><br />
+    </div>
+  </body>
+</html>

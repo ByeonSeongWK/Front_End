@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>데이터 타입 - 객체형</title>
+  </head>
+  <body>
+    <script>
+      "use strict";
+
+      // 객체 배열
+      // 데이터타입 변수명 = {변수1 : "값1", 변수2 : "값2"...};
+      const dog = { name: "루시", age: 10, weight: 2.5 };
+
+      console.log(dog);
+
+      // 객체 배열중 key값으로 하나를 불러 올때
+      console.log(`dog객체의 name은   : ${dog.name}`);
+      console.log(`dog객체의 age는    : ${dog.age}`);
+      console.log(`dog객체의 weight는 : ${dog.weight}`);
+
+      dog.weight = 3;
+      console.log(`dog객체의 weight는 : ${dog.weight}`); // 상수로 선언했는데 바뀐다...
+    </script>
+  </body>
+</html>

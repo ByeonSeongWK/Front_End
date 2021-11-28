@@ -1,0 +1,53 @@
+<!document html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>gradient</title>
+		<style>
+			.gra01{
+				/* 중앙으로 부터 가장 가까운 쪽의 박스까지의 거리에 의해 설정 */
+				background: -webkit-radial-gradient(ellipse closest-side, red, yellow 10%, #1c8e00 50%, yellow);
+				width:140px;
+				height:100px;
+				margin-bottom:10px;
+			}
+			.gra02{
+				background: -webkit-radial-gradient(ellipse farthest-corner, red, yellow 10%, #1c8e00 50%, yellow);
+				width:140px;
+				height:100px;
+				margin-bottom:10px;			
+			}
+			.gra03{
+				background: -webkit-radial-gradient(circle closest-side, red, yellow 10%, #1c8e00 50%, yellow);
+				width:140px;
+				height:100px;
+				margin-bottom:50px;
+			}
+			.gra04{
+				width:300px;
+				height:100px;
+				margin-bottom:50px;
+				background: linear-gradient(to right,				
+      red, orange, yellow, green, blue, indigo, violet);}
+	  		.gra05{
+				width:300px;
+				height:100px;
+				margin-bottom:10px;
+				background: radial-gradient(red, yellow, rgb(30, 144, 255));}
+				.blf{
+					font-size: 20px;
+					font-weight: bold;
+				}
+
+		</style>
+	</head>
+	<body>
+		<div class="gra01"></div>
+		<div class="gra02"></div>
+		<div class="gra03"></div>
+		<div class="blf">선형 그레이디언트</div>
+		<div class="gra04"></div>
+		<div class="blf">원형 그레이디언트</div>
+		<div class="gra05"></div>
+	</body>
+</html>

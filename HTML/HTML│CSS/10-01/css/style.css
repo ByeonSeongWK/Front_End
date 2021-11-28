@@ -1,0 +1,319 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+/* 기본 사이즈 */
+#wrap {
+  width: 100%;
+}
+.header {
+  width: 100%;
+  height: 100px;
+  background-color: beige;
+}
+.header .logo {
+  float: left;
+  margin: 40px 0 0 50px;
+  font-size: 18px;
+}
+.header .gnb {
+  float: right;
+}
+.header .gnb > li {
+  float: left;
+  line-height: 100px;
+  margin-right: 15px;
+}
+.header .gnb a {
+  font-size: 15px;
+}
+.header .menu-toggle-btn {
+  display: none;
+  float: right;
+  width: 20px;
+  margin: 40px 50px 0 0;
+  cursor: pointer;
+}
+.header .menu-toggle-btn > span {
+  /* display: inline-block; */
+  /* display: inline = 가로 배치
+     display: block = 세로 배치  */
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #3f51b5;
+}
+.header .menu-toggle-btn > span:nth-child(2) {
+  margin: 5px 0;
+}
+
+.main_img {
+  width: 100%;
+  /* margin-bottom: 30px; */
+}
+/* img 태그는 inline */
+.main_img > img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+.contents {
+  width: 100%;
+}
+/* .contents > article {
+  float: left;
+} */
+.ARE_area {
+  width: 100%;
+}
+.ARE_area_h {
+  margin: 0 auto;
+  width: 1000px;
+  height: 150px;
+  background-color: beige;
+  margin-bottom: 20px;
+}
+.ARE_area_h .sec-tit {
+  float: left;
+  width: 200px;
+  height: 150px;
+  text-align: center;
+  line-height: 150px;
+}
+/**************************/
+.ARE_area_h .desc {
+  float: left;
+  width: 800px;
+  height: 150px;
+  padding-top: 55px;
+  text-align: center;
+}
+
+.ARE_area_b {
+  margin: 0 auto;
+  width: 1000px;
+}
+.ARE_area_b ul {
+  width: 100%;
+}
+.ARE_area_b li {
+  float: left;
+  text-align: center;
+  width: 25%;
+}
+.gallery {
+  float: left;
+  width: 100%;
+  margin-bottom: 100px;
+}
+.gallery_h {
+  margin: 0 0;
+  margin-top: 30px;
+  width: 100%;
+  height: 150px;
+  background-color: aquamarine;
+}
+.gallery_h > h3 {
+  float: left;
+  margin-left: 70px;
+  font-size: 2rem;
+  line-height: 150px;
+}
+.gallery_b {
+  width: 100%;
+}
+.gallery_b > img {
+  float: left;
+  width: 25%;
+}
+
+.blog {
+  /* 
+   contents 밑 모든 article에 
+  float:left;를 줬기 때문에
+  이 아티클만 none값을 주겠다
+  ※ margin 보다 float가 우선 순위이다.
+  */
+  float: none;
+  margin: 0 auto;
+  margin-top: 60px;
+  width: 100%;
+  background-color: #ccc;
+}
+.blog_h {
+  float: left;
+  width: 25%;
+  height: 200px;
+}
+.blog_h > h3 {
+  /* 제목은 제목끼리 사이즈를 맞춘다. */
+  font-size: 2rem;
+}
+
+.blog_b {
+  float: left;
+  width: 75%;
+  height: 200px;
+}
+.blog_b ul {
+}
+.blog_b li {
+  float: left;
+  width: 32%;
+  margin-right: 2%;
+}
+.blog_b li:last-child {
+  margin-right: 0;
+}
+.blog_b img {
+  width: 100%;
+}
+.blog_b span {
+}
+.blog_b p {
+}
+
+.input_win {
+  margin: 0 auto;
+  width: 1000px;
+  height: 200px;
+}
+.input_win_h {
+  float: left;
+  width: 25%;
+}
+.input_win_h > h3 {
+}
+
+.input_win_b {
+  float: left;
+  width: 75%;
+}
+.input_win_b > ul {
+}
+.input_win_b > ul li {
+  float: left;
+  width: 50%;
+}
+.input_win_b > ul li:nth-child(3) {
+  width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .header .gnb {
+    display: none;
+  }
+  .header .menu-toggle-btn {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .ARE_area {
+    width: 100%;
+  }
+  .ARE_area_h {
+    margin: 0 0;
+    width: 100%;
+    /* height: 150px; */
+    background-color: #ccc;
+    margin-bottom: 20px;
+  }
+  .ARE_area_h .sec-tit {
+    float: left;
+    width: 100%;
+    height: 70px;
+    text-align: center;
+    line-height: 70px;
+  }
+  .ARE_area_h .desc {
+    float: left;
+    padding-top: 0px;
+    width: 100%;
+    height: 80px;
+    text-align: center;
+  }
+  .ARE_area_b {
+    margin: 0 0;
+    width: 100%;
+  }
+  .ARE_area_b li {
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .gallery {
+    width: 100%;
+  }
+  .gallery_h {
+    margin: 0 0;
+    margin-top: 30px;
+    text-align: center;
+    width: 100%;
+    height: 150px;
+    background-color: aquamarine;
+  }
+  .gallery_h > h3 {
+    float: none;
+    margin-left: 70px;
+    font-size: 2rem;
+    line-height: 150px;
+  }
+  .gallery_b {
+    width: 100%;
+  }
+  .gallery_b > img {
+    float: left;
+    width: 50%;
+  }
+  .blog {
+    float: none;
+    margin: 0 auto;
+    margin-top: 60px;
+    width: 100%;
+    background-color: #ccc;
+  }
+  .blog_h {
+    float: left;
+    width: 100%;
+    text-align: center;
+    height: 100px;
+  }
+  .blog_h > h3 {
+    /* 제목은 제목끼리 사이즈를 맞춘다. */
+    font-size: 2rem;
+  }
+  .blog_b {
+    float: left;
+    width: 100%;
+    height: 200px;
+  }
+  .blog_b ul {
+  }
+  .blog_b li {
+    float: left;
+    margin: 0 auto;
+    width: 32%;
+    margin-right: 2%;
+  }
+  .blog_b li:last-child {
+    margin-right: 0;
+  }
+  .blog_b img {
+    width: 100%;
+  }
+  .blog_b span {
+  }
+  .blog_b p {
+  }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>transition</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      div {
+        width: 100px;
+        height: 100px;
+        border: 1px solid #000;
+        margin: 20px;
+        /* 돌아오는 시간 */
+        transition: 0.7s;
+        /* 마우스 오버시 마우스 모양 변경 */
+        cursor: pointer;
+      }
+      /* 자기 자신에게 transition 설정 */
+      .box01:hover {
+        width: 1000px;
+        font-size: 50px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 3px #000;
+        transform: rotate(15deg);
+        background-color: aqua;
+        /* 준비 시간 */
+        transition-delay: 2s;
+        /* 움직이는 시간 */
+        transition-duration: 2s;
+        /* 어떤 속성이든 적용하는 값(생략 가능) */
+        transition-property: all;
+      }
+      .box02-1 {
+        margin: 0;
+        width: 95px;
+        height: 95px;
+        border: 0;
+        background-color: aquamarine;
+      }
+      /* 자신에게 속해 있는 요소에 transition 설정 */
+      .box02:hover .box02-1 {
+        transform: scale(1.5) rotate(360deg);
+        /* 준비 시간 */
+        transition-delay: 0s;
+        /* 움직이는 시간 */
+        transition-duration: 2s;
+        /* 어떤 속성이든 적용하는 값(생략 가능) */
+        transition-property: all;
+      }
+      /* 자기 자신에게 붙어 있는 요소를 선택 "+" */
+      .box03:hover + .box03-1 {
+        transform: translate(1000px, 200px);
+        transition-duration: 3s;
+        transition-timing-function: ease-in-out;
+      }
+      .box03-1 {
+        background-color: blueviolet;
+      }
+      /* 자기 자신에게 멀리 떨어진 요소를 선택 "~" */
+      .box04:hover ~ .box06 {
+        transform: skew(45deg, 15deg);
+        transition-duration: 3s;
+        transition-timing-function: ease;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box01">box01</div>
+
+    <div class="box02">
+      <div class="box02-1">box02-1</div>
+    </div>
+
+    <div class="box03">box03</div>
+    <div class="box03-1">box03-1</div>
+
+    <div class="box04">box04</div>
+    <div class="box05">box05</div>
+    <div class="box06">box06</div>
+  </body>
+</html>

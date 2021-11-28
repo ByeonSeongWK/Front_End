@@ -1,0 +1,60 @@
+<!-- 3. 스타일 시트_폰트 스타일 -->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width= , initial-scale=1.0" />
+    <title>스타일 시트_폰트 스타일</title>
+    <style type="text/css">
+      /* Noto Sans KR 웹 폰트를 import/(정보만 가져왔음), 기본 서체를 지정했다. */
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap");
+
+      /* 선택자{속성:속성값} */
+
+      /* 전체 선택자 */
+      * {
+        font-style: italic;
+      }
+
+      h1 {
+        font-size: 30px;
+        color: blueviolet;
+        /* font-family: "윤고딕,산돌고딕,맑은고딕"; */
+        /* 우선순위 정해놓기 ex) 윤고딕이 없으면 산돌고딕을 적용  */
+
+        /* 웹 폰트 들고오기 */
+        font-family: "Noto Sans KR", sans-serif;
+      }
+
+      /* 클래스 선택자 */
+      /* 선언 후 불러올때 앞에 "."을 찍어줘야 한다. */
+      .txt1 {
+        font-size: 30;
+        color: red;
+        font-family: "바탕체";
+        font-weight: 700;
+        font: 20px "궁서체" red 500;
+      }
+
+      /* 개별 선택자 */
+      #txt2 {
+        font-size: 25;
+        color: aqua;
+        font-family: "궁서체";
+      }
+    </style>
+  </head>
+  <body>
+    <h1>스타일 시트 제목 선언하기</h1>
+    <h1 class="txt1">스타일 시트 서브 제목 선언하기</h1>
+    <p class="txt1">
+      스타일 시트 서브 제목 선언하기<br />
+      스타일 시트 서브 제목 선언하기<br />
+      스타일 시트 서브 제목 선언하기
+    </p>
+    <h3 id="txt2">다른 스타일 시트의 제목</h3>
+    <h3>다른 스타일 시트의 제목</h3>
+    <h3 style="font-variant: small-caps">SungWook</h3>
+  </body>
+</html>

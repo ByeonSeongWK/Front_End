@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>클래스</title>
+  </head>
+  <body>
+    <script>
+      "use strict";
+      const Dog = class {
+        // 생성자(받아올 매개변수)
+        constructor(name, age, color) {
+          this.name = name;
+          this.age = age;
+          this.color = color;
+          this.family = "포메리안"; // 기본값으로 지정 해둘 값
+        }
+        // 메서드
+        play() {
+          return `${this.name}가 즐겁게 놉니다.`;
+        }
+      };
+      const Rucy = new Dog("루시", 10, "흰색");
+
+      // 객체의 매개변수 수정
+      Rucy.age = 11;
+
+      console.log(`이름 : ${Rucy.name}`);
+      console.log(`나이 : ${Rucy.age}`);
+      console.log(`색깔 : ${Rucy.color}`);
+      console.log(`견종 : ${Rucy.family}`);
+      console.log(`${Rucy.play()}`);
+    </script>
+  </body>
+</html>

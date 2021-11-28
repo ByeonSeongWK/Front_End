@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>풀다운 메뉴</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul,
+      ol,
+      li {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      .container {
+        margin-top: 35px;
+      }
+      nav {
+        display: inline-block;
+      }
+
+      nav > ul {
+        height: 40px;
+        overflow: hidden;
+        background-color: #fff;
+        transition: 0.5s;
+      }
+
+      nav > ul.over {
+        height: 200px;
+      }
+
+      nav > ul > li {
+        position: relative;
+        float: left;
+        width: 140px;
+        height: 40px;
+        text-align: center;
+        font-size: 13px;
+        border-right: 1px solid #ccc;
+        box-sizing: border-box;
+      }
+
+      nav > ul > li:last-child {
+        border-right: none;
+      }
+
+      nav > ul > li > a {
+        display: block;
+        width: 100%;
+        line-height: 40px;
+        background-color: #eaeaea;
+        color: #666;
+      }
+      nav > ul > li:hover > a,
+      nav > ul > li:focus > a,
+      nav > ul > li > a.over {
+        font-weight: 600;
+        background-color: #8ac007;
+        color: #fff;
+      }
+
+      nav .sub {
+        position: absolute;
+        top: 40px;
+        left: 0;
+        padding-top: 6px;
+        width: 100%;
+        border-left: 1px solid #f4f4f4;
+      }
+
+      nav .sub.over {
+        display: block;
+        /* opacity: 1; */
+        transition: 0.5s;
+      }
+
+      nav .sub li {
+        border-bottom: 1px solid #eaeaea;
+      }
+
+      nav .sub li > a {
+        display: block;
+        padding: 10px;
+        color: #666;
+        background-color: #fff;
+      }
+      nav .sub li > a:hover,
+      nav .sub li > a:focus {
+        background-color: #f8f8f8;
+      }
+    </style>
+
+    <script>
+      window.addEventListener("load", function () {
+        var nav = document.getElementById("nav");
+
+        var depth1Ul = nav.children[0];
+        var depth1Li = depth1Ul.children;
+
+        for (var i = 0; i < depth1Li.length; i++) {
+          depth1Li[i].index = i;
+
+          depth1Li[i].addEventListener("mouseenter", function () {
+            depth1Ul.classList.add("over");
+          });
+          depth1Li[i].addEventListener("mouseleave", function () {
+            depth1Ul.classList.remove("over");
+          });
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <nav id="nav">
+        <ul>
+          <li>
+            <a href="">menu1</a>
+            <ul class="sub">
+              <li><a href="">submn1-1</a></li>
+              <li><a href="">submn1-2</a></li>
+              <li><a href="">submn1-3</a></li>
+              <li><a href="">submn1-4</a></li>
+              <li><a href="">submn1-5</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="">menu2</a>
+            <ul class="sub">
+              <li><a href="">submn2-1</a></li>
+              <li><a href="">submn2-2</a></li>
+              <li><a href="">submn2-3</a></li>
+              <li><a href="">submn2-4</a></li>
+              <li><a href="">submn2-5</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="">menu3</a>
+            <ul class="sub">
+              <li><a href="">submn3-1</a></li>
+              <li><a href="">submn3-2</a></li>
+              <li><a href="">submn3-3</a></li>
+              <li><a href="">submn3-4</a></li>
+              <li><a href="">submn3-5</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="">menu4</a>
+            <ul class="sub">
+              <li><a href="">submn4-1</a></li>
+              <li><a href="">submn4-2</a></li>
+              <li><a href="">submn4-3</a></li>
+              <li><a href="">submn4-4</a></li>
+              <li><a href="">submn4-5</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </body>
+</html>

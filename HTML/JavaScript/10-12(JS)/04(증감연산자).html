@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>증감 연산자</title>
+    <script>
+      var a = 10;
+      var b = 20;
+      var c = 30;
+      var d = 40;
+      document.write("++a ───> " + ++a + "<br>");
+
+      document.write("b++ ───> " + b++ + "<br>");
+
+      document.write("--c ───> " + --c + "<br>");
+
+      document.write("d-- ───> " + d-- + "<br><br>");
+
+      document.write("───연산 후 재출력───" + "<br>");
+      document.write("a : " + a + " <─── 출력 전 연산" + "<br>");
+      document.write("b : " + b + " <─── 출력 후 연산" + "<br>");
+      document.write("c : " + c + " <─── 출력 전 연산" + "<br>");
+      document.write("d : " + d + " <─── 출력 후 연산" + "<br><br>");
+
+      document.write("────계산 문제────" + "<br>");
+      document.write(++a + "<br>"); // 12
+      document.write(a++ + "<br>"); // 12 + 1
+      document.write(++a + b++ + "<br>"); // 13 + (22 + 1)
+      document.write(++a + ++b + "<br>"); // 14 + 24
+    </script>
+  </head>
+  <body>
+    <!--
+        [대입 연산자]
+        res = res + 1;
+        전위 연산자 : ++res; ───> 더해서 바로 표현(처음부터 증감)
+        후위 연산자 : res++; ───> 나중에 더해서 표현(끝나고 증감)
+        ────────────────────
+        res = res - 1;
+        전위 연산자 : --res;
+        후위 연산자 : res--;
+    -->
+  </body>
+</html>

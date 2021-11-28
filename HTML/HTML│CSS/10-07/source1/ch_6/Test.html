@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+      }
+      body {
+        font-family: "맑은 고딕";
+        color: #444;
+      }
+      ul,
+      ol,
+      li {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      #wrap {
+        width: 100%;
+      }
+      #header {
+        height: 45px;
+        background: url(header_background.png) repeat-x 0 0; /* repeat-x 가로로 퍼지게 만들어라*/
+        position: relative;
+      }
+      .btn {
+        float: left;
+        display: block;
+        height: 45px;
+        padding: 0 10px;
+        color: #fff;
+        font-weight: bold;
+        font-size: 15px;
+        background: url(header_background.png) repeat-x 0 0;
+      }
+      .logo {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -75px;
+        color: #fff;
+        width: 150px;
+        line-height: 45px;
+        text-align: center;
+      }
+      .right_btn {
+        float: right;
+        margin: 6.5px 10px 0 0;
+      }
+      #main_nav {
+        width: 100%;
+        height: 40px;
+        background-color: brown;
+      }
+      #main_nav li {
+        float: left;
+        /* display: inline-block;
+          margin-left: -5px; */
+        width: 25%;
+        line-height: 40px;
+        text-align: center;
+      }
+      #main_nav li a {
+        color: #fff;
+        font-weight: 900;
+        display: block;
+      }
+      #submnarea {
+        height: 45px;
+        border-bottom: 2px solid #333;
+      }
+      #submnarea li {
+        float: left;
+        width: 20%;
+        line-height: 45px;
+        text-align: center;
+      }
+      #submnarea li a {
+        font-weight: 700;
+        display: block;
+        border: 1px solid #333;
+      }
+      /* 메인 이미지 */
+      #main_img {
+        width: 100%;
+        padding: 10px 0;
+        background-color: aquamarine;
+      }
+      #main_img .img_area {
+        position: relative;
+        margin: 0 auto;
+        width: 95%;
+        height: 300px;
+        /* 밖에 나가는걸 보이지 마라 */
+        overflow: hidden;
+      }
+      #main_img .imgs {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 0;
+        animation-name: main_ani;
+        animation-delay: 2s;
+        animation-duration: 6s;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+      }
+      #main_img .imgs li {
+        float: left;
+        position: absolute;
+        width: 100%;
+        height: 300px;
+        top: 0;
+      }
+      #main_img .imgs > li:nth-child(1) {
+        background-color: red;
+        left: 0%;
+      }
+      #main_img .imgs > li:nth-child(2) {
+        background-color: green;
+        left: 100%;
+      }
+      #main_img .imgs > li:nth-child(3) {
+        background-color: blue;
+        left: 200%;
+      }
+      /* main_ani */
+      @keyframes main_ani {
+        0% {
+          position: absolute;
+          left: 0;
+        }
+
+        100% {
+          position: absolute;
+          left: -200%;
+        }
+      }
+      #main_cotents {
+        display: block;
+      }
+      /* 배너 */
+      #banner {
+        position: relative;
+        width: 100%;
+        height: 200px;
+        /* 애니메이션 줄때 바깥에 나간걸 안보이게 */
+        overflow: hidden;
+      }
+      #banner .list {
+        position: absolute;
+        top: 20px;
+        left: 7%;
+        width: 100%;
+        height: 160px;
+        animation-name: main_ani2;
+        animation-delay: 2s;
+        animation-duration: 6s;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+        /* animation-timing-function: ease-in-out; */
+      }
+      #banner .list li {
+        float: left;
+        margin-right: 5%;
+        width: 40%;
+        height: 160px;
+        background-color: aqua;
+        position: absolute;
+        top: 0;
+      }
+      #banner .list li:nth-child(1) {
+        left: 0;
+        background-color: antiquewhite;
+      }
+      #banner .list li:nth-child(2) {
+        left: 50%;
+        background-color: aqua;
+      }
+      #banner .list li:nth-child(3) {
+        left: 100%;
+        background-color: aquamarine;
+      }
+      #banner .list li:nth-child(4) {
+        left: 150%;
+        background-color: blueviolet;
+      }
+      #banner .list li:nth-child(5) {
+        left: 200%;
+        background-color: cornflowerblue;
+      }
+      @keyframes main_ani2 {
+        0% {
+          position: absolute;
+          left: 10%;
+        }
+        20% {
+          position: absolute;
+          left: -45%;
+        }
+        80% {
+          position: absolute;
+          left: -95%;
+        }
+        100% {
+          position: absolute;
+          left: -145%;
+        }
+      }
+      /* TAB 버튼 */
+      #tabBox {
+        position: relative;
+        width: 100%;
+        height: 350px;
+      }
+      input {
+        display: none;
+      }
+      label {
+        display: block;
+        float: left;
+        width: 20%;
+        height: 50px;
+        background-color: #777;
+        font-weight: 600;
+        text-align: center;
+        line-height: 300%;
+        cursor: pointer;
+      }
+      label:hover {
+        background-color: rgb(27, 7, 32);
+        color: #fff;
+        font-size: 18px;
+        font-weight: bold;
+        transition: 0.5s;
+      }
+      #tabBox > section {
+        width: 100%;
+        height: 300px;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        display: none;
+      }
+
+      #con1 {
+        background-color: red;
+        z-index: 500;
+      }
+      #con2 {
+        background-color: orange;
+        z-index: 400;
+      }
+      #con3 {
+        background-color: yellow;
+        z-index: 300;
+      }
+      #con4 {
+        background-color: green;
+        z-index: 200;
+      }
+      #con5 {
+        background-color: blue;
+        z-index: 100;
+      }
+
+      #tabBox #tab1:checked ~ #con1,
+      #tabBox #tab2:checked ~ #con2,
+      #tabBox #tab3:checked ~ #con3,
+      #tabBox #tab4:checked ~ #con4,
+      #tabBox #tab5:checked ~ #con5 {
+        display: block;
+      }
+
+      /* 컨텐츠 */
+      #contents {
+        width: 100%;
+      }
+      #contents .test_txt {
+        padding: 20px;
+      }
+      #contents .test_txt h3 {
+        font-size: 20px;
+      }
+      #contents .test_txt p.data {
+        font-size: 12px;
+        padding: 2px 0 15px 0;
+      }
+      #contents .test_txt p.txt {
+        font-size: 15px;
+        line-height: 1.2;
+        padding: 10px 0;
+        margin-bottom: 3%;
+        border-top: 2px solid #444;
+      }
+      /* 하단 메뉴 */
+      #footer {
+        height: 60px;
+        border-top: 3px solid #444;
+        background-color: aqua;
+      }
+      #footer > h2 {
+        padding-top: 10px;
+        text-align: center;
+      }
+      #footer > address {
+        text-align: center;
+        font-size: 12px;
+        font-style: normal;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <header id="header">
+        <button class="btn">Button</button>
+        <h1 class="logo">Mobile</h1>
+        <a href="#" class="right_btn"
+          ><img src="header_right_button.png" alt=""
+        /></a>
+      </header>
+      <nav id="main_nav">
+        <ul>
+          <li><a href="#">버튼</a></li>
+          <li><a href="#">버튼</a></li>
+          <li><a href="#">버튼</a></li>
+          <li><a href="#">버튼</a></li>
+        </ul>
+      </nav>
+      <section id="submnarea">
+        <ul>
+          <li><a href="#">버튼</a></li>
+          <li><a href="#">버튼</a></li>
+          <li><a href="#">버튼</a></li>
+          <li><a href="#">버튼</a></li>
+          <li><a href="#">버튼</a></li>
+        </ul>
+      </section>
+      <!-- 메인 이미지 -->
+      <section id="main_img">
+        <div class="img_area">
+          <ul class="imgs">
+            <li>이미지1</li>
+            <li>이미지2</li>
+            <li>이미지3</li>
+          </ul>
+        </div>
+      </section>
+      <!-- 지나가는 배너 -->
+      <section id="banner">
+        <!-- 한 화면에 두개 정도 -->
+        <ul class="list">
+          <li>이미지1</li>
+          <li>이미지2</li>
+          <li>이미지3</li>
+          <li>이미지4</li>
+          <li>이미지5</li>
+        </ul>
+      </section>
+      <!-- 탭 버튼 -->
+      <article id="tabBox">
+        <label for="tab1">TAB 1</label>
+        <input type="radio" id="tab1" name="tab" checked />
+        <label for="tab2">TAB 2</label>
+        <input type="radio" id="tab2" name="tab" checked />
+        <label for="tab3">TAB 3</label>
+        <input type="radio" id="tab3" name="tab" checked />
+        <label for="tab4">TAB 4</label>
+        <input type="radio" id="tab4" name="tab" checked />
+        <label for="tab5">TAB 5</label>
+        <input type="radio" id="tab5" name="tab" checked />
+        <!-- 바뀌는 화면 -->
+        <section id="con1">con1</section>
+        <section id="con2">con2</section>
+        <section id="con3">con3</section>
+        <section id="con4">con4</section>
+        <section id="con5">con5</section>
+      </article>
+
+      <!-- 컨텐츠 -->
+      <section id="contents">
+        <article class="test_txt">
+          <h3>Lorem ipsum</h3>
+          <p class="data">2012-12-09 - Birthday</p>
+          <p class="txt">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Exercitationem atque similique modi! Quam tenetur obcaecati ad,
+            tempora doloremque amet voluptas error alias. Quaerat vel molestias
+            eum doloribus eos voluptatum architecto!
+          </p>
+          <p class="txt">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Exercitationem atque similique modi! Quam tenetur obcaecati ad,
+            tempora doloremque amet voluptas error alias. Quaerat vel molestias
+            eum doloribus eos voluptatum architecto!
+          </p>
+          <p class="txt">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Exercitationem atque similique modi! Quam tenetur obcaecati ad,
+            tempora doloremque amet voluptas error alias. Quaerat vel molestias
+            eum doloribus eos voluptatum architecto!
+          </p>
+        </article>
+      </section>
+
+      <!-- 하단 메뉴 -->
+      <footer id="footer">
+        <h2>HTML5 + CSS3 Basic</h2>
+        <address>Website Layout Basic</address>
+      </footer>
+    </div>
+  </body>
+</html>

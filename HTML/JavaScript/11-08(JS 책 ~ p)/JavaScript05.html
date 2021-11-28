@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>리터럴 클래스로 단일탭 메뉴 생성하기</title>
+
+    <style></style>
+    <script src="js/jquery.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        var $bar1 = $("#bar1");
+        // 아래 방법은 css()를 3번이나 호출하고 있다.
+        // $bar1.css("position" : "absolute");
+        // $bar1.css("left" : 100);
+        // $bar1.css("top" : 100);
+        $bar1.css({
+          // 아래 리터럴 방식은 css()를 1번만 호출 하고 있다.
+          position: "absolute",
+          left: 100,
+          top: 100,
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <img src="images/newbtn.bar.1.png" id="bar1" />
+  </body>
+</html>

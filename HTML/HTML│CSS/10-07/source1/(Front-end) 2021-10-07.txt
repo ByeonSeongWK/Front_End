@@ -1,0 +1,96 @@
+2021-10-07
+───────────────────────────────────────────────────────────────────────
+nav 태그 : 메인 메뉴, 서브 메뉴, 퀵 메뉴 3개만 사용 권장
+
+aside 태그 : 컨텐츠 내부에 부내용 들어가는 곳
+
+line-height : 높이 값이 있을때만 사용가능 px들어가면 생략 가능
+
+
+display : block . ul > li > a 로 잡으면 가로값만 칸에 맞게 맞춰진다. 
+세로값은 생성 X line-hieght는 안잡힌다. padding으로 위치를 잡아야 한다.
+
+기본 스타일 시트(ex/reset.css)에 기본 서체 등을 하나 따로 만들어둔다.
+현재 기본 서체 : 나눔 고딕!
+
+사이트 제작시 제일 중요한건 컨텐츠 부분(내용)!
+컨텐츠 기획이 중요하다.
+
+본문 글자 내용에 패딩값을 미리 줘 놓는게 좋다.(모바일 웹 개발 위해)
+
+nth-of-type()   : 지정된 태그를 기준으로 인덱스 값을 준다.
+nth-child()     : child 형제들 중에 태그가 같던 다르던 지정
+※ 기준이 다르다.
+()괄호 안에 들어가는 숫자의 개념이 다르다.
+
+박스를 비대칭 배치를 할때 왼쪽이 나뉘면 묶어주고 오른쪽은 묶지 말고
+배치를 해주는게 좋다.
+
+뷰포트 meta 태그
+작업을 안해놓으면 모바일에서 안될 수도 있다.
+───────────────────────────────────────────────────────────────────────
+옆으로 넘기는 애니메이션
+───────────────────────────────────────────────────────────────────────
+
+ ────────────────────스타일───────────────────────
+
+      #main_img .imgs {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 0;
+        animation-name: main_ani;
+        animation-delay: 2s;
+        animation-duration: 6s;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+      }
+      #main_img .imgs li {
+        float: left;
+        position: absolute;
+        width: 100%;
+        height: 300px;
+        top: 0;
+      }
+      #main_img .imgs > li:nth-child(1) {
+        background-color: red;
+        left: 0%;
+      }
+      #main_img .imgs > li:nth-child(2) {
+        background-color: green;
+        left: 100%;
+      }
+      #main_img .imgs > li:nth-child(3) {
+        background-color: blue;
+        left: 200%;
+      }
+      /* main_ani */
+      @keyframes main_ani {
+        0% {
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+        100% {
+          position: absolute;
+          left: -200%;
+          top: 0;
+        }
+      }
+
+ ─────────────────────바디───────────────────────
+ <!-- 메인 이미지 -->
+      <section id="main_img">
+        <div class="img_area">
+          <ul class="imgs">
+            <li>이미지1</li>
+            <li>이미지2</li>
+            <li>이미지3</li>
+          </ul>
+        </div>
+      </section>
+──────────────────────────────────────────────────
+움직임 줄땐 웬만하면 제이쿼리로
+
+ /* 애니메이션 줄때 바깥에 나간걸 안보이게 */
+상위 선택자에 → overflow: hidden;

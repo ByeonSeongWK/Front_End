@@ -1,0 +1,106 @@
+<!document html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>linear-gradient</title>
+    <style>
+      *{font-size: 20px; font-weight: bold;}
+      .top {
+        display: inline-block;
+        background: -webkit-linear-gradient(top, #fcfe06, #89cfe7);
+        width: 140px;
+        height: 140px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        background: linear-gradient();
+      }
+      .bottom {
+        display: inline-block;
+        background: -webkit-linear-gradient(bottom, #fcfe06, #89cfe7);
+        width: 140px;
+        height: 140px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+      }
+      .left {
+        display: inline-block;
+        background: -webkit-linear-gradient(left, #fcfe06, #89cfe7);
+        width: 140px;
+        height: 140px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+      }
+      .right {
+        display: inline-block;
+        background: -webkit-linear-gradient(right, #fcfe06, #89cfe7);
+        width: 140px;
+        height: 140px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+      }
+      .left_top {
+        display: inline-block;
+        background: -webkit-linear-gradient(left top, #fcfe06, #89cfe7);
+        width: 140px;
+        height: 140px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+      }
+      .right_top {
+        display: inline-block;
+        background: -webkit-linear-gradient(right top, #fcfe06, #89cfe7);
+        width: 140px;
+        height: 140px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+      }
+      .left_bottom {
+        display: inline-block;
+        background: -webkit-linear-gradient(left bottom, #fcfe06, #89cfe7);
+        width: 140px;
+        height: 140px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+      }
+      .right_bottom {
+        display: inline-block;
+        background: -webkit-linear-gradient(right bottom, #fcfe06, #89cfe7);
+        width: 140px;
+        height: 140px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+      }
+      .box1 {
+        width: 611px;
+        height: 200px;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        background: -webkit-linear-gradient(
+          /*
+		  [그라데이션 조절]
+		  top right : 방향으로 조절
+          (숫자)deg : 각도로 조절
+		  red (숫자)% : 시작 위치 지정
+		   */
+            0deg,
+          #89cfe7 10%,
+          red 30%,
+          #fcfe06 50%
+        );
+        /* 순서 : (시작위치, 시작하는 색, 끝나는 색) */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top">top</div>
+    <div class="bottom">bottom</div>
+    <div class="left">left</div>
+    <div class="right">right</div>
+    <div class="left_top">left top</div>
+    <div class="right_top">right top</div>
+    <div class="left_bottom">left bottom</div>
+    <div class="right_bottom">right bottom</div>
+
+    <div class="box1">box1</div>
+  </body>
+</html>

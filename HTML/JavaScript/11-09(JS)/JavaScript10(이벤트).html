@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이벤트</title>
+
+    <style>
+      .wrapper {
+        padding: 20px;
+        width: 50px;
+        height: 50px;
+        background-color: #666;
+        cursor: pointer;
+      }
+
+      .wrapper > a {
+        display: block;
+        width: 50px;
+        height: 50px;
+        background-color: #8ac007;
+        cursor: pointer;
+      }
+      .active {
+        background-color: rgba(255, 255, 0, 0.2);
+      }
+    </style>
+    <script>
+      window.addEventListener("load", function () {
+        var container = document.getElementsByClassName("container")[0];
+        window.addEventListener("resize", function () {
+          var info = "";
+          info += "inner width : " + window.innerWidth + "<br><br>";
+          info += "inner height : " + window.innerHeight + "<br><br>";
+          info += "outer width : " + window.outerWidth + "<br><br>";
+          info += "outer height : " + window.outerHeight + "<br><br>";
+          info += "page xoffset : " + window.pageXOffset + "<br><br>";
+          info += "page yoffset : " + window.pageYOffset;
+
+          container.innerHTML = info;
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="wrapper"></div>
+    </div>
+  </body>
+</html>

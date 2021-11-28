@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="txt01">아이디 :</label>
+    <input id="txt01" type="text" size="50" / maxlength="20" name="글자입력폼 이름설정"
+    value="아이디를 입력하세요">
+    <!-- 
+      [폼문]
+      size : 글자 입력폼의 크기
+      size, maxlength : 입력할 수 있는 글자의 수
+      / 2가지의 속성을 지정하지 않으면 자동으로 20자 입력
+
+      name : 텍스트 상자의 이름을 입력하며, 화면상에는 나타나지 않으나 반드시 입력해야 한다.(개발자가 읽는 부분)
+      value : 텍스트 상자 안에 처음부터 내용이 보이게 하려면 value 안에 원하는 텍스트를 입력하면 된다.
+    -->
+
+    <!-- 비밀번호 입력창 -->
+    <label for="txt01">비밀번호 :</label>
+    <input id="txt01" type="password" / size="50">
+
+    <br><br><br><br><br>
+      <!-- 여러줄 입력 -->
+      <!--
+      rows = "20줄"
+      cols = "50줄"    
+      ------------------->
+    <textarea rows="30" cols="50" /></textarea>
+
+    <br><br><br>
+    <!-- 체크박스(다중 선택시 사용) -->
+    <label for="txt02">선택1(중복가능)</label><br>
+    <input id="txt02" type="checkbox">산 <input id="txt02" type="checkbox"> 바다<input id="txt02" type="checkbox"> 들판
+  
+    <br><br><br>
+    <!-- 체크박스(단일 선택시 사용) -->
+    <label for="txt03">선택2(중복불가)</label><br>
+    <input id="txt03" type="radio" name="color">빨강 <input id="txt03" type="radio" name="color">파랑 <input id="txt03" type="radio" name="color">초록
+    <!-- radio 버튼은 하나만 선택할때 사용 여러개중 하나만 선택이 되려면 name을 통일해서 입력 -->
+    <br><br><br>
+
+    <input type="submit" value="전송하기"><!-- 기본값 = "제출"-->
+    
+    <!-- 입력값 초기화 -->
+    <input type="reset"  value="다시입력">
+
+    <!-- 일반 버튼(기능X) -->
+    <input type="button" value="버튼">
+    <br><br><br>
+
+    <!-- select문 -->
+    <!-- 누르면 option안에 입력한 내용이 전부 나타난다. -->
+    <select>
+      <option>부산진구1</option>
+      <option>부산진구2</option>
+      <option>부산진구3</option>
+      <option>부산진구4</option>
+      <option>부산진구5</option>
+      <option>부산진구6</option>
+      <option>부산진구7</option>
+    </select>
+  
+    <br><br><br>
+    <button>button</button>
+
+  </body>
+</html>

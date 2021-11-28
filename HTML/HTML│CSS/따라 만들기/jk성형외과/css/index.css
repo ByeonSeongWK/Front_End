@@ -1,0 +1,411 @@
+@charset "utf-8";
+#wrap {
+  width: 100%;
+}
+
+/* 상단 부분 */
+#header {
+  float: left;
+  width: 100%;
+}
+/* 
+h_top를 클래스로 선언했을때
+: #header .h_top{}
+아이디로 선언했을때
+: #h_top{} (바로 선언가능)
+*/
+/* 상단 메뉴 */
+#h_top {
+  margin: 0 auto;
+  width: 1100px;
+  height: 90px;
+  position: relative;
+}
+#h_top .logo {
+  float: left;
+}
+#h_top .info_mn {
+  float: left;
+  margin: 14px 0 0 64px;
+}
+#h_top .info_mn li {
+  /* 글자를 가로로 배치 */
+  float: left;
+  margin-right: 10px;
+}
+
+#h_top .info_mn li a {
+  font-size: 11px;
+}
+#h_top .q_mn {
+  float: left;
+  position: absolute;
+  top: 40px;
+  left: 200px;
+}
+#h_top .q_mn > li {
+  float: left;
+  margin-right: 14px;
+}
+#h_top .q_mn > li > a {
+  font-size: 16px;
+}
+#h_top .lang {
+  float: right;
+  margin: 10px 10px 0 0;
+}
+#h_top .notice {
+  position: absolute;
+  top: 40px;
+  right: 10px;
+}
+
+#h_top .notice > li {
+  float: left;
+  font-size: 11px;
+}
+#h_top .notice > li:last-child {
+  color: burlywood;
+}
+
+#h_top .notice > li:first-child::after {
+  color: black;
+  content: "|";
+  font-size: 10px;
+  display: inline-block;
+  padding: 0 10px;
+}
+/* 주메뉴 */
+#h_nav {
+  float: left;
+  width: 100%;
+  height: 40px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+#h_nav > ul {
+  margin: 0 auto;
+
+  width: 1100px;
+}
+#h_nav > ul > li {
+  float: left;
+  width: 137.5px;
+  height: 40px;
+  border-right: 1px solid #ccc;
+  /* border px값 포함해서 나눌시. */
+  box-sizing: border-box;
+  /* 박스안 글자 가운데 배치 */
+  text-align: center;
+  line-height: 40px;
+}
+#h_nav > ul > li:first-child {
+  border-left: 1px solid #ccc;
+}
+/*
+ 버튼 전체를 버튼으로 바꾸는 방법
+(원래는 a 태그를 써서 글자만 버튼임.)
+*/
+#h_nav > ul a {
+  display: block;
+  /* 마우스 내릴 시 */
+  transition: 0.3s;
+}
+#h_nav > ul a:hover {
+  background-color: beige;
+  /* 마우스 올릴 시 */
+  transition: 0.5s;
+}
+
+#h_bott {
+  float: left;
+  width: 100%;
+  height: 135px;
+  background: url(../images/bg_main_slogan.jpg) no-repeat 50% 0;
+}
+
+/* 메인 이미지 */
+#main_img {
+  float: left;
+  width: 100%;
+  height: 550px;
+  background: url(../images/main1.png) no-repeat 50% 0;
+}
+
+/* 컨텐츠 부분 */
+#contents {
+  float: left;
+  width: 100%;
+}
+#contents img {
+  float: left;
+}
+#contents > .inner {
+  margin: 0 auto;
+  width: 1100px;
+}
+#contents > .inner > article {
+  float: left;
+}
+
+/* 컨텐츠 상단 */
+#contents .about {
+  width: 275px;
+  height: 355px;
+}
+#contents .event {
+  width: 275px;
+  height: 355px;
+}
+#contents .move {
+  width: 550px;
+  height: 355px;
+}
+
+/* 컨텐츠 중간 */
+#contents .docs {
+  width: 275px;
+  height: 710px;
+}
+#contents .photo {
+  width: 548px;
+  /* width : 550px; */
+  height: 710px;
+}
+
+#contents .photo .box {
+  float: left;
+  width: 137px;
+  height: 142px;
+  position: relative;
+  /* 마우스 오버시 손가락 모양으로 변경 */
+  cursor: pointer;
+}
+#contents .photo .box:hover .in_box {
+  opacity: 0.7;
+  transition: 0.7s;
+}
+
+#contents .photo .in_box {
+  /* 위 값에서 border값을 빼줬다. */
+  width: 133px;
+  height: 138px;
+  border: 2px solid red;
+  /* 벗어나지 않게 */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  opacity: 0;
+}
+#contents .photo .in_box > p {
+  margin-top: 55px;
+  text-align: center;
+  background-color: antiquewhite;
+  padding: 5px 0;
+}
+
+#contents .photo .box img {
+  float: left;
+}
+
+#contents .photo_t {
+  width: 550px;
+  height: 280px;
+}
+
+#contents .photo_h {
+  width: 550px;
+  height: 145px;
+  background-color: #333;
+  color: white;
+}
+#contents .photo_h > .tt1 {
+  font-size: 30px;
+  font-weight: 800;
+  text-align: center;
+  padding: 25px 0;
+}
+#contents .photo_h > .menu {
+  width: 480px;
+  margin: 0 auto;
+  height: 30px;
+  border: 1px solid #666;
+}
+#contents .photo_h > .menu > li {
+  float: left;
+  width: 120px;
+  text-align: center;
+  line-height: 30px;
+  border-left: 1px solid #666;
+  box-sizing: border-box;
+}
+#contents .photo_h > .menu > li:first-child {
+  background-color: burlywood;
+  border-left: 0;
+}
+#contents .photo_h > .menu a {
+  font-size: 13px;
+  color: white;
+  /* 마우스 올릴시 버튼 전체 클릭 가능하게
+      a에 display: block; 설정 */
+  display: block;
+  transition: 0.3s;
+}
+
+#contents .photo_h > ul a:hover {
+  background-color: darkorange;
+  transition: 0.5s;
+}
+#contents .photo_b {
+  width: 550px;
+  height: 280px;
+}
+
+#contents .story {
+  width: 275px;
+  height: 710px;
+}
+
+/* 컨텐츠 하단 */
+#contents .news {
+  float: left;
+  width: 350px;
+  height: 215px;
+  margin: 35px 0;
+  border-right: 1px solid gainsboro;
+}
+#contents .news_h {
+  float: left;
+  margin: 15px 0;
+}
+#contents .news_1 {
+  float: left;
+}
+#contents .news .news_1 li {
+  border-bottom: 1px dotted gainsboro;
+  padding: 9px 0;
+  font-size: 14px;
+}
+#contents .news .news_1 li p {
+  font-size: 12px;
+}
+#contents .help_desk {
+  float: left;
+  width: 355px;
+  height: 215px;
+  margin: 25px 25px;
+  border-right: 1px solid gainsboro;
+}
+#call_c {
+  padding: 15px 0 35px 0;
+}
+#contents .location {
+  margin-top: 20px;
+}
+
+#map {
+  padding: 10px 0 40px 0;
+}
+
+/* 하단 부분 */
+#footer {
+  float: left;
+  width: 100%;
+}
+#footer .f_sns {
+  width: 100%;
+  height: 42px;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+}
+#footer .f_sns_in {
+  margin: 0 auto;
+  width: 1100px;
+  height: 42px;
+  background-color: antiquewhite;
+}
+#footer .f_sns .info_mn {
+  float: left;
+}
+#footer .info_mn li {
+  float: left;
+  margin-right: 20px;
+  line-height: 41px;
+}
+#footer .info_mn a {
+  font-size: 13px;
+}
+#footer .f_sns .sns_mn {
+  float: right;
+}
+#footer .f_sns .sns_mn li {
+  float: left;
+  border-right: 1px solid #666;
+}
+#footer .f_sns .sns_mn li:nth-child(1) {
+  border-left: 1px solid #666;
+}
+#footer .f_sns .sns_mn li img {
+}
+
+#footer .f_all_mn {
+  width: 100%;
+  height: 570px;
+  background: rgba(51, 51, 51, 0.2);
+}
+#footer .f_all_mn_in {
+  margin: 0 auto;
+  width: 1100px;
+  height: 570px;
+}
+
+#footer .f_all_mn_in .all_mn {
+  float: left;
+  margin: 38px 0 0 70px;
+}
+#footer .f_all_mn_in .all_mn > li {
+  float: left;
+  margin-right: 50px;
+}
+#footer .f_all_mn_in .sub_mn {
+}
+#footer .f_all_mn_in .sub_mn > li {
+  text-align: center;
+}
+#footer .f_all_mn_in .sub_mn > li:nth-child(1) {
+  margin-bottom: 20px;
+}
+#footer .f_all_mn_in h4 {
+  font-size: 16px;
+  color: #333;
+}
+#footer .f_all_mn_in a {
+  font-size: 13px;
+}
+#footer .f_all_mn_in .all_mn2 {
+  clear: both;
+  float: left;
+}
+
+#footer .f_copy {
+  margin: 0 auto;
+  width: 1100px;
+  height: 145px;
+  background-color: aqua;
+}
+
+#footer .f_copy .address {
+  float: left;
+  width: 500px;
+  height: 120px;
+  border: 1px solid #666;
+  font-size: 30px;
+  /* address가 자동으로 글자 기울림때문에
+     normal로 바꿔야 일반 글자체가 된다. */
+  font-style: normal;
+}
+#footer .f_copy .f_site {
+  float: right;
+  margin: 39px 55px 0 0;
+}

@@ -1,0 +1,25 @@
+2021-09-13
+───────────────────────────────────────────────────────────────────────────────────────────────────────────
+border-style-top:solid;
+border-style-right:dotted;
+border-style-bottom:double;
+border-style-left:dashed;
+
+border-width-top:10px;
+border-width-right:20px;
+border-width-bottom:5px;
+border-width-left:8px;
+
+border-color-top:#000000;
+border-color-right:blue;
+border-color-bottom:#ff0000;
+border-color-left:skyblue;
+
+- 나눠서 적용할때
+border-top:1px solid #000
+border-right:1px solid #000
+border-bottom:1px solid #000
+border-left:1px solid #000
+
+- 한번에 적용할때
+border: 1px solid #000;

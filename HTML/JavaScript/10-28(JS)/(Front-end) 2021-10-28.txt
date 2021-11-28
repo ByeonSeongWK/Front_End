@@ -1,0 +1,37 @@
+<style>
+    @media screen and (orientation: landscape) {
+      body {
+        background: #fcb354;
+      }
+      #landscape {
+        display: block;
+      }
+    }
+    @media screen and (orientation: portrait) {
+      body {
+        background: #24bbaf;
+      }
+      #portrait {
+        display: block;
+      }
+    }
+  </style>
+
+  미디어 특정 방향 지정
+  direction
+  ───────────────────────────────────────────────────────────────────
+  click은 단 하나만 선택
+  <li><a href="#"></a></li>
+  상태일때 click은 a를 선택
+
+  덩어리로 묶을때는 hover 등
+  밖에 따로 빼둘꺼는 mouseleave 영역 
+
+  find, next 자식 요소 선택자
+
+css는 초기값
+
+setInterval() {함수}, 시간);
+  
+
+

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<title>mobile example</title>
+<meta name="description" content="" />
+<meta name="author" content="THINKER" />
+<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="stylesheet" href="css/default.css"/>
+<style>
+body, div {
+	margin: 0;
+	background: #eaeae;
+}
+h1 {
+	margin: 0;
+	padding: 0;
+}
+/* 바뀌지 않는 정보 */
+#wrapper {
+	position: relative;
+	margin: 0 auto;
+	background: #666;
+}
+#resolution {
+	border: none;
+}
+#wrapper div {
+	width: 300px;
+	height: 300px;
+	text-indent: 5px;
+	background: #fff;
+	color: #666;
+}
+
+/* 기본 media query */
+/* 가로 방향의 모바일 페이지 구조 */
+@media screen and (orientation: landscape) {
+	#wrapper {
+		width: 940px;
+		height: 500px;
+	}
+	#wrapper #box1 {
+		display: block;
+		position: absolute;
+		left: 10px;
+		top: 10px;
+		z-index: 1;
+		margin: 0;
+	}
+	#wrapper #box2 {
+		display: block;
+		position: absolute;
+		left: 320px;
+		top: 10px;
+		z-index: 2;
+		margin: 0;
+	}
+	#wrapper #box3 {
+		display: block;
+		position: absolute;
+		left: 630px;
+		top: 10px;
+		z-index: 3;
+		margin: 0;
+	}
+	#wrapper h1 {
+		font-size: 150%;
+	}
+}
+/*
+세로 방향의 모바일 페이지 구조, 현재의 브라우저 상의 크기는 588px
+@media screen and (orientation: portrait) {
+	#wrapper {
+		display: block;
+		padding-top: 10px;
+		width: 98%;
+		height: 980px;
+	}
+	#wrapper #box1 {
+		display: block;
+		position: static;
+		margin: 0 auto;
+		margin-bottom: 10px;
+	}
+	#wrapper #box2 {
+		display: block;
+		position: static;
+		margin: 0 auto;
+		margin-bottom: 10px;
+	}
+	#wrapper #box3 {
+		display: block;
+		position: static;
+		margin: 0 auto;
+		margin-bottom: 10px;
+	}
+	#wrapper h1 {
+		font-size: 150%;
+	}
+}
+*/
+/* 현재의 브라우저 상의 크기는 950px */
+@media screen and (max-width: 950px) {
+	#wrapper {
+		display: block;
+		padding-top: 10px;
+		width: 630px;
+		height: 500px;
+	}
+	#wrapper #box1 {
+		display: block;
+		position: absolute;
+		left: 10px;
+		top: 10px;
+		z-index: 1;
+		margin: 0;
+	}
+	#wrapper #box2 {
+		display: block;
+		position: absolute;
+		left: 320px;
+		top: 10px;
+		z-index: 2;
+		margin: 0;
+	}
+	#wrapper #box3 {
+		display: none;
+	}
+	#wrapper h1 {
+		font-size: 100%;
+	}
+}
+@media screen and (max-width: 650px) {
+	#wrapper {
+		display: block;
+		width: 330px;
+		height: 930px;
+	}
+	#wrapper #box1 {
+		display: block;
+		position: static;
+		margin: 0 auto;
+		margin-bottom: 10px;
+	}
+	#wrapper #box2 {
+		display: block;
+		position: static;
+		margin: 0 auto;
+		margin-bottom: 10px;
+	}
+	#wrapper #box3 {
+		display: block;
+		position: static;
+		margin: 0 auto;
+		margin-bottom: 10px;
+	}
+	#wrapper h1 {
+		font-size: 100%;
+	}
+}
+@media screen and (max-width: 350px) {
+	#wrapper {
+		display: block;
+		height: 930px;
+	}
+	#wrapper #box1 {
+		display: block;
+		position: static;
+		margin: 0 auto;
+		margin-bottom: 10px;
+	}
+	#wrapper #box2 {
+		display: block;
+		position: static;
+		margin: 0 auto;
+		margin-bottom: 10px;
+	}
+	#wrapper #box3 {
+		display: block;
+		position: static;
+		margin: 0 auto;
+		margin-bottom: 10px;
+	}
+}
+</style>
+
+<!-- 현재의 해상도를 얻는 자바스크립트 -->
+<script>
+window.onload=window.onresize=controlResizing;
+
+function controlResizing(){
+	var vn_screenx=window.innerWidth; // 화면 스크린 넓이
+	var vn_screeny=window.innerHeight; // 화면 스크린 높이
+	// console.log("화면 넓이 " +vn_screenx+", 화면 높이 "+vn_screeny);
+	var documentTxt=document.getElementById("resolution");
+	documentTxt.value="width "+vn_screenx+", height "+vn_screeny;
+}
+</script>
+</head>
+
+<body>
+<div id="wrapper">
+	<!-- relative div 하위에 abolute div -->
+	<div id="box1"><h1>box1</h1></div>
+	<div id="box2"><h1>box2</h1></div>
+	<div id="box3"><h1>box3</h1></div>
+</div>
+<br /><br />
+<form name="news">
+	<input type="text" id="resolution" value="width, height" />
+</form>
+</body>
+</html>

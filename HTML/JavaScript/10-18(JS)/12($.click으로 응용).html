@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>remove 메소드</title>
+    <style>
+      ul,
+      ol,
+      li {
+        list-style: none;
+      }
+      #wrap {
+        border: 3px dotted red;
+      }
+    </style>
+
+    <script src="js/jquery.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".deleteBtn").click(function () {
+          $(".list").remove();
+        });
+        $(".insertBtn").click(function () {
+          $("#wrap").prepend(
+            '<ul class="list"><li>3-1</li><li>3-2</li><li>3-3</li><li>3-4</li></ul>'
+          );
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <span>
+      remove()와 detach()와 메서드의 차이 remove()의 경우 엘리먼트를 삭제 하면
+      바인딩된 이벤트나 저장된 데이터가 메모리에서 삭제 된다. detach()의 경우
+      엘리먼트를 삭제하면 바인딩된 이벤트나 저장된 데이터가 남아 있어 해당
+      엘리먼트를 변수에 담았다가 다시 붙이면 이벤트와 데이터가 남아 있는 것을
+      불수 있다.
+    </span>
+    <br /><br />
+    <span> remove() : 요소를 없앤다. detach() : 요소를 숨긴다. </span>
+    <br /><br /><br />
+    <div id="wrap">
+      <ul class="list">
+        <li>3-1</li>
+        <li>3-2</li>
+        <li>3-3</li>
+        <li>3-4</li>
+      </ul>
+      <input type="button" class="deleteBtn" value="삭제하기" />
+      <input type="button" class="insertBtn" value="추가하기" />
+    </div>
+  </body>
+</html>

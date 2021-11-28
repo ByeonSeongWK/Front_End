@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouse Wheel Event</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #wrap > div {
+        width: 100%;
+        height: 700px;
+      }
+      #main {
+        background-color: aqua;
+      }
+      #about {
+        background-color: aquamarine;
+      }
+      #skill {
+        background-color: bisque;
+      }
+      #work1 {
+        background-color: blueviolet;
+      }
+      #work2 {
+        background-color: cornflowerblue;
+      }
+      #end_page {
+        background-color: cadetblue;
+      }
+    </style>
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <!-- mousewheel event jQuery를 넣어줘야 작동이 된다. -->
+    <script src="js/jquery.mousewheel.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script>
+      $(document).ready(function () {
+        // 높이가 화면에 맞춰진다.
+        var ht = $(window).height();
+        $("#wrap > div").height(ht);
+
+        // 화면 크기에 따라서 높이가 맞춰진다.
+        $(window).on("resize", function () {
+          var ht = $(window).height();
+          $("#wrap > div").height(ht);
+        });
+
+        $("#wrap > div").on("mousewheel", function (event, delta) {
+          //   // event, delta event는 이벤트를 의미 /  delta 이벤트의 발생여부 즉 상태를 저장
+          //   if (delta > 0) {
+          //     var prev = $(this).prev().offset().top; // 현재 위치한 div를 기준으로 이전 div
+          //     $("html, body")
+          //       .stop()
+          //       .animate({ scrollTop: prev }, 1000, "easeOutExpo");
+          //   } else if (dleta < 0) {
+          //     var next = $(this).next().offset().top; // 현재 위치한 div를 기준으로 다음 div
+          //     $("html, body")
+          //       .stop()
+          //       .animate({ scrollTop: next }, 1000, "easeOutExpo");
+          //   }
+          if (delta > 0) {
+            var prev = $(this).prev().offset().top;
+            $("html, body")
+              .stop()
+              .animate({ scrollTop: prev }, 1000, "easeOutExpo");
+          } else if (delta < 0) {
+            var next = $(this).next().offset().top;
+            $("html, body")
+              .stop()
+              .animate({ scrollTop: next }, 1000, "easeOutExpo");
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="main"></div>
+      <div id="about"></div>
+      <div id="skill"></div>
+      <div id="work1"></div>
+      <div id="work2"></div>
+      <div id="end_page"></div>
+    </div>
+  </body>
+</html>

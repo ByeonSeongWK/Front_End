@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>resize</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #wrapper {
+        border: 5px solid blue;
+        padding: 30px;
+        margin: 20px;
+        font-size: 20px;
+      }
+    </style>
+
+    <script src="js/jquery.js"></script>
+    <script>
+      $(document).ready(function () {
+        var box = $("#wrapper");
+        $(window).resize(function () {
+          $("#width").text(box.width());
+          $("#height").text(box.height());
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <span>
+      브라우저 창의 크기를 변경해 보고 박스의 크기가 각 메서드에 따라 어떻게
+      다른지 확인해보세요.
+    </span>
+    <div id="wrapper">
+      <span>박스의 width = </span><span id="width">0</span><br />
+      <span>박스의 height = </span><span id="height">0</span><br />
+    </div>
+  </body>
+</html>

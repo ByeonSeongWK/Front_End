@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>요소 중 인덱스 번호 뽑기(.index)</title>
+    <script src="../js/jquery.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        // 인덱스 번호 순서(n-1) // (프로그램적인 부분에서 순서)
+        var el = $("#wrapper .el");
+        var n = el.index();
+        alert("<li>4 는 : " + n + "번 인덱스 입니다.");
+      });
+    </script>
+  </head>
+  <body>
+    <span>
+      .eq() 메소드로 요소 하나만 수정해보기. eq()는 몇 번째라는 의미를 부여 하는
+      메소드이다.
+    </span>
+    <div id="wrapper">
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li class="el">4(index 번호 는?)</li>
+        <li>5</li>
+        <li>6</li>
+      </ul>
+    </div>
+  </body>
+</html>

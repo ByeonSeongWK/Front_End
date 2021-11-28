@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>함수 03</title>
+    <script>
+      "use strict";
+      // 익명 함수(이름이 없다)
+      // 필요할때마다 호출/즉시 실행`
+      // const hello1 = function () {};
+
+      // 화살표 함수
+      const hello1 = () => console.log("안녕하세요... 자바스크립트");
+
+      const hello2 = (x, y) =>
+        console.log(
+          `안녕하세요, 매개변수로 전달 받은 x의 값은 ${x}이고, y의 값은 ${y}입니다.`
+        );
+
+      const hello3 = (start, end) => {
+        let sum = 0;
+        for (let i = start; i <= end; i++) {
+          console.log("안녕하세요. JavaScript");
+          sum += i;
+        }
+        return sum;
+      };
+    </script>
+  </head>
+  <body>
+    <script>
+      "use strict";
+      hello1();
+      hello2(5, 3);
+      const result = hello3(1, 5);
+      console.log(result);
+
+      const age = Number(prompt("나이를 입력하세요."));
+
+      let isAdult =
+        age > 18 ? () => alert("성인입니다.") : () => alert("청소년입니다.");
+      isAdult();
+    </script>
+  </body>
+</html>

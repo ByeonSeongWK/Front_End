@@ -1,0 +1,59 @@
+<!document html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>border-radius</title>
+    <style>
+      .box01 {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(204, 204, 204);
+        border-radius: 50px 0;
+        margin-bottom: 10px;
+      }
+      .box02 {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(204, 204, 204);
+        border-radius: 100px 0;
+        margin-bottom: 10px;
+      }
+      .box03 {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(204, 204, 204);
+        border-radius: 100px 10px 10px 10px;
+        margin-bottom: 10px;
+      }
+      .box04 {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(204, 204, 204);
+        border-radius: 300px 10px 10px 10px;
+        margin-bottom: 10px;
+      }
+      .box05 {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(204, 204, 204);
+        border-radius: 0px 0px 0px 0px;
+        margin-bottom: 10px;
+        /* 시간을 주는것 */
+        transition: 1s;
+      }
+      /* 마우스를 올렸을때 아래처럼 모양이 바뀐다. */
+      .box05:hover {
+        border-radius: 50px 30px 20px 10px;
+        /* 모양이 바뀌는 시간을 주는 것 transition */
+        transition: 1s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box01"></div>
+    <div class="box02"></div>
+    <div class="box03"></div>
+    <div class="box04"></div>
+    <div class="box05"></div>
+  </body>
+</html>

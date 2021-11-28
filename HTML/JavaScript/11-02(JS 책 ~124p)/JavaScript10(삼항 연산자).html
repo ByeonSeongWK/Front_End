@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>삼항 연산자</title>
+  </head>
+  <body>
+    <script>
+      "use strict";
+      // 삼항 연산자
+      const num1 = Number(prompt("첫 번째 숫자를 입력하세요."));
+      const num2 = Number(prompt("두 번째 숫자를 입력하세요."));
+
+      const result = num1 > num2 ? num1 : num2;
+      console.log(`둘 중에 더 큰 수는 : ${result} 입니다.`);
+
+      // 화살표 연산자
+      // (조건) => {실행문}
+    </script>
+    <!--
+        삼항 연산자
+        ㆍ조건식에 따른 참, 거짓에 따라 반환값이 달라지는 연산
+                              true    false
+                              -----   -----
+        변수(상수) = 조건식 ? 결과1 : 결과2
+                     ------
+                true 또는 false
+                ㆍ조건식이 참이면 결과1 실행
+                ㆍ조건식이 거짓이면 결과2 실행
+
+        const 변수1;
+        const 변수2;
+        
+        const movie = 변수1 > 변수2 ? 참일때 실행문 : 거짓일때 실행문
+                        if(조건){}                  else{}
+    -->
+  </body>
+</html>

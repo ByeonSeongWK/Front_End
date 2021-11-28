@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>조건문 switch Ex01</title>
+    <script>
+      var a, b, c, op;
+
+      a = prompt("값1을 입력하세요");
+      op = prompt("연산자를 선택하세요.");
+      b = prompt("값2을 입력하세요");
+
+      // prompt는 문자열로 입력 받기 때문에
+      // 형변환을 parseInt()로 변환해줘야 한다.(그래야 연산이 된다.)
+      a = parseInt(a);
+      b = parseInt(b);
+
+      // 산술연산자를 이용한 계산기 만들어보기
+      switch (op) {
+        case "+":
+          c = a + b;
+          document.write("더하기를 선택하셨습니다.<br>값은 : " + c);
+          break;
+
+        case "-":
+          c = a - b;
+          document.write("빼기를 선택하셨습니다.<br>값은 : " + c);
+          break;
+
+        case "*":
+          c = a * b;
+          document.write("곱하기를 선택하셨습니다.<br>값은 : " + c);
+          break;
+
+        case "/":
+          c = a / b;
+          document.write("나누기를 선택하셨습니다.<br>값은 : " + c);
+          break;
+
+        case "%":
+          c = a % b;
+          document.write("나머지를 선택하셨습니다.<br>값은 : " + c);
+          break;
+
+        default:
+          document.write("값을 잘못 입력하셨습니다.");
+      }
+    </script>
+  </head>
+  <body>
+    <!-- 
+          [조건문_switch문]
+
+          switch(변수 또는 수식) {
+            case 값1:
+                    수행문장1;
+                    break;
+            case 값2:
+                    수행문장2;
+                    break;
+            case 값3:
+                    수행문장3;
+                    break;
+            case 값4:
+                    수행문장4;
+                    break;    
+            case 값5:
+                    수행문장5;
+                    break;     
+            default:
+                    수행문장6; <── 동일값 없을시 실행                       
+          }
+          ㆍbreak를 만날시 중괄호 탈출
+          ㆍbreak가 없으면 아래 case값까지 실행(break를 만날때까지)
+        -->
+  </body>
+</html>

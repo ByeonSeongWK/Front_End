@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반복문_while문</title>
+    <script>
+      document.write("──while문──<br>");
+
+      var i = 1;
+      while (i <= 5) {
+        document.write("Nice!" + "<br>");
+        i += 1;
+      }
+
+      document.write("─do~while문─<br>");
+
+      var j = 1;
+      do {
+        document.write("Nice!" + "<br>");
+        j += 1;
+      } while (j <= 5);
+
+      document.write("──────문제──────<br>");
+
+      var k = 10;
+      do {
+        document.write(k + "<br>");
+        k--;
+      } while (k >= 1);
+
+      document.write("──────문제2─────<br>");
+
+      var k1 = 1;
+      var sum = 0;
+      do {
+        document.write(k1 + "<br>");
+        sum += k1;
+        k1 += 2;
+      } while (k1 <= 10);
+      document.write("<br>총합은 : " + sum);
+    </script>
+  </head>
+  <body>
+    <!--─────────────────────────────────────
+        while 문
+    ─────────────────────────────────────────
+        while(조건) {
+            실행문
+        }
+    ─────────────────────────────────────────
+        do ~ while 문
+    ─────────────────────────────────────────
+        do {
+            실행문
+        } while(조건);
+    ─────────────────────────────────────────
+    while문 do-while문 차이는 조건을 물어보고
+    실행하느냐 실행하고 물어보느냐의 차이다.
+    ────────────────────────────────────-->
+  </body>
+</html>

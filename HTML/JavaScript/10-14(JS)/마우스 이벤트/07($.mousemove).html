@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mousemove 마우스 이벤트</title>
+    <script src="../js/jquery.js"></script>
+    <!--head에 script를 넣으면 자동실행!-->
+    <script>
+      $(document).ready(function () {
+        //                                ↓
+        $(document).mousemove(function (event) {
+          // function (event)에서 event란 mousemove가 작동된 상태를 하나의 객체로 설정.
+          $("span").text(
+            // text() $(대상).text()라고 한다면 대상 안에 어떤값을 글자로 표현
+
+            // 움직이는 이벤트를 X, Y값을 span에 text로 나타내라.
+            "X값 : " + event.pageX + "," + " Y값 : " + event.pageY
+            // pageX 현재 페이지의 좌표값 x를 의미, pageY 현재 페이지의 좌표값 Y를 의미
+          );
+        });
+      });
+    </script>
+    <style>
+      p {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <p>마우스 좌표는 : <span></span>.</p>
+  </body>
+</html>

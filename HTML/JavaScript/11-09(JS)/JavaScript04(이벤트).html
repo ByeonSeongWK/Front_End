@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이벤트</title>
+    <script>
+      var myFn = function () {
+        var area = document.getElementById("demo");
+        area.innerHTML = "Hello JavaScript!!";
+      };
+      // 페이지를 읽어들이고 시작
+      //   window.onload = function () {
+      //     // console.log("load event!!");
+      //     var button = document.getElementById("call");
+      //     button.onclick = function () {
+      //       console.log("Hello JavaScript!!");
+      //     };
+      //   };
+      // 위의 주석 방법이랑 같다.
+
+      window.addEventListener("load", function () {
+        // addEventListener는 익스플로어 9 안먹힘
+        var button = document.getElementById("call");
+        button.addEventListener("click", function () {
+          console.log("Hello JavaScript!!");
+        });
+      });
+      // 콜백 함수는 대입 형식의 함수이며
+      //  이 타입의 이벤트를 지양하는 이유는 중복된 이벤트의 실행이 되지 않기 때문.
+    </script>
+  </head>
+
+  <body>
+    <h1 class="title">basic :: JavaScript node access</h1>
+    <div class="container">
+      <button id="call">event call</button>
+      <textarea id="demo" class="note"> </textarea>
+    </div>
+  </body>
+</html>

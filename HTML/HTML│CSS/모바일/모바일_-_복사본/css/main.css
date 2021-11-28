@@ -1,0 +1,96 @@
+@charset "utf-8";
+/* CSS Document */
+#wrap {
+  width: 100%;
+}
+#header {
+  float: left;
+  position: relative;
+  width: 100%;
+  height: 100px;
+}
+#header .all_mn {
+  float: left;
+  margin: 20px 0 0 10px;
+}
+#header .logo {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  margin-left: -125px;
+}
+#header .search {
+  float: right;
+  margin: 30px 10px 0 0;
+}
+
+#main_img {
+  float: left;
+  width: 100%;
+}
+#main_img > img {
+  float: left;
+  width: 100%;
+}
+
+#main_nav {
+  float: left;
+  width: 100%;
+}
+#main_nav li {
+  float: left;
+  width: 20%;
+}
+#main_nav li img {
+  width: 100%;
+}
+
+#sub_mn {
+  float: left;
+  width: 100%;
+}
+#sub_mn .sub_top {
+  border-bottom: 1px solid #ccc;
+}
+#sub_mn ul {
+  float: left;
+  width: 100%;
+}
+#sub_mn li {
+  float: left;
+  width: 20%;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-right: 1px solid #ccc;
+  box-sizing: border-box;
+}
+#sub_mn li:last-child {
+  border-right: 0;
+}
+#sub_mn a {
+  display: block;
+  font-size: 14px;
+  color: #333;
+}
+#sub_mn a:hover {
+  background-color: #ff9900;
+  color: #fff;
+  transition: 0.5s;
+}
+
+#banner {
+  float: left;
+  width: 100%;
+}
+#banner li {
+  float: left;
+  width: 33%;
+  margin-right: 0.5%;
+}
+#banner li:last-child {
+  margin-right: 0;
+}
+#banner li img {
+  width: 100%;
+}

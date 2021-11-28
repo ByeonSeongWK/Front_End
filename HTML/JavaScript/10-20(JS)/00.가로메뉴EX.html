@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가로메뉴 만들기</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      li,
+      ol,
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      .nav {
+        margin: 0 auto;
+        margin-top: 50px;
+        width: 600px;
+        height: 30px;
+      }
+      .nav > ul > li {
+        float: left;
+        width: 19.6%;
+        height: 30px;
+        background-color: darkgray;
+        text-align: center;
+        line-height: 1.8em;
+        border: 1px solid beige;
+        position: relative;
+      }
+
+      .nav > ul > li:hover {
+        font-weight: bold;
+        background-color: bisque;
+      }
+      .nav > ul > li > a {
+        display: block;
+        color: #fff;
+      }
+      .nav > ul > li:hover a {
+        color: #333;
+      }
+
+      .submm {
+        position: absolute;
+        top: 30px;
+        left: 0px;
+        width: 100%;
+      }
+
+      .submm > li {
+        width: 100%;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        /* display: none; */
+      }
+      .submm > li:hover {
+        background-color: cornflowerblue;
+        font-size: 18px;
+      }
+    </style>
+    <script src="js/jquery.js"></script>
+  </head>
+  <body>
+    <nav class="nav">
+      <ul class="mainmm">
+        <li>
+          <!-- 네비 주 메뉴 -->
+          <a href="#">menu1</a>
+          <!-- 네비 부 메뉴 -->
+          <ul class="submm">
+            <li>
+              <a href="#">menu1-1</a>
+            </li>
+            <li>
+              <a href="#">menu1-2</a>
+            </li>
+            <li>
+              <a href="#">menu1-3</a>
+            </li>
+            <li>
+              <a href="#">menu1-4</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <!-- 네비 주 메뉴 -->
+          <a href="#">menu2</a>
+          <!-- 네비 부 메뉴 -->
+          <ul class="submm">
+            <li>
+              <a href="#">menu2-1</a>
+            </li>
+            <li>
+              <a href="#">menu2-2</a>
+            </li>
+            <li>
+              <a href="#">menu2-3</a>
+            </li>
+            <li>
+              <a href="#">menu2-4</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <!-- 네비 주 메뉴 -->
+          <a href="#">menu3</a>
+          <!-- 네비 부 메뉴 -->
+          <ul class="submm">
+            <li>
+              <a href="#">menu3-1</a>
+            </li>
+            <li>
+              <a href="#">menu3-2</a>
+            </li>
+            <li>
+              <a href="#">menu3-3</a>
+            </li>
+            <li>
+              <a href="#">menu3-4</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <!-- 네비 주 메뉴 -->
+          <a href="#">menu4</a>
+          <!-- 네비 부 메뉴 -->
+          <ul class="submm">
+            <li>
+              <a href="#">menu4-1</a>
+            </li>
+            <li>
+              <a href="#">menu4-2</a>
+            </li>
+            <li>
+              <a href="#">menu4-3</a>
+            </li>
+            <li>
+              <a href="#">menu4-4</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <!-- 네비 주 메뉴 -->
+          <a href="#">menu5</a>
+          <!-- 네비 부 메뉴 -->
+          <ul class="submm">
+            <li>
+              <a href="#">menu5-1</a>
+            </li>
+            <li>
+              <a href="#">menu5-2</a>
+            </li>
+            <li>
+              <a href="#">menu5-3</a>
+            </li>
+            <li>
+              <a href="#">menu5-4</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <script>
+      $(document).ready(function () {
+        $(".submm").css({ display: "none" });
+
+        $(".mainmm > li").hover(
+          function () {
+            $(this).find(".submm").slideDown(500);
+          },
+          function () {
+            // .submm이 만약에 css특성이 displat: block이면 숨겨라 반복
+            $(".submm").each(function () {
+              if ($(this).css({ display: "block" })) {
+                // == .show()
+                $(this).hide(); // == displat : none
+              }
+            });
+          }
+        );
+      });
+    </script>
+  </body>
+</html>

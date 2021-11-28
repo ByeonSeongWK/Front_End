@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>슬라이딩갤러리</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul,
+      ol,
+      li {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      #slider {
+        margin: 0 auto;
+        position: relative;
+
+        width: 600px;
+        height: 350px;
+        background: #fff;
+        border: 2px solid #fdf6dd;
+      }
+      #viewer {
+        width: 100%;
+        height: 350px;
+        position: relative;
+        overflow: hidden;
+      }
+      #viewer ul {
+        width: 100%;
+        position: absolute;
+      }
+      #viewer li {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 350px;
+      }
+      #viewer li.img1 {
+        left: 0;
+        background-color: red;
+      }
+      #viewer li.img2 {
+        left: 600px;
+        background-color: orange;
+      }
+      #viewer li.img3 {
+        left: 1200px;
+        background-color: yellow;
+      }
+      #viewer li.img4 {
+        left: 1800px;
+        background-color: green;
+      }
+
+      .btns {
+        position: absolute;
+        right: 0;
+        bottom: 2%;
+      }
+      .btns li {
+        float: left;
+        margin-right: 6px;
+        width: 16px;
+        height: 16px;
+        list-style: none;
+        background: #60f;
+        cursor: pointer;
+      }
+      .btns li a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        line-height: 1;
+        text-align: center;
+        background-color: #fdf6dd;
+        color: #000;
+      }
+      .btns li a:hover {
+        background: #cf0;
+      }
+      .btns li a.act {
+        background: #05184d;
+        color: #fff;
+      }
+      #prev {
+        position: absolute;
+        left: 5px;
+        bottom: 5px;
+        width: 80px;
+      }
+      #next {
+        position: absolute;
+        left: 87px;
+        bottom: 5px;
+        width: 80px;
+      }
+    </style>
+  </head>
+  <!--  -->
+  <body>
+    <div id="slider">
+      <div id="viewer">
+        <ul>
+          <li class="img1">img1</li>
+          <li class="img2">img2</li>
+          <li class="img3">img3</li>
+          <li class="img4">img4</li>
+        </ul>
+      </div>
+      <ul class="btns">
+        <li><a href="">1</a></li>
+        <li><a href="">2</a></li>
+        <li><a href="">3</a></li>
+        <li><a href="">4</a></li>
+      </ul>
+      <button id="prev">previous</button>
+      <button id="next">next</button>
+    </div>
+
+    <script src="../js/jquery.js"></script>
+    <script>
+      var current = 0;
+      var n = 0;
+      $(".btns > li").click(function (e) {
+        // function (e) ← e는 매개변수이다.
+        // 매개변수를 발생하는 함수의 이벤트를 저장하는 변수
+        e.preventDefault(); // 이것이 없으면 화면이동이 안된다.
+        // ↑ a태그에 이벤트를 초기화를 시킨다. 제이쿼리에서는 최대한 안쓰는게 좋다(a태그를 어쩔 수 없이 쓰는 경우 사용)
+        n = $(this).index(); // 버튼에 따라서 0, 1, 2, 3 가 들어간다.
+        $(".btns > li > a").removeClass("act");
+        $(this).find("a").addClass("act");
+        slideTarget(n);
+      });
+      /****** prev 버튼 함수 ******/
+      $("#prev").click(function (e) {
+        e.preventDefault();
+
+        if (current > 0) {
+          current--;
+          slideTarget(current);
+        } else {
+          current = 3;
+          slideTarget(current);
+        }
+      });
+      /****** next 버튼 함수 ******/
+      $("#next").click(function (e) {
+        e.preventDefault();
+        if (current < 3) {
+          current++;
+          slideTarget(current);
+        } else {
+          current = 0;
+          slideTarget(current);
+        }
+      });
+      /****** 배경이 움직이게 하는 함수 ******/
+      function slideTarget(n) {
+        var pos = n * -600 + "px";
+        current = n;
+        $("#viewer ul").animate({ left: pos });
+
+        $(".btns > li > a").removeClass("act");
+        $(".btns > li").eq(n).find("a").addClass("act");
+      }
+      /***************************************/
+    </script>
+  </body>
+</html>

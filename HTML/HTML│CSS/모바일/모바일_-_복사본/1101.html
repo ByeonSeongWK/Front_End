@@ -1,0 +1,242 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+
+<style>
+*{ margin:0; padding:0;}
+body{margin:0; padding:0;
+       font-family:"맑은 고딕";
+	   font-size:12px; color:#333;
+}
+ul, li{ list-style:none;}
+
+
+
+#header{float:left; position:relative; width:100%; height:100px;}
+#header .all_btn{ float:left; margin-top:30px;}
+#header .logo{ position:absolute; top:25px; left:50%; margin-left:-125px;}
+#header .serch_btn{ float:right; margin-top:30px;}
+#main_img{ float:left; width:100%;}
+#main_img img{float:left; width:100%; height:auto;}
+
+#main_mn{float:left;width:100%;}
+#main_mn ul{width:100%;}
+#main_mn li{ float:left; width:20%;}
+#main_mn img{float:left; width:100%; height:auto;}
+
+#q_mn{float:left; width:100%; height:auto;}
+#q_mn ul{ float:left; width:100%; }
+#q_mn ul > li{ float:left; width:20%;  text-align:center;
+                   border-right:1px solid #666; box-sizing:border-box;
+				   border-bottom:1px solid #666;}
+#q_mn ul > li:last-child{border-right:0px;}
+#q_mn a{ display:block; font-size:10px; padding:8px 0px; background-color:#FFCC33;}	
+#q_mn .bottom li{border-bottom:0px; }	
+
+#banner{float:left; width:100%; background-color:#CC0000; }
+#banner a{float:left; width:32%; margin-right:2%; }
+#banner a:last-child{ margin-right:0;}
+#banner img{ width:100%; height:auto;}	
+
+#tabs{float:left; width:100%; }
+#tabs header{float:left; width:100%;  height:85px; text-align:center;}
+#tabs header h3{ font-size:13px; color:#000; font-weight:600; margin-top:30px;}
+
+#tabs section.tab_box{float:left; width:100%;  height:400px; background-color:#F90;}
+#tabs section.tab_box input{ display:none;}
+#tabs section.tab_box label{ float:left; width:25%; padding:5px 0; text-align:center;
+             font-size:12px; color:#993300; background-color:#666666;}
+#tabs section.tab_box article{float:left; width:100%; height:300px; display:none;}
+#tabs section.tab_box .box1{ background-color:#FF9933; }
+#tabs section.tab_box .box2{ background-color:#3C9; }
+#tabs section.tab_box .box3{ background-color:#0000FF;}
+#tabs section.tab_box .box4{ background-color:#FFFF00;}
+#tabs #tab1:checked ~ .box1,
+#tabs #tab2:checked ~ .box2,
+#tabs #tab3:checked ~ .box3,
+#tabs #tab4:checked ~ .box4 {
+	display: block;
+}
+
+#tabs footer{ float:left; width:100%;  height:100px; background-color:#FFCC00;}
+#tabs footer .btns{ margin:0 auto; margin-top:20px; width:125px; height:60px;}
+#tabs footer a:first-child{ margin-right:5px;}
+#tabs footer a{ float:left; display:block; width:60px; height:60px; background-color:#3300FF;}
+
+
+#arrivals{ float:left; width:100%; height:auto; background-color:#FF9900;}
+#arrivals header{float:left; width:100%; height:100px; text-align:center;}
+#arrivals header h3{ margin-top:30px; font-size:18px; color:#000;}
+#arrivals section{float:left; width:100%;  height:auto;  background-color:#FF3333;}
+
+#arrivals section figure{ float:left; width:33%;  height:auto; }
+#arrivals section figure img{width:100%; height:auto; }
+#arrivals section figure  h3{}
+
+#arrivals footer{float:left; width:100%; height:120px; text-align:center;}
+#arrivals footer div{ display:inline-block; border:1px solid #000; padding:2px; 
+                          margin-top:44px;}
+#arrivals footer a{ display:block; padding:10px 45px; 
+                        background-color:#666;
+						text-decoration:none; font-size:12px;}
+						
+#instar{float:left; width:100%; height:auto;}	
+#instar header{float:left; width:100%; height:80px; background-color:#3399CC;}	
+#instar header img{ float:left;}
+#instar header a{ float:right;}
+#instar div{ display:inline-block; margin:10px; padding:10px; border:1px solid #000;}	
+</style>
+</head>
+
+<body>
+<header id="header">
+<a href="" class="all_btn"><img src="images/all_mn.png" alt=""></a>
+<h1 class="logo"><img src="images/logo.png" alt=""></h1>
+<a href="" class="serch_btn"><img src="images/serch.png" alt=""></a>
+</header>
+
+<section id="main_img">
+<img src="images/mainimg.PNG" alt="">
+</section>
+
+<nav id="main_mn">
+<ul>
+    <li><a href=""><img src="images/nav_01.jpg" alt=""></a></li>
+    <li><a href=""><img src="images/nav_02.jpg" alt=""></a></li>
+    <li><a href=""><img src="images/nav_03.jpg" alt=""></a></li>
+    <li><a href=""><img src="images/nav_04.jpg" alt=""></a></li>
+    <li><a href=""><img src="images/nav_05.png" alt=""></a></li>
+</ul>
+</nav>
+<section id="q_mn">
+ <ul class="top">
+  <li><a href="">menu</a></li>
+  <li><a href="">menu</a></li>
+  <li><a href="">menu</a></li>
+  <li><a href="">menu</a></li>
+  <li><a href="">menu</a></li>
+ </ul>
+ <ul class="bottom">
+  <li><a href="">menu</a></li>
+  <li><a href="">menu</a></li>
+  <li><a href="">menu</a></li>
+  <li><a href="">menu</a></li>
+  <li><a href="">menu</a></li>
+ </ul>
+</section>
+<section id="banner">
+    <a href=""><img src="images/banner_01.png" alt=""></a>
+    <a href=""><img src="images/banner_02.png" alt=""></a>
+    <a href=""><img src="images/banner_03.png" alt=""></a>
+</section>
+    <section id="tabs">
+    <header>
+     <h3>WEEKLY BEST</h3> 
+    </header>
+    <section class="tab_box">
+     <input id="tab1" type="radio" name="tabs" checked>
+	 <label for="tab1">TOP</label>
+	<input id="tab2" type="radio" name="tabs">
+	<label for="tab2">Outer</label>
+	<input id="tab3" type="radio" name="tabs">
+	<label for="tab3">Dress</label>
+	<input id="tab4" type="radio" name="tabs">
+	<label for="tab4">Bottom</label>
+     <article class="box1">box1</article>
+     <article class="box2">box2</article>
+     <article class="box3">box3</article>
+     <article class="box4">box4</article>
+    </section>
+    <footer>
+      <div class="btns">
+        <a href=""></a>
+        <a href=""></a>
+      </div>
+    </footer>
+</section>
+
+
+<section id="arrivals">
+    <header>
+      <h3>New Arrivals</h3>
+    </header>
+    
+    <section>
+     <figure>
+       <img src="images/pppp.jpg" alt="">
+       <figcaption>
+         <h4>sample product01</h4>
+         <p class="txt01">37000원</p>
+         <p class="txt02">상품간략설명을<br> 넣으주세요</p>
+       </figcaption>
+     </figure>
+      <figure>
+       <img src="images/pppp.jpg" alt="">
+       <figcaption>
+         <h4>sample product01</h4>
+          <p class="txt01">37000원</p>
+         <p class="txt02">상품간략설명을<br> 넣으주세요</p>
+       </figcaption>
+     </figure>
+      <figure>
+       <img src="images/pppp.jpg" alt="">
+       <figcaption>
+         <h4>sample product01</h4>
+          <p class="txt01">37000원</p>
+         <p class="txt02">상품간략설명을<br> 넣으주세요</p>
+       </figcaption>
+     </figure>
+      <figure>
+       <img src="images/pppp.jpg" alt="">
+       <figcaption>
+         <h4>sample product01</h4>
+        <p class="txt01">37000원</p>
+         <p class="txt02">상품간략설명을<br> 넣으주세요</p>
+       </figcaption>
+     </figure>
+      <figure>
+       <img src="images/pppp.jpg" alt="">
+       <figcaption>
+         <h4>sample product01</h4>
+         <p class="txt01">37000원</p>
+         <p class="txt02">상품간략설명을<br> 넣으주세요</p>
+       </figcaption>
+     </figure>
+      <figure>
+       <img src="images/pppp.jpg" alt="">
+       <figcaption>
+         <h4>sample product01</h4>
+          <p class="txt01">37000원</p>
+         <p class="txt02">상품간략설명을<br> 넣으주세요</p>
+       </figcaption>
+     </figure>
+      </section>
+    
+    <footer>
+      <div>
+      <a href="">More</a>
+      </div>
+    </footer>
+</section>
+
+<section id="instar">
+    <header></header>
+      <div><img src="images/aaaa.jpg" alt=""></div>
+      <div><img src="images/aaaa.jpg" alt=""></div>
+      <div><img src="images/aaaa.jpg" alt=""></div>
+      <div><img src="images/aaaa.jpg" alt=""></div>
+      <div><img src="images/aaaa.jpg" alt=""></div>
+      <div><img src="images/aaaa.jpg" alt=""></div>
+      <div><img src="images/aaaa.jpg" alt=""></div>
+      <div><img src="images/aaaa.jpg" alt=""></div>
+      <div><img src="images/aaaa.jpg" alt=""></div>
+      <div><img src="images/aaaa.jpg" alt=""></div>
+   
+</section>
+
+
+<footer></footer>
+</body>
+</html>

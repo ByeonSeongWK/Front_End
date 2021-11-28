@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>배열</title>
+
+    <script>
+      "use strict";
+      let arr = ["루시", 10, 3.5, true];
+      console.log(arr);
+
+      // 배열 추가
+      arr.push("남자");
+      console.log(arr);
+
+      // 첫번째 주소에 있는 값을 제거
+      arr.shift();
+      console.log(arr);
+
+      let arr2 = ["김사과", "서울", "학생"];
+      // 두개의 배열을 합침
+      let arr0 = arr.concat(arr2);
+      console.log(arr0);
+
+      arr2 = arr2.join("|");
+      console.log(arr2);
+
+      // 정렬
+      let arr3 = ["c", "b", "a", "z", "o"];
+      arr3.sort();
+      console.log(arr3);
+
+      // 정렬 - 역순
+      arr3.reverse();
+      console.log(arr3);
+    </script>
+  </head>
+  <body>
+    <!--
+        ㆍArray 객체의 메서드
+        - push()    : 배열의 요소를 추가
+        - pop()     : 배열의 마지막 주소에 있는 값을 제거
+        - shift()   : 배열의 첫 번째 주소에 있는 값을 제거
+        - concat()  : 두 개의 배열을 합침
+        - join()    : 배열 요소 사이에 원하는 문자를 삽입
+        - reverse() : 배열을 역순으로 재배치
+        - sort()    : 배열을 오름차순으로 정렬
+      -->
+  </body>
+</html>

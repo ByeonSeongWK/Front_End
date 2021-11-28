@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이벤트</title>
+    <script>
+      function writeText(str) {
+        var area = document.getElementById("demo");
+        area.innerHTML = "Hello JavaScript!"; // 텍스트 추가
+      }
+    </script>
+  </head>
+  <body>
+    <h1 class="title">basic :: JavaScript node access</h1>
+    <div class="container">
+      <!--                                (매개 변수로 값 넣기) -->
+      <button id="call" onclick='writeText("Hello JavaScript!")'>
+        event call
+      </button>
+      <textarea id="demo" class="note"> </textarea>
+    </div>
+  </body>
+</html>

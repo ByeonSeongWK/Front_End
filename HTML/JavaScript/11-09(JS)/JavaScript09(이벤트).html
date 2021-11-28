@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이벤트</title>
+
+    <style>
+      .wrapper {
+        padding: 20px;
+        width: 50px;
+        height: 50px;
+        background-color: #666;
+        cursor: pointer;
+      }
+
+      .wrapper > a {
+        display: block;
+        width: 50px;
+        height: 50px;
+        background-color: #8ac007;
+        cursor: pointer;
+      }
+      .active {
+        background-color: rgba(255, 255, 0, 0.2);
+      }
+    </style>
+    <script>
+      window.addEventListener("load", function () {
+        var container = document.getElementsByClassName("container")[0];
+        var wrapper = container.children[0];
+
+        wrapper.addEventListener("click", function (e) {
+          e.currentTarget.classList.add("active");
+        });
+
+        wrapper.children[0].addEventListener("click", function (e) {
+          e.currentTarget.classList.add("active");
+          e.stopPropagation();
+          // stopPropagation() 이벤트 명령어로 위의 노드로 이벤트가 진행 되는 것을 막는다.
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <a href="#"></a>
+      </div>
+    </div>
+  </body>
+</html>

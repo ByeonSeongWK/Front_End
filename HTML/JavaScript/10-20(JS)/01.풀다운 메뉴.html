@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>풀다운 만들기</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      li,
+      ol,
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      body {
+        font-size: 16px;
+      }
+      #wrap {
+        width: 100%;
+      }
+      #header {
+        position: relative;
+        width: 100%;
+        height: 100px;
+      }
+      #header nav {
+        margin: 0 auto;
+        width: 1200px;
+        height: 100px;
+      }
+      #header nav li {
+        float: left;
+        margin-top: 38px;
+        width: 20%;
+        height: 60px;
+        text-align: center;
+        line-height: 60px;
+        background-color: beige;
+      }
+
+      #header nav a {
+        display: block;
+        color: #444;
+      }
+      #header nav a.on {
+        background-color: crimson;
+        color: white;
+      }
+
+      /***** 서로 겹쳐져 있다.  *****/
+      #submn_area {
+        position: absolute;
+        top: 100px;
+        left: 0;
+        z-index: 5000;
+        width: 100%;
+        height: 0px;
+        background-color: aqua;
+        overflow: hidden;
+        /*
+        서브의 높이가 작아지더라도 안에
+        내용의 높이가 있다면 보일 것이므로 숨기기 위해서
+         */
+      }
+      #main_img {
+        width: 100%;
+        height: 350px;
+        background-color: darkseagreen;
+      }
+    </style>
+    <script src="js/jquery.js"></script>
+    <script src="js/fullmn.jsx"></script>
+  </head>
+  <body>
+    <div id="wrap">
+      <header id="header">
+        <nav>
+          <!-- 주 메뉴 -->
+          <ul>
+            <li><a href="#">menu</a></li>
+            <li><a href="#">menu</a></li>
+            <li><a href="#">menu</a></li>
+            <li><a href="#">menu</a></li>
+            <li><a href="#">menu</a></li>
+          </ul>
+        </nav>
+        <!-- 부 메뉴가 될 태그 -->
+        <div id="submn_area">submn_area</div>
+      </header>
+      <section id="main_img"></section>
+    </div>
+  </body>
+</html>

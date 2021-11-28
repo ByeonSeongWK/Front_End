@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<title>mobile example</title>
+<meta name="description" content="" />
+<meta name="author" content="THINKER" />
+
+<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="stylesheet" href="css/default.css"/>
+<style>
+
+body, div {
+	margin: 0;	background: #eaeae;
+}
+h1 {margin: 0;	padding: 0;}
+
+#wrapper {
+	position: relative;	margin: 0 auto;	background: #666;
+	width: 940px;
+	height: 500px;
+}
+#resolution {	border: none;
+}
+#wrapper div { float:left; margin:5px;	width: 300px;height: 300px;	
+        text-indent: 5px;	background: #fff;	color: #666;
+}
+
+#wrapper #box1 {
+		display: block;
+		z-index: 1;
+		margin-left:10px;
+		
+}
+
+#wrapper #box2 {
+		display: block;
+		
+		z-index: 1;
+		
+}
+
+#wrapper #box3 {
+		display: block;
+		z-index: 1;
+		
+}
+
+@media screen and (max-width: 670px){
+	
+	#wrapper {
+		display: block;
+		padding-top: 10px;
+		width: 630px;
+		height: 500px;
+	}
+	#wrapper #box1 {
+		display: block;
+		
+		z-index: 1;
+		
+	}
+	#wrapper #box2 {
+		display: block;
+		
+		z-index: 2;
+		
+	}
+	#wrapper #box3 {
+		display: none;
+	}
+	#wrapper h1 {
+		font-size: 100%;
+	}
+	
+	}
+@media screen and (max-width: 350px) {
+	 #wrapper {
+		display: block;
+		width: 100%;
+		height: 930px;
+	}
+	#wrapper div {float:none; width: 90%;}
+	#wrapper #box1 {
+		display: block;
+		
+		margin: 0 auto;
+		margin-bottom: 10px;
+	}
+	#wrapper #box2 {
+		display: block;
+		
+		margin: 0 auto;
+		margin-bottom: 10px;
+	}
+	
+	#wrapper #box3 {
+		display: block;
+		
+		margin: 0 auto;
+		margin-bottom: 10px;
+	}
+}
+
+
+
+</style>
+</head>
+
+<body>
+<div id="wrapper">
+	<!-- relative div 하위에 abolute div -->
+	<div id="box1"><h1>box1</h1></div>
+	<div id="box2"><h1>box2</h1></div>
+	<div id="box3"><h1>box3</h1></div>
+</div>
+<br /><br />
+<form name="news">
+	<input type="text" id="resolution" value="width, height" />
+</form>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>제이쿼리 기본 애니메이션 메소드</title>
+    <script src="js/jquery.js"></script>
+    
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+        border: 1px solid #000;
+        margin: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">.box</div>
+
+    <script>
+      $(document).ready(function () {
+        // show(보인다.)
+        // $(".box").show();
+        // └─(display: block)
+        // hide(숨긴다.)
+        // $(".box").hide();
+        // └─(display: none)
+        //
+        // show()보인다, hide()숨긴다 (display:block, none)
+        // slideUp()위쪽으로 세로값이 작아짐, slideDown()아래쪽으로 세로값이 커짐
+        // FadeIn() 서서히 나타남, FadeOUt() 서서히 사라짐(opacity:0.1);
+        // 1초는 → 1000
+        //
+        // $(".box").show();─┬─ 기본값 설정에 많이 쓴다.
+        // $(".box").hide();─┘
+        // $(".box").slideUp();
+        // $(".box").slideDown();
+        // $(".box").FadeIn();
+        // $(".box").FadeOut();
+        // css({스타일시트값}) 초기값 설정
+        // stop() 이거 이전에 애니메이션들을 정지시키는 설정
+        // deilay(시간) 설정된 시간만큼 대기시간이 설정
+        // animate({스타일시트}, 5000) 최종스타일값을 설정 기본 1000시간
+      });
+    </script>
+  </body>
+</html>

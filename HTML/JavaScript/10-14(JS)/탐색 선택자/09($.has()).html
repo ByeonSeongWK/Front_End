@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>has메소드</title>
+    <script src="../js/jquery.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#wrapper > ul > li").has("ul").css({ color: "blue" });
+        // 어떤 설정되어 있는 값을 가지고 있는 요소만 적용
+      });
+    </script>
+  </head>
+  <body>
+    <span>
+      has() 메소드를 사용해서 li 엘리먼트 중 자식으로 ul 엘리먼트를 가지고 있는
+      엘리먼트를 찾아서 색을 바꿔 주세요.
+    </span>
+    <div id="wrapper">
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>
+          4
+          <ul>
+            <li>4-1</li>
+            <li>4-2</li>
+            <li>4-3</li>
+            <li>4-4</li>
+          </ul>
+        </li>
+        <li>5</li>
+        <li>6</li>
+      </ul>
+    </div>
+  </body>
+</html>

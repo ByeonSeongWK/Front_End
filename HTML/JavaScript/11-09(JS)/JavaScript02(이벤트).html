@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이벤트</title>
+    <script>
+      function writeText() {
+        var area = document.querySelector(".note");
+        area.innerHTML = "Hello JavaScript!"; // 텍스트 추가
+      }
+      // HTML을 문서로서 최적화하기 위하여, HTML은 오로지 document를 표시해주는 역할을
+      // 담당하게 하기 위해서는 이벤트 핸들러를 연결하는 것이 좋은 방법
+    </script>
+  </head>
+  <body>
+    <h1 class="title">basic :: JavaScript node access</h1>
+    <div class="container">
+      <button id="call" onclick="writeText()">event call</button>
+      <textarea id="demo" class="note"> </textarea>
+    </div>
+  </body>
+</html>

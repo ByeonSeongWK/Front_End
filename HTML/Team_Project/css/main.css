@@ -1,0 +1,618 @@
+@charset "utf-8";
+
+#wrap {
+  width: 100%;
+}
+
+/* 상단(header) 부분----------------------------------------------------------------------------------------------------100 */
+/* 상단(header) 부분 */
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  float: left;
+  width: 100%;
+  height: 100px;
+  background-color: blanchedalmond;
+}
+/* -------------------------------------------------- */
+/* 상단 : 탑 부분 */
+#h_top {
+  margin: 0 auto;
+  margin-top: 35px;
+  width: 1680px;
+  height: 35px;
+  background-color: crimson;
+}
+#h_top .logo {
+  float: left;
+}
+#h_top .logo a {
+}
+#h_top .logo img {
+  width: 140px;
+  height: 35px;
+}
+#h_top .h_group {
+  float: right;
+  margin-top: 5px;
+}
+/* #h_top .h_group ul{
+} */
+#h_top .h_group ul li {
+  float: left;
+  margin-right: 15px;
+}
+#h_top .h_group ul li:last-child {
+  margin-right: 0;
+}
+#h_top .h_group ul li a {
+}
+#h_top .h_group ul li a img {
+  width: 30px;
+  height: 30px;
+}
+#h_top .h_group .menu_btn {
+  display: inline-block;
+  /* overflow: hidden; */
+  width: 28px;
+  height: 30px;
+}
+#h_top .h_group .menu_btn span {
+  display: block;
+  margin-bottom: 7px;
+  width: 28px;
+  border-bottom: 5px solid rgb(51, 51, 51);
+}
+#h_top .h_group .menu_btn span:last-child {
+  margin-bottom: 0;
+}
+/* -------------------------------------------------- */
+/* 상단 : 네비 부분 */
+/* #h_nav{
+    float: left;
+    width: 100%;
+    height: 1080px;
+    background-color: cyan;
+}
+.navBox{
+    float: right;
+    width: 100%;
+    height: 900px;
+    overflow: hidden;
+    background-color: rgb(255, 127, 227);
+}
+.navBox ul{
+    float: right;
+    margin-right: -1500px;
+    width: 1500px;
+    transition: 0.8s;
+}
+.navBox ul.on{
+    margin-right: 0;
+}
+.navBox ul li{
+    float: left;
+    width: 630px;
+    height: 900px;
+    background-color: aliceblue;
+}
+.navBox ul li img{
+    width: 100%;
+    height: auto;
+}
+
+.navBox .handle{
+    float: right;
+    display: block;
+    width: 20px;
+    height: 200px;
+    text-indent: -9999px;
+    background-color: #333;
+    cursor: pointer;
+    border-radius: 10px 0 0 10px;
+} */
+/* 메인(main) 부분----------------------------------------------------------------------------------------------------100 */
+/* 메인(main) 부분 */
+#main {
+  margin-top: 100px;
+  float: left;
+  width: 100%;
+  height: 2610px;
+  background-color: blue;
+}
+#main .main_img {
+  margin: 0 auto;
+  width: 1680px;
+  height: 870px;
+  background-color: aliceblue;
+}
+#main .text {
+  padding-top: 130px;
+  float: left;
+  width: 500px;
+  height: 740px;
+  /* background-color: rgb(52, 139, 214); */
+}
+#main .text p {
+  margin-bottom: 20px;
+  font-size: 50px;
+  line-height: 90px;
+  font-weight: 550;
+  color: rgb(36, 36, 36);
+}
+#main .text h3 {
+  font-size: 80px;
+  font-weight: 900;
+  color: rgb(36, 36, 36);
+}
+#main .img {
+  float: left;
+  width: 1180px;
+  height: 870px;
+  background-color: rgb(39, 113, 177);
+}
+#main .img img {
+  width: 100%;
+  height: 100%;
+}
+/* 내용(contents) 부분----------------------------------------------------------------------------------------------------100 */
+/* 내용(contents) 부분 */
+#contents {
+  float: left;
+  width: 100%;
+  height: 2080px;
+  background-color: chartreuse;
+}
+/* -------------------------------------------------- */
+/* 내용 : 1. 아이템 부분 */
+#c_item {
+  margin: 0 auto;
+  width: 1680px;
+  height: 870px;
+  background-color: darkorange;
+}
+#c_item h3 {
+  text-align: center;
+  font-size: 60px;
+  font-weight: 900;
+}
+
+#c_item ul.kwicks {
+  /* position: relative; */
+  margin: 0;
+  padding: 0;
+}
+#c_item ul.kwicks li {
+  display: block;
+  padding: 0;
+  width: 420px;
+  height: 700px;
+  /* width: 125px;
+    height: 100px;  */
+  overflow: hidden;
+  /* outline: 1px solid #09f; */
+}
+#c_item ul.kwicks.horizontal li {
+  float: left;
+  /* margin-right: 5px; */
+}
+ul.kwicks li img {
+  width: 100%;
+  height: 100%;
+}
+#c_item ul.kwicks.horizontal li.kwick_4 {
+  margin-right: none;
+}
+#c_item li {
+  background: #09f;
+}
+
+#c_item li.kwick_1 {
+  background: #53b388;
+}
+
+#c_item li.kwick_2 {
+  background: #5a69a9;
+}
+
+#c_item li.kwick_3 {
+  background: #c26468;
+}
+
+#c_item li.kwick_4 {
+  background: #bf7cc7;
+}
+/* -------------------------------------------------- */
+/* 내용 : 2. 리뷰 부분 */
+#c_review {
+  margin: 0 auto;
+  width: 1680px;
+  height: 870px;
+  background-color: darkslateblue;
+}
+/* -------------------------------------------------- */
+/* 내용 : 3. 인포 부분 */
+#c_info {
+  margin: 0 auto;
+  width: 100%;
+  height: 340px;
+  background-color: rgb(36, 36, 36);
+}
+#c_info .qna {
+  float: left;
+  width: 49.8%;
+  height: 340px;
+  background: url(../images/contents3_q.png) no-repeat 50% 50%;
+  /* background-color: rgb(25, 29, 29); */
+  text-align: center;
+}
+#c_info .qna h3 {
+  margin-top: 50px;
+  font-size: 60px;
+  color: #fff;
+}
+#c_info .qna p {
+  margin: 50px;
+  font-size: 27px;
+  color: #fff;
+}
+#c_info .qna span {
+  padding: 7px 13px;
+  border: 2px solid #fff;
+  border-radius: 3px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 15px;
+  color: #fff;
+}
+#c_info .qna span:hover {
+  border: 2px solid rgb(236, 255, 67);
+  color: rgb(236, 255, 67);
+}
+#c_info .line {
+  margin: 10px 0;
+  float: left;
+  height: 320px;
+  width: 3px;
+  background-color: #fff;
+}
+#c_info .tip {
+  float: left;
+  width: 49.9%;
+  height: 340px;
+  background: url(../images/contents3_tip.png) no-repeat 50% 50%;
+  /* background-color: rgb(40, 42, 43); */
+  text-align: center;
+}
+#c_info .tip h3 {
+  margin-top: 50px;
+  font-size: 60px;
+  color: #fff;
+}
+#c_info .tip p {
+  margin: 50px;
+  font-size: 27px;
+  color: #fff;
+}
+#c_info .tip span {
+  padding: 7px 25px;
+  border: 2px solid #fff;
+  border-radius: 3px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 15px;
+  color: #fff;
+}
+#c_info .tip span:hover {
+  border: 2px solid rgb(236, 255, 67);
+  color: rgb(236, 255, 67);
+}
+/* 하단(footer) 부분----------------------------------------------------------------------------------------------------100 */
+/* 하단(footer) 부분 */
+#footer {
+  float: left;
+  width: 100%;
+  height: 530px;
+  background-color: rgb(29, 29, 29);
+}
+/* -------------------------------------------------- */
+/* 하단 : 탑 부분 */
+#f_top {
+  margin: 0 auto;
+  width: 1680px;
+  height: 80px;
+  background-color: darkolivegreen;
+}
+#f_top h2 {
+  margin: 10px 0 0 20px;
+  float: left;
+  width: 40px;
+  height: 40px;
+}
+#f_top h2 a img {
+  width: 100%;
+}
+#f_top .f_sns {
+  float: right;
+  margin-top: 30px;
+}
+
+#f_top .f_sns ul li {
+  margin-right: 20px;
+  float: left;
+  width: 25px;
+  height: 25px;
+}
+#f_top .f_sns ul li img {
+  width: 100%;
+}
+
+/* 하단 : 바텀 부분 */
+#f_bom {
+  margin: 0 auto;
+  width: 1680px;
+  height: 450px;
+  background-color: rgb(0, 0, 0);
+}
+#footer-section2 {
+  display: inline-block;
+  margin-bottom: 120px;
+}
+#footer-inner span {
+  display: inline-block;
+}
+.flt,
+.pull-left {
+  float: left !important;
+}
+.wp30 {
+  width: 30%;
+}
+#footer-section2 div {
+  display: inline-block;
+  width: 100%;
+}
+.centraFont {
+  font-family: "Centra No2";
+}
+.lh18 {
+  line-height: 18px;
+}
+.colFFF {
+  color: #fff;
+}
+
+.flt,
+.pull-left {
+  float: left !important;
+}
+.f14 {
+  font-size: 14px;
+}
+
+#footer-section2 div {
+  display: inline-block;
+  width: 100%;
+}
+.notoFont {
+  font-family: "Noto Sans KR";
+}
+.lh22 {
+  line-height: 22px;
+}
+.colFFF {
+  color: #fff;
+}
+.flt,
+.pull-left {
+  float: left !important;
+}
+.bld {
+  font-weight: bold;
+}
+.f15 {
+  font-size: 15px;
+}
+
+#footer-section2 div {
+  display: inline-block;
+  width: 100%;
+}
+.notoFont {
+  font-family: "Noto Sans KR";
+}
+.lh19 {
+  line-height: 19px !important;
+}
+.colFFF {
+  color: #fff;
+}
+.flt,
+.pull-left {
+  float: left !important;
+}
+.f13 {
+  font-size: 13px;
+}
+
+a:link {
+  text-decoration: none;
+  color: #807f83;
+}
+.dpib {
+  display: inline-block;
+}
+.flt,
+.pull-left {
+  float: left !important;
+}
+.wp100 {
+  width: 100%;
+}
+
+/*------------*/
+element.style {
+  width: 60px;
+  height: 40px;
+  background-image: url(/img/footer/spclogo.png);
+}
+#footer-inner span {
+  display: inline-block;
+}
+
+#footer-inner span {
+  display: inline-block;
+}
+.flt,
+.pull-left {
+  float: left !important;
+}
+.wp70 {
+  width: 70%;
+}
+
+#footer-section2 div {
+  display: inline-block;
+  width: 100%;
+}
+.h55 {
+  height: 55px;
+}
+/***************************************************************/
+#footer ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+.tdline {
+  text-decoration: underline !important;
+}
+.flt,
+.pull-left {
+  float: left !important;
+}
+.mgr74 {
+  margin-right: 74px;
+}
+.bld {
+  font-weight: bold;
+}
+
+#footer .subUl a {
+  font-family: "Centra No2", "Noto Sans KR";
+  font-weight: 400;
+  font-size: 13px;
+  color: #ffffff;
+}
+a:link {
+  text-decoration: none;
+}
+.fntClr_1a59ff {
+  color: #1a59ff !important;
+}
+.lh19 {
+  line-height: 19px !important;
+}
+a {
+  background: transparent;
+}
+/* 사용자 에이전트 스타일시트 */
+a:-webkit-any-link {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#footer-section2 div {
+  display: inline-block;
+  width: 100%;
+}
+
+.menuTitle {
+  float: left;
+  font-family: "Centra No2", "Noto Sans KR";
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 22px;
+  color: #fff;
+  height: 44px;
+  margin-right: 67px;
+}
+
+#footer .subUl a {
+  font-family: "Centra No2", "Noto Sans KR";
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 30px;
+  color: #ffffff;
+}
+a {
+  background: transparent;
+}
+
+.mgt20 {
+  margin-top: 20px;
+}
+
+#footer .subUl a {
+  font-family: "Centra No2", "Noto Sans KR";
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 30px;
+  color: #ffffff;
+}
+
+.centraFont {
+  font-family: "Centra No2";
+}
+.lh31 {
+  line-height: 31px;
+}
+.colFFF {
+  color: #fff;
+}
+.mgt20 {
+  margin-top: 20px;
+}
+.fwno {
+  font-weight: normal;
+}
+.f24 {
+  font-size: 24px;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+#footer-inner span {
+  display: inline-block;
+}
+.col999 {
+  color: #999;
+}
+
+.notoFont {
+  font-family: "Noto Sans KR";
+}
+.lh19 {
+  line-height: 19px !important;
+}
+.tdline {
+  text-decoration: underline !important;
+}
+.colFFF {
+  color: #fff;
+}
+.mgt20 {
+  margin-top: 20px;
+}
+.f13 {
+  font-size: 13px;
+}

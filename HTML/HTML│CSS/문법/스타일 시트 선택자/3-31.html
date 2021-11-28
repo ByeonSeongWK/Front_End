@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS3 Selector Basic Page</title>
+    <style>
+      /* p태그에 첫번째 글자만 적용 */
+      p::first-letter {
+        font-size: 3em;
+      }
+      /* p태그에 첫번째 문단만 적용 */
+      p::first-line {
+        color: red;
+      }
+      /* [:(콜론), ::(콜론x2) 의 차이점]
+        해당 요소의 일부분에 적용되는 가상선택자에는 콜론(::)을 두개를 붙이고
+        해당 요소의 전체에 적용되는 가상선택자에는 콜론(:)을 하나 붙인다.
+        ※ 두개는 일부분, 하나는 전체
+        */
+    </style>
+  </head>
+  <body>
+    <h1>Lorem ipsum dolor sit amet</h1>
+    <p>
+      Lorem ipsum dolor sit amet,<br />
+      consectetur adipiscing elit.
+    </p>
+    <p>Aenean ac erat et massa vehicula laoreet consequat et sem.</p>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dblclick 마우스 이벤트</title>
+    <script src="../js/jquery.js"></script>
+    <!--head에 script를 넣으면 자동실행!-->
+    <script>
+      // 현재문서가 읽어지면. 준비를 해달라;
+      $(document).ready(function () {
+        // 버튼을 누르는 순간(제일 기본적인 것.)
+        $("p").click(function () {
+          alert("텍스트가 선택되었습니다.");
+        });
+      });
+      // jQuery에서는 모든 글자가 버튼이 될 수 있다.
+      // 대신 필수로 cursor: pointer로 마우스를
+      // 올렸을때 모양이 바뀌게 해줘야 한다.
+    </script>
+    <style>
+      p {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <p><b>여기를 클릭하세요</b></p>
+  </body>
+</html>

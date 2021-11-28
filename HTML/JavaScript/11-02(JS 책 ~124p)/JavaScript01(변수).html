@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>변수</title>
+  </head>
+  <body>
+    <h2>변수</h2>
+    <script>
+      "use strict";
+      // strict mode 사용을 한다는 의미이며 코드를 엄격하게 사용하도록 함.
+      var num;
+      num = 10;
+      console.log("콘솔창 출력 : " + num);
+      console.log("콘솔창 출력 : " + "num"); // 문자열로 그냥 num이란 문자를 표현
+      document.write("화면에 출력 : " + num);
+
+      var num2;
+      console.log("콘솔창 출력 : " + num2); // undefined 값이 없다고 나옴.
+
+      var num3 = "";
+      console.log("콘솔창 출력 : " + num3); // 비어있는 공백이 나온다. null 값
+
+      let age = 30;
+      console.log("콘솔창 출력 : " + age); // 30 정수형 출력
+
+      let name = "홍길동";
+      console.log("콘솔창 출력 : " + name); // 홍길동 문자열 출력
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>논리 연산자</title>
+    <script>
+      var a = 10;
+      var b = 5;
+
+      document.write("───┤논리 연산자├───" + "<br>");
+      c = a < b && a == b;
+      document.write(
+        "c = a > b && a == b" + "<br>" + "└─>" + (c = a > b && a == b) + "<br>"
+      );
+
+      c = a < b || a == b;
+      document.write(
+        "c = a > b || a == b" + "<br>" + "└─>" + (c = a > b || a == b) + "<br>"
+      );
+    </script>
+  </head>
+  <body>
+    <!--
+        [논리 연산자]
+        ㆍ논리 and : && ───> 둘다 참이면 참.
+        ㆍ논리 or : ||  ───> 둘 중 하나만 참이라도 참.
+        
+        ㆍvar a = 10, b = 5;
+        a && b = false;
+        a || b = true;
+    -->
+  </body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입</title>
+  </head>
+  <style></style>
+  <body>
+    <table border="3" cellpadding="10">
+      <tr>
+        <!-- 제목 -->
+        <td colspan="2">회원가입</td>
+      </tr>
+      <tr>
+        <!-- 아이디 -->
+        <td>
+          <label for="idName">아 이 디 :</label>
+        </td>
+        <td>
+          <input id="idName" type="text" size="20" / maxlength="20" name="">
+        </td>
+      </tr>
+      <tr>
+        <!-- 비밀번호 -->
+        <td>
+          <label for="id_pw">비밀번호 :</label>
+        </td>
+        <td>
+          <input id="id_pw" type="password" size="19.5" / maxlength="15"
+          name="">
+        </td>
+      </tr>
+
+      <tr>
+        <!-- 주소 -->
+        <td>
+          <label for="post_c">주소 :</label>
+        </td>
+        <td>
+          <input id="post_c" type="text" size="3" /> -<input
+            id="post_c"
+            type="text"
+            size="3"
+          />
+        </td>
+      </tr>
+
+      <tr>
+        <!-- 전화번호 -->
+        <td>
+          <label for="phone_N">전화번호 :</label>
+        </td>
+        <td>
+          <select>
+            <option>010</option>
+            <option>011</option>
+            <option>017</option>
+            <option>019</option>
+          </select>
+          -<input id="phone_N" type="text" size="4" /> -<input
+            id="phone_N"
+            type="text"
+            size="4"
+          />
+        </td>
+      </tr>
+      <tr>
+        <!-- 성별 -->
+        <td><label>성별 :</label></td>
+        <td>
+          <label for="gender_m">남자</label>
+          <input type="radio" name="gender" />
+          <label for="gender_g">여자</label>
+          <input type="radio" name="gender" />
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" height="5px;"></td>
+      </tr>
+      <tr id="bth">
+        <td colspan="2">
+          <input type="submit" value="전송하기" />
+          <input type="reset" value="다시입력" />
+          <input type="button" value="button" />
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

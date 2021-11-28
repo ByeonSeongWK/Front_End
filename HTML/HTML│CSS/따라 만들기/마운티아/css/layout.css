@@ -1,0 +1,490 @@
+/* 언어팩 */
+@charset "utf-8";
+
+#wrap {
+  width: 100%;
+}
+/*
+[가상 선택자]
+float:left; 속성이 그 다음 요소에게 상속되지 않게 선언
+.box::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+*/
+
+/* 기준을 margin이 아닌 float로 잡아둔다.(아니면 딸려서 내려오기 때문) */
+/* float:left; 는 상속 되기 때문에 맨위에 div만 설정해둔다. */
+
+/* 상단 부분 */
+#header {
+  float: left;
+  width: 100%;
+}
+/* 로고 */
+#header_top {
+  /* 가운데 위치 */
+  margin: 0 auto;
+  width: 1000px;
+  height: 115px;
+  /* absolute를 썻기 때문에 사용 */
+  position: relative;
+}
+/* header_top 안의 logo 선택자 */
+#header_top .logo {
+  float: left;
+  margin: 45px 0 0 10px;
+}
+/* 로고 끝 */
+
+/* 퀵메뉴 */
+#header_top .q_mn {
+  float: left;
+  /* margin이면 앞에 있는 요소부터 기준 */
+  margin: 55px 0 0 150px;
+}
+
+/* > 부등호를 넣으면 q_mn안에 있는 li이다 라고 할 수 있다. */
+#header_top .q_mn > li {
+  /* 왼쪽 기준부터 정렬 */
+  float: left;
+  /* 글자 사이의 여백 */
+  margin-right: 20px;
+}
+
+#header_top .q_mn > li > a {
+  font-size: 15px;
+}
+/* 퀵메뉴 끝 */
+
+/* 검색어 박스 */
+#header_top .input_box {
+  float: left;
+  width: 260px;
+  height: 30px;
+  margin: 50px 0 0 0;
+  background-color: rgb(231, 231, 231);
+}
+
+#header_top .input_box .txt {
+  float: left;
+  font-size: 14px;
+  /* 세로 배치 : 가운데 배치 line-height : 행 간 ->한줄로 칸을 맞춰라. */
+  line-height: 30px;
+  /* 가로 배치 : margin은 부피가 있어야한다. span에선 padding이 더 잘 먹힌다. */
+  padding-left: 10px;
+}
+
+#header_top .input_box .search {
+  float: right;
+  /* img로 불러올땐 가로세로 값이 있어서 margin으로 조절한다. */
+  margin: 5px 5px 0 5px;
+}
+/* 검색어 박스 끝 */
+
+/* info 메뉴 */
+#header_top .info_mn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+#header_top .info_mn > li {
+  float: left;
+  /* 글자와 글자 사이의 여백 */
+  margin-right: 10px;
+  /* li와 선 사이의 여백 */
+  padding-right: 10px;
+  border-right: 1px solid #000;
+  /* 선의 크기(글자와 크기를 맞춤) */
+  line-height: 11px;
+}
+#header_top .info_mn > li > a {
+  font-size: 11px;
+}
+/* 
+  li.list = li안에 포함된 last 클래스
+  li .list = li안에 last 클래스
+  */
+#header_top .info_mn > li.last {
+  margin-right: 0px;
+  padding-right: 0px;
+  border-right: 0px;
+}
+/* 상단 퀵메뉴 끝 */
+
+/* 네비게이션 */
+#header_nav {
+  float: left;
+  width: 100%;
+  height: 45px;
+  /*
+  "../" 상위 폴더로 가기
+  background-image: url(../images/nav_area.jpg);
+  반복을 안한다.
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  */
+  /* 위 코드를 쭐여서 아래 처럼 사용. */
+  background: url(../images/nav_area.jpg) no-repeat 50% 0;
+}
+
+/*  */
+/* a는 안가도 된다. 글자 버튼이 아니라 이미지 버튼이기 때문에. */
+#header_nav > ul {
+  margin: 0 auto;
+  width: 1008px;
+}
+#header_nav > ul > li {
+  float: left;
+}
+
+/* 메인 이미지 부분 */
+#main_img {
+  float: left;
+  width: 100%;
+  height: 465px;
+  /* no-repeat : 반복 X, 50%, 0 : 가운데 배치 */
+  background: url(../images/main_img.jpg) no-repeat 50% 0;
+}
+
+/* 내용 부분 */
+#contents {
+  float: left;
+  width: 100%;
+}
+#item {
+  /* margin auto를 먼저 넣어야 한다.
+  아니면 세로값이 0 이 되어서 초기화가 된다. */
+  margin: 0 auto;
+  margin-top: 40px;
+  width: 1000px;
+  height: 260px;
+}
+#item .item_h {
+  float: left;
+  width: 170px;
+  height: 260px;
+}
+
+/* 하위 선택자 */
+/* .item_h 생략 가능 */
+#item .tt1 {
+  font-size: 28px;
+  color: #000;
+  /* text-decoration:으로 하면 안됌 */
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+#item .menu {
+  margin-top: 30px;
+}
+#item .menu > li {
+  margin-bottom: 13px;
+}
+/* 글자 크기는 글자를 감싸고 있는 태그에 주는게 좋다. */
+#item .menu > li > a {
+  font-size: 15px;
+  color: #333;
+}
+#item .menu > li > a:hover {
+  color: orange;
+  text-decoration: underline;
+}
+
+#item .item_b {
+  float: right;
+  width: 795px;
+  height: 260px;
+}
+#item .box {
+  float: left;
+  margin-right: 10px;
+  width: 189.25px;
+  height: 258px;
+  border: 1px solid #ccc;
+}
+/* 선택자 */
+#item .box:last-child {
+  margin-right: 0px;
+}
+
+#item .box > img {
+  /* 
+  이미지는 가로값만 맞춰 준다.
+  부모 값에 100%를 맞춰 준다.
+  */
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+}
+#item .box > div {
+  float: left;
+  width: 100%;
+  padding-top: 14px;
+}
+#item .box h4 {
+  margin: 0 0 5px 10px;
+}
+#item .box span {
+  margin-left: 10px;
+}
+/* 그림 버튼 */
+#go_btn {
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  width: 1000px;
+  height: 275px;
+}
+#go_btn a {
+  margin-right: 15px;
+}
+
+#go_btn a:last-child {
+  margin-right: 0px;
+}
+
+#movie {
+  width: 100%;
+  height: 300px;
+  background-image: url(../images/movie.png);
+  background-repeat: no-repeat;
+  background-position: center top; /* = 50% 0 */
+  position: relative;
+}
+/* 부모가 기준이 안잡혀 있어서 margin을 못쓴다. */
+#movie > a {
+  display: block;
+  width: 170px;
+  height: 50px;
+  border: 1px solid #fff;
+  position: absolute;
+  top: 200px;
+  /* position 가운데 배치하고 싶을때
+     left: 50%; margin-left: -85px; */
+  left: 50%;
+  margin-left: -85px;
+}
+
+#style {
+  margin: 0 auto;
+  margin-top: 40px;
+  width: 1000px;
+  height: 260px;
+}
+#style .style_h {
+  float: left;
+  width: 170px;
+  height: 260px;
+}
+
+#style .tt2 {
+  font-size: 28px;
+  color: #000;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+#style .menu2 {
+  margin-top: 30px;
+}
+#style .menu2 > li {
+  margin-bottom: 13px;
+}
+#style .menu2 > li > a {
+  font-size: 15px;
+  color: #000;
+}
+#style .menu2 > li > a:hover {
+  color: orange;
+  text-decoration: underline;
+}
+
+#style .style_b {
+  float: right;
+  width: 795px;
+  height: 260px;
+}
+#style .style_b > li {
+  float: left;
+  width: 188px;
+  height: 258px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+}
+#style .style_b > li:last-child {
+  margin-right: 0px;
+}
+#style .style_b > li img {
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+}
+#style .style_b .box > div {
+  float: left;
+  padding: 0 0 5px 10px;
+}
+
+#banner {
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 80px;
+  width: 1000px;
+  height: 395px;
+}
+#banner > .group {
+  float: left;
+  width: 492px;
+}
+/*
+   ※ margin이 안먹힐때는 float: left
+   margin이 안먹힐 때는 크기 와 기준이 안잡혔을 때이다.  
+*/
+#banner > .group a:last-child {
+  float: left;
+  margin-top: 15px;
+}
+#banner > a {
+  float: right;
+}
+
+#info {
+  width: 100%;
+  height: 165px;
+  background: url(../images/footer_top_bg.jpg) repeat-x 0 0;
+}
+#info .banner {
+  margin: 0 auto;
+  width: 1000px;
+  height: 110px;
+}
+#info .notice {
+  margin: 0 auto;
+  width: 1000px;
+  height: 55px;
+  line-height: 55px;
+}
+#info .notice > .tt1 {
+  float: left;
+  font-size: 15px;
+  color: #fff;
+}
+#info .notice > .txt {
+  float: left;
+  margin-left: 35px;
+  font-size: 12px;
+  color: #fff;
+}
+#info .notice > .date {
+  float: right;
+  margin-right: 30px;
+  font-size: 10px;
+  color: #fff;
+}
+
+/* 하단 부분 */
+#footer {
+  float: left;
+  width: 100%;
+}
+
+#f_top {
+  margin: 0 auto;
+  width: 1000px;
+  height: 290px;
+}
+#f_top .main_mn {
+  float: left;
+  margin: 60px 0 0 20px;
+}
+#f_top .main_mn > li {
+  float: left;
+  margin-right: 50px;
+}
+#f_top .sub_mn {
+}
+
+#f_top .sub_mn li {
+  margin-bottom: 10px;
+}
+/* 고객센터 */
+#f_top .call_center {
+  float: right;
+  width: 220px;
+  height: 250px;
+}
+
+#f_top .call_center h3 {
+  font-size: 35px;
+  color: #000;
+  border-bottom: 1px solid #000;
+  text-align: center;
+  padding: 20px 0 7px 0;
+}
+
+#f_top .call_center h4 {
+  font-size: 16px;
+  color: #000;
+  padding-top: 15px;
+}
+
+#f_top .call_center p {
+  font-size: 13px;
+  color: #666;
+}
+/* 하단 부분 */
+#f_bom {
+  margin: 0 auto;
+  width: 1000px;
+  height: 140px;
+}
+#f_bom .logo2 {
+  margin: 30px 0 0 0;
+  float: left;
+  width: 100px;
+  height: 60px;
+  background-color: aquamarine;
+}
+#f_bom .group {
+  margin: 10px 0 0 0;
+  float: left;
+  font-size: 15px;
+  line-height: 20px;
+}
+#f_bom .group .info_mn {
+  float: left;
+  margin: 25px 0 20px 20px;
+}
+#f_bom .group .info_mn li {
+  float: left;
+  border-right: 1px solid #333;
+  margin-right: 10px;
+  padding-right: 10px;
+  /* border 선 크기 */
+  line-height: 13px;
+}
+
+/* 마지막 글자는 선을 없애야 한다. */
+#f_bom .group .info_mn li:last-child {
+  margin-right: 0;
+  padding-right: 0;
+  border-right: 0;
+}
+
+#f_bom .group .info_mn a {
+  font-size: 13px;
+}
+
+/* 카피라이트 */
+#f_bom .group .address {
+  margin: 10px 0 0 20px;
+  float: left;
+  width: 100%;
+  height: 60px;
+  background-color: aquamarine;
+}
+
+.line {
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  margin: 25px 0 0 20px;
+}

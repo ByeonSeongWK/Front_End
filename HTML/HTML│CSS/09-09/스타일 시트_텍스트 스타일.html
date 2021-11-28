@@ -1,0 +1,84 @@
+<!-- 4. 스타일 시트_텍스트 스타일 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width= , initial-scale=1.0" />
+    <title>스타일 시트_텍스트 스타일</title>
+    <style type="text/css">
+      .txt1 {
+        /* 글자 크기 */
+        font-size: 20px;
+
+        /* 행간 사이의 간격*/
+        /* ex) 20px이면 20px이상을 해줘야 한다.
+               미만으로 갈시 글자가 겹쳐진다. */
+        line-height: 40px;
+
+        /* 글자 사이의 간격 */
+        letter-spacing: 0px;
+
+        /* 단어 사이의 간격 */
+        /* word-spacing: 20px; */
+
+        /* 들여쓰기 */
+        /* "-"값도 사용 가능 */
+        text-indent: 0px;
+        word-spacing: 20px;
+      }
+
+      .box {
+        width: 400px;
+        height: 150px;
+        background-color: rgb(138, 138, 241);
+        text-align: right;
+      }
+      a {
+        /* none 값으로 밑줄을 삭제 시킬 수도 있다. */
+        text-decoration: none;
+      }
+
+      .txt2 {
+        font-family: "맑은 고딕";
+        font-style: italic;
+        font-size: 12px;
+        line-height: 1.6;
+        font-weight: bold;
+        /* font: italic bold 12px /1.6 "맑은 고딕"; */
+        /* font:font-style: font-variant: font-weight font-size/line-height font-famil; */
+      }
+    </style>
+  </head>
+  <body>
+    <p class="txt1">
+      스타일시트 선언<br />
+      스타일시트 선언<br />
+      스타일시트 선언<br />
+      스타일시트 선언<br />
+      스타일시트 선언
+    </p>
+    <div class="box">스타일시트 선언</div>
+
+    <!-- 기본값은 파란색, 밑줄 -->
+    <a href="#">네이버사이트로 이동하기</a>
+
+    <!-- 영문자 변환 첫글자만 대문자 소문자 -->
+    <h3 style="text-transform: capitalize">capitalize</h3>
+    <h3 style="text-transform: lowercase">lowercase</h3>
+    <h3 style="text-transform: uppercase">uppercase</h3>
+
+    <!-- 텍스트에 선 긋기 -->
+    <h3 style="text-decoration: underline">underline</h3>
+    <h3 style="text-decoration: overline">overline</h3>
+    <h3 style="text-decoration: line-through">line-through</h3>
+
+    <p class="txt2">
+      스타일시트 선언<br />
+      스타일시트 선언<br />
+      스타일시트 선언<br />
+      스타일시트 선언<br />
+      스타일시트 선언
+    </p>
+  </body>
+</html>

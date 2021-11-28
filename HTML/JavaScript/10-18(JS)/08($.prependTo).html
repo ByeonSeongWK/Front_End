@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>prependTo 메소드</title>
+    <style>
+      ul,
+      ol,
+      li {
+        list-style: none;
+      }
+      .newEl {
+        color: red;
+      }
+    </style>
+
+    <script src="js/jquery.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        // $('이동대상').prependTo(이동할위치);
+        $(".newEl").prependTo($(".list"));
+      });
+    </script>
+  </head>
+  <body>
+    <span>
+      prepend()메소드를 사용하여 표시된 부분 위에 엘리먼트를 이동시켜 주세요.
+    </span>
+
+    <ul class="list">
+      <li>3-1(위로 이동시켜 주세요)</li>
+      <li>3-2</li>
+      <li>3-3</li>
+      <li>3-4</li>
+    </ul>
+
+    <br /><br /><br />
+    <li class="newEl">이동하고자 하는 태그</li>
+  </body>
+</html>

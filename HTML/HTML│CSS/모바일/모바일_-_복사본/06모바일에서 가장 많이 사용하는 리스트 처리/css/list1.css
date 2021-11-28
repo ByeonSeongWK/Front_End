@@ -1,0 +1,104 @@
+﻿html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+.header {
+	position: relative;
+	padding: 10px;
+	height: 45px;
+	border-bottom: 1px solid #000;
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.17, rgb(134,184,219)),
+		color-stop(0.8, rgb(35,148,148))
+	);
+	background-image: linear-gradient(bottom, rgb(134,184,219) 17%, rgb(35,148,148) 80%);
+	background-image: -o-linear-gradient(bottom, rgb(134,184,219) 17%, rgb(35,148,148) 80%);
+	background-image: -moz-linear-gradient(bottom, rgb(134,184,219) 17%, rgb(35,148,148) 80%);
+	background-image: -webkit-linear-gradient(bottom, rgb(134,184,219) 17%,  rgb(35,148,148) 80%);
+	background-image: -ms-linear-gradient(bottom, rgb(134,184,219) 17%, rgb(35,148,148) 80%);
+}
+.header>.title {
+	position: absolute;
+	overflow: hidden;
+	left: 50%;
+	top: 10px;
+	margin: 1px 0 0 -75px;
+	width: 150px;
+	height: 40px;
+	line-height: 1em;
+	text-align: center;
+	text-overflow: ellipsis;
+	text-shadow: rgba(0, 0, 0, 1) 0 -1px 1px;
+	white-space: nowrap;
+	font-size: 20px;
+	font-weight: bold;
+	color: #fff;
+}
+
+/* new CSS */
+.button {
+	position: absolute;
+	right: 10px;
+	top: 8px;
+	margin: 0;
+	padding: 0 5px;
+	width: auto;
+	height: 30px;
+	overflow: hidden;
+	line-height: 30px;
+	text-shadow: rgba(0, 0, 0, 0.5) 0 -1px 0;
+	text-decoration: none;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-family: inherit;
+	font-size: 12px;
+	font-weight: bold;
+	background: #b8860b;
+	color: #fff;
+	border-width: 0 5px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	/*
+	-webkit-border-image: url(../images/button.png) 0 5 0 5;
+	-moz-border-image: url(../images/button.png) 0 5 0 5;
+	border-image: url(../images/button.png) 0 5 0 5;
+	*/
+}
+.menu {
+	left: 6px;
+	width: 40px;
+	text-align: center;
+}
+.list {
+	background: #7c0c18;
+}
+.list li {
+	position: relative;
+	height: 40px;
+	list-style: none;
+	border-top: 1px solid #8c2a34;
+	border-bottom: 1px solid #640913;
+}
+.list li a {
+	display: block;
+	position: relative;
+	padding-left: 10px;
+	line-height: 40px;
+	text-decoration: none;
+	color: #d6b69e;
+}
+.list li:nth-of-type(even) {
+	background: #830f1b;
+}

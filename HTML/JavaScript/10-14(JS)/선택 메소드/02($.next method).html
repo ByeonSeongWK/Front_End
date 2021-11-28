@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>위치에 의한 선택메소드(next )</title>
+    <script src="../js/jquery.js"></script>
+    <script>
+      $(document).ready(function () {
+        // wrapper 밑 ul에 자식 요소들을 다 선택함
+        // $("#wrapper > ul > li.first").next();
+        //  ↓ 위 내용을 변수화 시켜 el에 담았다.
+        var el = $("#wrapper > ul > li.first").next();
+        el.css({ color: "red" });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <span>
+        next() 메소드를 사용하여 1번 엘리먼트의 바로 다음 형제 엘리먼트의
+        글자색을 변경해주세요.
+      </span>
+      <ul>
+        <li class="first">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+      </ul>
+    </div>
+  </body>
+</html>

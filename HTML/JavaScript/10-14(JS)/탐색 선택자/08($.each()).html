@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>each메소드</title>
+    <script src="../js/jquery.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        ///////////////////////////// 매개변수 i 선언
+        $("#wrapper > ul > li").each(function (i) {
+          $(this).css({ color: "purple" });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <span>
+      each() 메소드를 사용하여 ul 엘리먼트 자식 엘리먼트를 순환 하여 모두 색을
+      바꿔 주세요.
+    </span>
+    <div id="wrapper">
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+      </ul>
+    </div>
+  </body>
+</html>

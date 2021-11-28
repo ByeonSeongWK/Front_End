@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이벤트</title>
+    <script>
+      // 익스플로어 9 이하는 안먹힌다.
+      if (window.addEventListener) {
+        window.addEventListener("load", function () {
+          var button = document.getElementById("call");
+          var note = document.getElementById("demo");
+
+          button.addEventListener("click", function () {
+            note.innerHTML = "Hello JavaScript!!";
+          });
+        });
+        // 안먹힐 시 사용
+      } else {
+        window.attachEvent("onload", function () {
+          var button = document.getElementById("call");
+          var note = document.getElementById("demo");
+
+          button.attachEvent("onclick", function () {
+            note.innerHTML = "Hello JavaScript!!";
+          });
+        });
+      }
+    </script>
+  </head>
+
+  <body>
+    <h1 class="title">basic :: JavaScript node access</h1>
+    <div class="container">
+      <button id="call">event call</button>
+      <textarea id="demo" class="note"> </textarea>
+    </div>
+  </body>
+</html>

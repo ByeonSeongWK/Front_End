@@ -1,0 +1,10 @@
+
+[RGBA 형식 및 HSLA 형식의 사용 예]
+
+http://www.colorpicker.com/
+RGBA형식 --> color:rgba(255, 127, 45, 0.5)
+             color:rgba(red, green, blue, 투명도)
+
+http://www.workwithcolor.com/hsl-color-picker-01.htm
+HSLA형식 --> color:hsla(0, 0%, 100%, 0.5)
+             color:hsla(색상, 채도, 명도, 투명도)

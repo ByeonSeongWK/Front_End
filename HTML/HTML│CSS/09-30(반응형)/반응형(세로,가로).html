@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반응형 사이트</title>
+    <!-- 
+        - minimum-scale : 줄일 수 있는 최소 크기를 지정합니다. 0~10 사이의 값을 가진다.
+        - maximum-scale : 늘릴 수 있는 최대 크기를 지정합니다. 0~10 사이의 값을 가진다.
+        - user-scalable : yes 또는 no 값을 가지며 사용자가 화면을 확대ㆍ축소 할 수 있는지 지정.
+     -->
+    <style>
+      body {
+        margin: 10px;
+        font-family: "맑은 고딕";
+      }
+      h1 {
+        display: none;
+        font-size: 16px;
+        font-weight: normal;
+        color: #333;
+      }
+
+      /* 가로 방향일때 스타일 적용 */
+      @media screen and (orientation: landscape) {
+        body {
+          background: #fcb354;
+        }
+        #landscape {
+          display: block;
+        }
+      }
+
+      /* 세로 방향일때 스타일 적용 */
+      @media screen and (orientation: portrait) {
+        body {
+          background: #24bbaf;
+        }
+        #portrait {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="landscape">가로 레이아웃</h1>
+    <h1 id="portrait">세로 레이아웃</h1>
+  </body>
+</html>

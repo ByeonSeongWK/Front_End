@@ -1,0 +1,29 @@
+<!document html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>border-radius</title>
+    <style>
+      .cycle {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(204, 204, 204);
+        border-radius: 120px 30px;
+        /*
+		border-radius : 0 0 --> 1번째 3번째
+		border-radius : 0/0 --> 수평과 수직
+		*/
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(204, 204, 204);
+        border-radius: 30px 120px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cycle"></div>
+    <div class="box"></div>
+  </body>
+</html>

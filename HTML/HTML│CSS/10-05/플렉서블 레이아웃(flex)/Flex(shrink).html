@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex : flex-shrink</title>
+    <style>
+        .layout{
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0;
+        }
+        .flexbox{
+            display: flex;
+            /* 반드시 아래로 흘러가지 않게 설정 */
+            flex-wrap: nowrap;
+            padding: 10px;
+            background-color: #f0f0f0;
+        }
+        .item{
+            min-height: 150px;
+            flex-basis: 200px;
+            flex-shrink: 0;
+            border: 1px solid red;
+            box-sizing: border-box;
+            flex-shrink: 0;
+        }
+        .item:nth-child(1){flex-shrink: 1;}
+        .item:nth-child(2){flex-shrink: 0;}
+        .item:nth-child(3){flex-shrink: 1;}
+        .item:nth-child(4){flex-shrink: 2;}
+
+    </style>
+  </head>
+  <body>
+    <h2>flex : flex-shrink</h2>
+    <div class="layout">
+        <div class="flexbox">
+            <div class="item">content1</div>
+            <div class="item">content2</div>
+            <div class="item">content3</div>
+            <div class="item">content4</div>
+        </div>
+    </div>
+    </div>
+
+    <!----------------------------------------------------------------------------- 
+    │
+    │  ㆍflex-shrink(스윙크)<축소>
+    │    플렉스 컨테이너 아이템들이 차지할 너비들에 대한 감소형 숫자를 지정합니다.
+    │ 
+    └------------------------------------------------------------------------------>
+  </body>
+</html>

@@ -1,0 +1,255 @@
+#wrap {
+  margin: 0 auto;
+  width: 1200px;
+}
+#header {
+  width: 1200px;
+  height: 100px;
+  background-color: brown;
+}
+#header .logo {
+  float: left;
+  margin: 15px 0 0 50px;
+}
+#header .main_nav {
+  float: right;
+  margin: 20px 100px 0 0;
+  width: 540px;
+  height: 60px;
+  background-color: deepskyblue;
+}
+#header .main_nav li {
+  float: left;
+  width: 135px;
+  height: 60px;
+  background-color: #fff;
+  text-align: center;
+  line-height: 60px;
+  position: relative;
+}
+#header .main_nav li a {
+  font-size: 16px;
+  color: #000;
+  display: block;
+}
+#header .main_nav li.on {
+  background-color: burlywood;
+}
+#header .main_nav .sub_mn {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  z-index: 9999;
+}
+#header .main_nav .sub_mn li {
+  background-color: blanchedalmond;
+}
+#header .main_nav .sub_mn li.on {
+  background-color: darkgray;
+}
+#header .main_nav .sub_mn a {
+}
+
+#main_img {
+  width: 1200px;
+  height: 300px;
+  background-color: chocolate;
+  position: relative;
+}
+#main_img .img_area {
+  position: relative;
+}
+#main_img .imgs li {
+  position: absolute;
+  top: 0;
+  width: 1200px;
+  height: 300px;
+}
+#main_img .imgs .img01 {
+  left: 0%;
+  background-color: firebrick;
+  z-index: 300;
+}
+#main_img .imgs .img02 {
+  left: 0%;
+  background-color: forestgreen;
+  z-index: 200;
+}
+#main_img .imgs .img03 {
+  left: 0%;
+  background-color: midnightblue;
+  z-index: 100;
+}
+#main_img .btns {
+  position: absolute;
+  left: 50%;
+  top: 250px;
+  z-index: 9999;
+  margin-left: -32.5px;
+}
+#main_img .btns li {
+  float: left;
+  margin-right: 10px;
+  width: 15px;
+  height: 15px;
+  background-color: palegoldenrod;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#main_img .btns li.on2 {
+  width: 15px;
+  height: 15px;
+  background-color: #333;
+  border: 3px solid #fff;
+}
+
+#contents {
+  width: 1200px;
+  height: 200px;
+  background-color: darkgoldenrod;
+}
+#contents .tab_box {
+  float: left;
+  width: 400px;
+  height: 200px;
+  position: relative;
+}
+#contents #popup {
+  position: absolute;
+  top: -300px;
+  left: 300px;
+  z-index: 9999;
+  width: 400px;
+  height: 350px;
+  background-color: #ccc;
+}
+
+#notice {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 400px;
+  height: 200px;
+  background-color: darkorange;
+}
+
+#notice header {
+  width: 400px;
+  height: 30px;
+  background-color: palevioletred;
+}
+
+#notice header h3 {
+  float: left;
+  margin-left: 10px;
+  padding-top: 10px;
+  font-size: 15px;
+  width: 100px;
+  height: 20px;
+  cursor: pointer;
+}
+
+#notice header .ttl01 {
+  background-color: powderblue;
+}
+#notice section {
+  width: 400px;
+  height: 170px;
+  background-color: powderblue;
+}
+#notice section ul {
+  float: left;
+  margin: 30px 0 0 20px;
+}
+#notice section li {
+  margin-bottom: 5px;
+}
+#notice section a {
+  font-size: 12px;
+  color: #333;
+}
+
+#gallery {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 500;
+  width: 400px;
+  height: 200px;
+  background-color: darksalmon;
+}
+#gallery header {
+  width: 400px;
+  height: 30px;
+  background-color: palevioletred;
+}
+#gallery header h3 {
+  float: left;
+  margin-left: 10px;
+  padding-top: 10px;
+  font-size: 15px;
+  width: 100px;
+  height: 20px;
+  cursor: pointer;
+}
+
+#gallery header .ttl02 {
+  background-color: coral;
+}
+#gallery section {
+  width: 400px;
+  height: 170px;
+  background-color: coral;
+}
+#gallery section img {
+  float: left;
+  margin: 40px 0 0 8px;
+  border: 2px solid #ccc;
+}
+
+#banner {
+  float: left;
+  width: 400px;
+  height: 200px;
+  background-color: darkseagreen;
+}
+#banner header {
+  width: 400px;
+  height: 30px;
+  background-color: rgb(168, 134, 145);
+}
+#banner header h3 {
+  float: left;
+  margin: 10px 0 0 10px;
+  font-size: 15px;
+}
+#banner section {
+  width: 400px;
+  height: 170px;
+  background-color: blanchedalmond;
+}
+#banner section a {
+  float: left;
+  margin: 20px 0 0 9px;
+}
+
+#go_btn {
+  float: left;
+  width: 400px;
+  height: 200px;
+  background-color: darkviolet;
+}
+#go_btn ul {
+  float: left;
+  margin: 30px 0 0 130px;
+}
+#go_btn ul li {
+  margin-bottom: 5px;
+}
+
+#footer {
+  width: 1200px;
+  height: 100px;
+  background-color: #ccc;
+}

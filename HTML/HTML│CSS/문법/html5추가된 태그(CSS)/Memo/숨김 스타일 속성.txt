@@ -1,0 +1,11 @@
+[숨김 스타일 속성]
+
+[opacity : 0]
+※ opacity는 완전 투명해져도 본인의 자리를 지킨다.
+ㆍ애니메이션에 사용. 다른건 적용이 안된다.
+
+[display: none]
+※ display는 완전 투명해지면 아예 사라진다.(있다, 없다의 개념)
+
+[visibility: hidden]
+※ visibility는 opacity와 같다(투명해짐, 없어지는게 아님). 애니메이션에는 적용X

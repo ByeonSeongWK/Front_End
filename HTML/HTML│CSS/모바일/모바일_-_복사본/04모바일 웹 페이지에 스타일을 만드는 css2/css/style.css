@@ -1,0 +1,67 @@
+﻿#menu {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	width: 774px;
+	height: 210px;
+	background: url(../images/menu-bg.jpg) no-repeat;
+}
+#menu span {
+	display: none;
+	position: absolute;
+}
+#menu a {
+	display: block;
+	position: absolute;
+	text-indent: -900%;
+}
+#menu a:hover {
+	background-position: left bottom;
+}
+#menu a:hover span {
+	display: block;
+}
+#menu .home {
+	left: 96px;
+	top: 73px;
+	width: 144px;
+	height: 58px;
+	background: url(../images/home.gif) no-repeat;
+	/* border: 1px solid #000; */
+}
+#menu .home span {
+	left: 28px;
+	top: -20px;
+	width: 86px;
+	height: 14px;
+	background: url(../images/home-over.gif) no-repeat;
+}
+#menu .about {
+	left: 338px;
+	top: 97px;
+	width: 131px;
+	height: 51px;
+	background: url(../images/about.gif) no-repeat;
+}
+#menu .about span {
+	left: 44px;
+	top: 54px;
+	width: 40px;
+	height: 12px;
+	background: url(../images/about-over.gif) no-repeat;
+}
+#menu .rss {
+	left: 588px;
+	top: 94px;
+	width: 112px;
+	height: 47px;
+	background: url(../images/rss.gif) no-repeat;
+}
+#menu .rss span {
+	left: 26px;
+	top: -20px;
+	width: 92px;
+	height: 20px;
+	background: url(../images/rss-over.gif) no-repeat;
+}

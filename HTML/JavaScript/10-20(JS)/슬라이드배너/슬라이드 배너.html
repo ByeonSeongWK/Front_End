@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>슬라이드 배너</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul,
+      ol,
+      li {
+        list-style: none;
+      }
+      #main_img {
+        width: 100%;
+        height: 400px;
+      }
+      #img_area {
+        width: 100%;
+        height: 400px;
+        position: relative;
+        overflow: hidden;
+      }
+      #imgs li {
+        width: 100%;
+        height: 400px;
+        position: absolute;
+        text-align: center;
+        line-height: 400px;
+        font-size: 5em;
+      }
+      #imgs li:nth-child(1) {
+        background-color: beige;
+      }
+      #imgs li:nth-child(2) {
+        background-color: burlywood;
+        left: 100%;
+      }
+      #imgs li:nth-child(3) {
+        background-color: darkgoldenrod;
+        left: 200%;
+      }
+    </style>
+    <script src="js/jquery.js"></script>
+    <script>
+      $(function () {
+        var current = 0;
+        // 함수 호출(함수는 혼자 못움직임 호출을 해야한다.)
+        // move();
+
+        timer();
+        function timer() {
+          setIntervalId = setInterval(function () {
+            var n = current + 1;
+            // index번호가 3번이 없으니 인덱스가 3이 되면 n을
+            // 강제로 0으로 바꿔라 그러면 계속 실행
+            if (n == 3) {
+              n = 0;
+            }
+
+            move(n);
+          }, 4000);
+        }
+
+        function move(i) {
+          // eq(순서(인덱스))
+
+          var currentEl = $("#imgs > li").eq(current);
+          var nextEl = $("#imgs > li").eq(i);
+
+          currentEl.css({ left: "0%" }).animate({ left: "-100%" });
+          nextEl.css({ left: "100%" }).animate({ left: "0%" });
+
+          current = i;
+        }
+      }); // function 닫기
+
+      // 외워야 한다...
+      // setIntervalId = setInterval(실행문, 시간);
+      //
+      // ㆍsetInterval 변수는 자동실행을 정지하기 위해서
+      //   객체로 대상을 설정 // 무한 반복...
+      // setInterval(function(){실행문}, 시간);
+      //
+      // ㆍ자동실행문 시간 1초에 한번씩 실행
+      // clearInterval(setIntervalId); ← 객체 setIntervalId 객체 자동실행을 정지
+      //
+      // ㆍ한번 실행(몇 초 있다가)
+      // setTimeout(실행문, 시간); ← 시간만큼 대기 했다가 한번 실행
+    </script>
+  </head>
+  <body>
+    <div id="main_img">
+      <!-- 이미지 영역 -->
+      <div id="img_area">
+        <!-- 이미지 그룹 -->
+        <ul id="imgs">
+          <li>이미지1</li>
+          <li>이미지2</li>
+          <li>이미지3</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

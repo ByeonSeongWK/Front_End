@@ -1,0 +1,13 @@
+<audio src="소스파일위치지정" controls></audio>
+- controls   오디오 파일을 재생한 컨트롤 패널을 생성
+- autoplay  웹페이지를 열면 오디오 파일을 자동으로 재생
+- loop 오디오 파일을 무한 반복하여 재생
+- pleload 오디오 파일을 재생하기 전에 파일을 미리 불러옵니다.
+
+
+<video src="img/cloud.mp4" controls></video>
+- controls   비디오 파일을 재생한 컨트롤 패널을 생성
+- autoplay  웹페이지를 열면 비디오 파일을 자동으로 재생
+- loop     동영상 파일을 무한 반복하여 재생
+- pleload 동영상 파일을 재생하기 전에 파일을 미리 불러옴
+- poster 동영상 플레이어 초기화면에 보여줄 이미지를 지정

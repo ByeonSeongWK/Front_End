@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #wrap {
+        width: 3000px;
+        height: 6000px;
+      }
+      .l_box {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        width: 60px;
+        background-color: beige;
+      }
+      .b_box {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        height: 60px;
+        width: 100%;
+        background-color: blueviolet;
+      }
+      /* 애니메이션 넣어보기 */
+      .box1 {
+        margin: 200px;
+        width: 150px;
+        height: 150px;
+        border: 2px solid #000;
+        transform: rotate(250deg);
+        transform-origin: 50% 50%;
+        animation-name: box_ani;
+        animation-delay: 1s;
+        animation-direction: alternate;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        /* animation-timing-function: ease-in-out; */
+      }
+      @keyframes box_ani {
+        0% {
+          float: left;
+          margin-left: 100px;
+        }
+        100% {
+          float: left;
+          margin-left: 600px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="l_box"></div>
+      <div class="b_box"></div>
+
+      <div class="box1">box1</div>
+    </div>
+  </body>
+</html>

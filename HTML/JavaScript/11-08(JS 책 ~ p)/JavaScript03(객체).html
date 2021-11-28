@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>객체</title>
+    <script>
+      // 리터럴 방식으로 클래스를 만들고 바로 user 라는 변수에 자동으로 인스턴스가 만들어 주소로 대입
+      var user = {
+        name: "홍길동",
+        age: 15,
+        // this는 객체 자기자신의 주소
+        showinfo: function () {
+          document.write(
+            `이름은 ${this.name} \t 나이는 ${this.age} 입니다.<br/>`
+          );
+          document.write(
+            "name : " + this.name + ", age : " + this.age + "<br/>"
+          );
+        },
+      };
+      // 외부에서 클래스의 메소드를 호출하고, 멤버변수(프로퍼티)를 사용하고자 한다면
+      // user를 이용해야한다.
+      // 내부 호출
+      user.showinfo();
+
+      // 외부 호출
+      document.write("name : " + user.name + ", age : " + user.age + "<br/>");
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이벤트</title>
+  </head>
+  <body>
+    <h1 class="title">basic :: JavaScript node access</h1>
+    <div class="container">
+      <ul id="tutorial">
+        <li class="html">html</li>
+        <li class="css">css</li>
+        <li class="css3">css3</li>
+        <li class="javascript">javascript</li>
+        <li class="jquery">jquery</li>
+        <li class="blank"></li>
+      </ul>
+      <p id="portfolio">portfolio</p>
+    </div>
+    <script>
+      //   // id로 접근
+      //   var tutorial = document.getElementById("tutorial");
+      //   tutorial.style.backgroundColor = "#666";
+
+      //   // class
+      //   var html = document.getElementsByClassName("html"); // Elements라서 배열 형식으로 들어감
+      //   html[0].style.backgroundColor = "#999";
+
+      //   // tag로 접근
+      //   var lies = document.getElementsByTagName("li"); // Elements라서 배열 형식으로 들어감
+      //   for (var i = 0; i < lies.length; i++) {
+      //     lies[i].style.backgroundColor = "#999";
+      //   }
+
+      // 첫번째 노드를 선택
+      //   var li = document.querySelector("#tutorial > li");
+      //   li.style.backgroundColor = "#666";
+
+      // 전체 노드를 선택
+      var li = document.querySelectorAll("#tutorial > li");
+      for (var i = 0; i < li.length; i++) {
+        li[i].style.backgroundColor = "#666";
+      }
+    </script>
+  </body>
+</html>

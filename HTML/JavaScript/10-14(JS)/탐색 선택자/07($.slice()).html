@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>slice메소드</title>
+    <script src="../js/jquery.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        var el = $("#wrapper > ul > li");
+
+        // (    앞자리 : 형제중 번호로 시작 지점 선택,
+        //      뒷자리 : 적용할 지점까지 선택 )
+        el.slice(2, 5).css("color", "red");
+      });
+    </script>
+  </head>
+  <body>
+    <span> slice() 메소드를 이용하여 해당 위치(영역)에 색을 바꿔주세요. </span>
+    <div id="wrapper">
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3(여기만 바꿔 주세요.)</li>
+        <li>4(여기만 바꿔 주세요.)</li>
+        <li>5(여기만 바꿔 주세요.)</li>
+        <li>6</li>
+      </ul>
+    </div>
+  </body>
+</html>

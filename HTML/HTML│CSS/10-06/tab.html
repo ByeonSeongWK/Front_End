@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tab</title>
+    <style>
+      #tabBox {
+        width: 400px;
+        height: 550px;
+        border: 2px solid #000;
+        position: relative;
+      }
+
+      input {
+        /* 평상시엔 값을 없애라 */
+        display: none;
+      }
+
+      label {
+        display: block;
+        float: left;
+        width: 25%;
+        height: 50px;
+        background-color: #ff9900;
+        font-size: 15px;
+        color: #fff;
+        font-weight: 900;
+        text-align: center;
+        line-height: 50px;
+        /* 마우스 올렸을때 모양 바뀌게 */
+        cursor: pointer;
+      }
+
+      label:hover {
+        background-color: rgb(255, 0, 0);
+        color: #000;
+        transition: 0.5s;
+      }
+      #tabBox > section {
+        width: 400px;
+        height: 500px;
+        /* 서로 겹치게 만들기 */
+        position: absolute;
+        top: 50px;
+        left: 0;
+        display: none;
+      }
+
+      /* z-index로 순서 정하기 */
+      #con1 {
+        background-color: antiquewhite;
+        z-index: 400;
+      }
+      #con2 {
+        background-color: aqua;
+        z-index: 300;
+      }
+      #con3 {
+        background-color: aquamarine;
+        z-index: 200;
+      }
+      #con4 {
+        background-color: cornflowerblue;
+        z-index: 100;
+      }
+
+      /* 라디오 버튼을 눌렀을때 display : none -> block */
+      #tabBox #tab1:checked ~ #con1 {
+        display: block;
+      }
+      #tabBox #tab2:checked ~ #con2 {
+        display: block;
+      }
+      #tabBox #tab3:checked ~ #con3 {
+        display: block;
+      }
+      #tabBox #tab4:checked ~ #con4 {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="tabBox">
+      <!-- 
+        for를 주면 radio에 display:none을 줘도 상속이 된다.
+        그래서 글자에 라디오 버튼이 상속이 된다.
+        -->
+      <label for="tab1">menu1</label>
+      <input type="radio" id="tab1" name="tab" checked />
+
+      <label for="tab2">menu2</label>
+      <input type="radio" id="tab2" name="tab" checked />
+
+      <label for="tab3">menu3</label>
+      <input type="radio" id="tab3" name="tab" checked />
+
+      <label for="tab4">menu4</label>
+      <input type="radio" id="tab4" name="tab" checked />
+
+      <section id="con1">con1</section>
+      <section id="con2">con2</section>
+      <section id="con3">con3</section>
+      <section id="con4">con4</section>
+    </div>
+  </body>
+</html>

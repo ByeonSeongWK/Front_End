@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>basic :: JavaScript node access</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    />
+    <link
+      rel="stylesheet"
+      href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic"
+    />
+    <style>
+      body {
+        margin: 20px;
+        padding: 20px;
+        line-height: 1;
+        font-family: "Open Sans", sans-serif;
+        font-size: 1em;
+        background-color: #555;
+        color: #000;
+      }
+      ul,
+      li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      li {
+        margin-top: 20px;
+      }
+      .title {
+        margin: 0;
+        padding: 0;
+        font-size: 1.5em;
+        font-weight: 300;
+      }
+      .container {
+        margin-top: 35px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 class="title">basic :: JavaScript node access</h1>
+    <div class="container">
+      <ul id="tutorial">
+        <li class="html">HTML</li>
+        <li class="css">CSS</li>
+        <li class="css3">CSS3</li>
+        <li class="javascript">JavaScript</li>
+        <li class="jquery">jQuery</li>
+        <li class="blank"></li>
+      </ul>
+      <p id="portfolio">portfolio</p>
+    </div>
+    <script>
+      //──────── id로 접근
+      var tutorial = document.getElementById("tutorial");
+      tutorial.style.backgroundColor = "#999";
+      // Element Object 방식 : 개별로 선택
+
+      //──────── 태그로 접근
+      var li = document.getElementsByTagName("li");
+      // NodeList Object 방식 : 그룹으로 선택
+      /*
+		console.log(li);
+		console.log(li[1]);
+		console.log(li.item(1));
+		console.log("li.length : " + li.length);
+	  */
+      for (var i = 0; i < li.length; i++) {
+        li[i].style.backgroundColor = "#666";
+      }
+
+      //──────── 클래스로 접근
+      var html = document.getElementsByClassName("html");
+      // NodeList Object 방식 : 그룹으로 선택(class도 NodeList방식)
+      /*
+	 	console.log(html);
+		console.log(html[0]);
+		console.log(html.item(0)); 
+	  */
+      html[0].style.backgroundColor = "#fff";
+
+      // css 기법으로 첫 번째 노드 선택
+      // querySelector : 그룹에서 첫 번째 요소만 선택한다.
+      var li = document.querySelector("#tutorial > li");
+
+      // css 기법으로 전체 노드 선택
+      var li = document.querySelectorAll("#tutorial > li");
+      li.style.backgroundColor = "#ccc";
+      for (var i = 0; i < li.length; i++) {
+        // textContent 대상안에 있는 글자
+        if (li[i].textContent == "HTML" || li[i].textContent == "CSS") {
+          li[i].style.backgroundColor = "#ccc";
+        }
+        // NodeList Object 방식 : 그룹으로 선택
+      }
+    </script>
+  </body>
+</html>

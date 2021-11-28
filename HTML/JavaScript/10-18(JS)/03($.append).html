@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>append 메소드</title>
+    <style>
+      ul,
+      ol,
+      li {
+        list-style: none;
+      }
+      .newEl {
+        color: red;
+      }
+    </style>
+
+    <script src="js/jquery.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".list").append('<li class="newEl">3-5</li>');
+      });
+    </script>
+  </head>
+  <body>
+    <span>
+      append() 메소드를 사용하여 표시된 부분 아래에 3-5 엘리먼트(클래스 newEl을
+      적용)를 추가시켜 주세요. 지정된 요소들 중 마지막에 태그를 html을 추가
+    </span>
+    <div id="wrapper">
+      <span>이곳의 내용을 바꿔주세요.</span>
+    </div>
+
+    <ul class="list">
+      <li>3-1</li>
+      <li>3-2</li>
+      <li>3-3</li>
+      <li>3-4(아래에 3-5를 채워주세요.)</li>
+    </ul>
+  </body>
+</html>

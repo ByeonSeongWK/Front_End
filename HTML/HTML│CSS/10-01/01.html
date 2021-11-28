@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-size: 20px;
+      }
+
+      .txt1 {
+        font-size: 20px;
+      }
+      .txt2 {
+        font-size: 3em; /* 20px x 3 = 3em*/
+      }
+      .txt2-1 {
+        font-size: 3em; /* 20px x 3 x 3 = 9em
+                           부모의 기준으로 x 3
+                        */
+      }
+      .txt3 {
+        font-size: 1rem;
+      }
+      .txt3-1 {
+        font-size: 1rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="txt1">text1</div>
+    <div class="txt2">
+      text2
+      <div class="txt2-1">txt2-1</div>
+      <div class="txt3">
+        text3
+        <div class="txt3-1">txt3-1</div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>다단레이아웃</title>
+    <style>
+      div,
+      h2,
+      p {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        margin: 10px;
+      }
+      h2 {
+        /* 상, 좌우, 하 */
+        padding: 0 0 20px;
+        text-align: center;
+      }
+      div.col {
+        /* 가운데 정렬이지만 좌우로 알아서 맞춰줌. */
+        text-align: justify;
+
+        padding: 20px;
+        background-color: beige;
+        /* 몇 칸으로 나눌 것인지? */
+        column-count: 3;
+        /* 간격 */
+        column-gap: 30px;
+        /* 텍스트 옆 선 긋기 */
+        column-rule: 3px dashed red;
+      }
+      .col > h2 {
+        column-span: all;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>다단레이아웃</h2>
+
+    <div class="col">
+      <h2>다단레이아웃</h2>
+      <p>
+        내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.
+        내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.
+        내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.
+        내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.
+        내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.
+        내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.
+      </p>
+    </div>
+    <!--
+    [다단 레이아웃]
+    텍스트 단을 column 속성으로 다단을 만들 수 있습니다.
+    다단으로 만든다는 의미는 레이아웃을 여러개의 컬럼으로
+     쪼개서 구성한다는 것을 의미합니다.(예: 신문사설)
+
+    column-count : 가로로 나열될 텍스트의 단의 개수를 설정합니다.
+    column-gap : 단과 단 사이의 여백을 설정합니다.
+    column-rule : 단과 단 사이의 구분선, 구분의 모양, 두께, 색상을 설정합니다.
+    column-span : 단과 안의 포함된 요소를 다단 편집에서 해제시킵니다.
+    -->
+  </body>
+</html>

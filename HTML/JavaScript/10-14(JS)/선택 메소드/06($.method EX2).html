@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>위치에 의한 선택메소드(.is)</title>
+    <script src="../js/jquery.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        // is() 존재 유무(상태)를 확인
+        var el = $("#el > ul > li").is("#nextEl");
+        if (el == true) {
+          alert("nextEl이 존재합니다.");
+        } else {
+          alert("nextEl이 존재하지 않습니다.");
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <span>
+      is() 메서드를 사용하여 id가 "el"인 엘리먼트의 확장집합중 id가 "nextEl" 인
+      엘리먼트가 존재 하는지 체크하고 존재 한다면 alert 창을 띄워주세요.
+    </span>
+    <div id="wrapper">
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>
+          3
+          <ul>
+            <li>3-1</li>
+            <li>3-2</li>
+            <li id="el">
+              3-3
+              <ul>
+                <li>3-3-1</li>
+                <li>3-3-2</li>
+                <li id="nextEl">3-3-3</li>
+                <li>3-3-4</li>
+                <li>3-3-5</li>
+              </ul>
+            </li>
+            <li>3-4</li>
+          </ul>
+        </li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+      </ul>
+    </div>
+  </body>
+</html>

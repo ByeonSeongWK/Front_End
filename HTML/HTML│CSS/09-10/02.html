@@ -1,0 +1,73 @@
+<!-- [margin] -->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>박스의 바깥쪽 여백</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .box01 {
+        float: left;
+        /* 위, 아래, 좌, 우 모두 다 여백이 들어 간다. */
+        margin: 0px;
+        width: 100px;
+        height: 100px;
+        background-color: brown;
+      }
+      .box02 {
+        float: left;
+        /* 위 아래의 여백, 좌 우의 여백 */
+        margin: 0px 0px;
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+      }
+      .box03 {
+        float: left;
+        /* 위, 좌우, 아래 */
+        margin: 0px 0px 0px;
+        width: 100px;
+        height: 100px;
+        background-color: aquamarine;
+      }
+      .box04 {
+        float: left; /* both대신 left나 right도 사용 가능.*/
+        /* 위 : 50px, 우 : 200px, 아래 : 10px, 좌 : 300px */
+        margin: 50px 200px 10px 300px;
+        width: 100px;
+        height: 100px;
+        background-color: red;
+      }
+      .box05 {
+        /* 확인 */
+        float: left;
+        clear: left;
+        width: 100px;
+        height: 100px;
+        background-color: red;
+      }
+      /* [padding] */
+      .box06 {
+        float: left;
+        /* 위 : 50px, 우 : 0px, 아래 : 0px, 좌 : 20px */
+        padding: 50px 0 0 20px;
+        width: 100px;
+        height: 100px;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box01">box01</div>
+    <div class="box02">box02</div>
+    <div class="box03">box03</div>
+    <div class="box04">box04</div>
+    <div class="box05">box05</div>
+    <div class="box06">box06</div>
+  </body>
+</html>

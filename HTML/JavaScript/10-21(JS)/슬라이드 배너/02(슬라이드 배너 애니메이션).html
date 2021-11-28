@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>슬라이드 배너</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul,
+      ol,
+      li {
+        list-style: none;
+      }
+
+      #main_img {
+        position: relative;
+        width: 100%;
+        height: 400px;
+      }
+      #img_area {
+        width: 100%;
+        height: 400px;
+        position: relative;
+        /* overflow: hidden; */
+      }
+      #imgs li {
+        width: 100%;
+        height: 400px;
+        position: absolute;
+        text-align: center;
+        line-height: 400px;
+        font-size: 5em;
+        opacity: 0;
+      }
+      #imgs li:nth-child(1) {
+        background-color: beige;
+        left: 0%;
+        z-index: 300;
+        opacity: 1;
+      }
+      #imgs li:nth-child(2) {
+        background-color: burlywood;
+        left: 0%;
+        z-index: 200;
+      }
+      #imgs li:nth-child(3) {
+        background-color: darkgoldenrod;
+        left: 0%;
+        z-index: 100;
+      }
+      #main_img .btns {
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        margin-left: -32.5px;
+        z-index: 1000;
+        width: 150px;
+        height: 50px;
+      }
+      #main_img .btns li {
+        float: left;
+        width: 15px;
+        height: 15px;
+        background-color: darkgrey;
+        border: 1px solid lightskyblue;
+        border-radius: 50%;
+        margin-right: 10px;
+        box-sizing: border-box;
+      }
+      /****** addClass ******/
+      #main_img .btns li.on {
+        background-color: snow;
+      }
+
+      #main_img .btns li a {
+        display: block;
+        text-indent: -9999px;
+      }
+    </style>
+    <script src="../../js/jquery.js"></script>
+    <script>
+      $(function () {
+        /*** 자동실행을 함수로 호출하는 방식 ***/
+        var curent = 0; // 카운터 세는 변수
+        var setIntervalId; // 순환 제어 하는 변수
+
+        $(".btns > li").click(function () {
+          var i = $(this).index();
+          move(i);
+          $(".btns > li").removeClass();
+          $(this).addClass("on");
+        });
+
+        // $("#main_img").hover(
+        //   function () {},
+        //   function () {}
+        // );
+
+        $("#main_img").on({
+          // 마우스를 올리면 작동을 멈춰라
+          mouseover: function () {
+            clearInterval(setIntervalId);
+            // 변수로 객체화를 시켜서 아래서 만든것을 위해서 사용
+          },
+          mouseout: function () {
+            // 마우스가 나가면 함수 timer()를 실행
+            timer();
+          },
+        });
+        timer();
+
+        // timer라는 이름의 함수를 만든다.(순환하는 함수)
+        function timer() {
+          // setInterval(실행문, 1000);
+          // clearInterval(정지시킬 객체명)
+          setIntervalId = setInterval(function () {
+            var n = curent + 1;
+            if (n == 3) {
+              n = 0;
+            } // 3 이 됐을때 다시 0으로 바꿔줘라
+            // 마지막 사진 다음 값이 왔을때 초기값으로 돌아간다.
+            move(n);
+          }, 3000);
+        }
+
+        /*** 애니메이션 ***/
+        // move라는 이름의 함수를 만든다.(움직이는 함수) - 슬라이더 배너 핵심
+        function move(i) {
+          // 버튼이 동일 화면일때 실행이 안되게 만든다. 필수
+          if (curent == i) return;
+
+          var curentEl = $("#imgs > li").eq(curent); // 0 -> 1 -> 2
+          var nextEl = $("#imgs > li").eq(i); // 1 -> 2 -> 3
+
+          curentEl.css({ opacity: 1 }).animate({ opacity: 0 });
+          nextEl.css({ opacity: 0 }).animate({ opacity: 1 });
+
+          // 왼쪽으로 슬라이드 애니메이션 줄때
+          // curentEl.css({ left: "100%" }).animate({ left: "0%" });
+          // nextEl.css({ left: "0%" }).animate({ left: "100%" }); // 현시점 current
+
+          curent = i; // next -> curent
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <div id="main_img">
+      <!-- 이미지 영역 -->
+      <div id="img_area">
+        <!-- 이미지 그룹 -->
+        <ul id="imgs">
+          <li>이미지1</li>
+          <li>이미지2</li>
+          <li>이미지3</li>
+        </ul>
+      </div>
+      <ul class="btns">
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+      </ul>
+    </div>
+  </body>
+</html>

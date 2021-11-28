@@ -1,0 +1,102 @@
+<!-- transform -->
+<!document html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>transform</title>
+    <style>
+      div {
+        width: 200px;
+        height: 50px;
+        border: 2px solid #000;
+        margin: 50px 50px;
+      }
+      .box01:hover {
+        transform: scale(1.2);
+        transition: 1s;
+        /* 마우스를 올리면 1.2 확대 된다. */
+      }
+      .box01-1:hover {
+        transform: scaleX(1.2);
+        transition: 1s;
+      }
+      .box01-2:hover {
+        transform: scaleY(1.2);
+        transition: 1s;
+      }
+      .box01-3:hover {
+        transform: scale(1.2, 2);
+        transition: 1s;
+      }
+      .box02:hover {
+        transform: rotate(100deg);
+        transition: 1s;
+      }
+      .box02-1:hover {
+        transform: rotateX(360deg);
+        transition: 1s;
+      }
+      .box02-2:hover {
+        transform: rotateY(360deg);
+        transition: 1s;
+      }
+      .box03:hover {
+        transform: skew(-45deg);
+        transition: 1s;
+      }
+      .box03-1:hover {
+        transform: skewX(-45deg);
+        transition: 1s;
+      }
+      .box03-2:hover {
+        transform: skewY(-45deg);
+        transition: 1s;
+      }
+      .box03-3:hover {
+        transform: skew(-45deg, 60deg);
+        transition: 1s;
+      }
+      .box04:hover {
+        transform: translate(50px);
+        transition: 1s;
+      }
+      .box04-1:hover {
+        transform: translateX(50px);
+        transition: 1s;
+      }
+      .box04-2:hover {
+        transform: translateY(50px);
+        transition: 1s;
+      }
+      .box04-3:hover {
+        transform: translate(50px, -50px);
+        transition: 1s;
+      }
+      /* 
+			[transform] : 요소의 형태를 변경함
+
+			scale([ds]) : 지정한 배율 만큼 확대함
+			rotate([deg]) : 지정한 각도만큼 회전 시킴(rotate는 X, Y 값이 같이 안줘진다.)
+            translate([dx]. [dy]) : 지정한 크기 만큼 이동 시킴
+			skew([degx], [degy]) : 지정한 경사로 기울림(마이너스를 주면 반대로 간다.)
+			*/
+    </style>
+  </head>
+  <body>
+    <div class="box01">scale</div>
+    <div class="box01-1">scaleX</div>
+    <div class="box01-2">scaleY</div>
+    <div class="box01-3">scaleXY</div>
+    <div class="box02">rotate</div>
+    <div class="box02-1">rotateX</div>
+    <div class="box02-2">rotateY</div>
+    <div class="box03">skew</div>
+    <div class="box03-1">skewX</div>
+    <div class="box03-2">skewY</div>
+    <div class="box03-3">skewXY</div>
+    <div class="box04">translate</div>
+    <div class="box04-1">translateX</div>
+    <div class="box04-2">translateY</div>
+    <div class="box04-3">translateXY</div>
+  </body>
+</html>

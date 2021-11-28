@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>심볼</title>
+  </head>
+  <body>
+    <script>
+      "use strict";
+
+      const sym1 = Symbol("apple");
+      const sym2 = Symbol("apple");
+
+      console.log(`sym1 === sym2 : ${sym1 === sym2}`);
+
+      const num1 = 10;
+      const num2 = 10;
+
+      Symbol(num1);
+      Symbol(num2);
+
+      console.log(`num1 === num2 : ${num1 === num2}`);
+
+      const sym3 = Symbol("banana");
+      const sym4 = sym3;
+
+      console.log(`sym3 === sym4 : ${sym3 === sym4}`);
+      // 심볼의 문자열은 변수명도 똑같아야 ===에 true가 나온다.
+      // 심볼의 숫자형은 변수명이 달라도 값만 같으면 ===에 true가 나온다.
+
+      // 심볼(Symbol)은 ES6에서 새롭게 추가된 7번째 타입으로 변경 불가능한 원시타입 입니다.
+      // 심볼은 이름의 충돌 위험이 없는 유일한 객체(object)의 프로퍼티(property)의 키(key)를 만들기 위해 사용합니다.
+    </script>
+  </body>
+</html>

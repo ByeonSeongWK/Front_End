@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>위치에 의한 선택메소드Ex2(.find)</title>
+    <script src="../js/jquery.js"></script>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul,
+      li {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+
+      ul.main {
+        width: 200px;
+        margin: 50px;
+      }
+      ul.main li {
+        border-bottom: 1px solid #333;
+      }
+      ul.main > li {
+        float: left;
+        width: 100px;
+        background-color: beige;
+        text-align: center;
+      }
+      ul.submn {
+        width: 100%;
+        background-color: aliceblue;
+      }
+    </style>
+    <script>
+      $(document).ready(function () {
+        // 숨긴다
+        $(".submn").hide();
+
+        $(".main > li").hover(
+          function () {
+            $(this).find(".submn").slideDown();
+          },
+          function () {
+            $(this).find(".submn").slideup();
+          }
+        );
+      });
+    </script>
+  </head>
+  <body>
+    <ul class="main">
+      <li>
+        <a href="#" class="mn">menu1</a>
+        <ul class="submn">
+          <li><a href="#">submn1-1</a></li>
+          <li><a href="#">submn1-2</a></li>
+          <li><a href="#">submn1-3</a></li>
+          <li><a href="#">submn1-4</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" class="mn">menu2</a>
+        <ul class="submn">
+          <li><a href="#">submn2-1</a></li>
+          <li><a href="#">submn2-2</a></li>
+          <li><a href="#">submn2-3</a></li>
+          <li><a href="#">submn2-4</a></li>
+        </ul>
+      </li>
+    </ul>
+  </body>
+</html>

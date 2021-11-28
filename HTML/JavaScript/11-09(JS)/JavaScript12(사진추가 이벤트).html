@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이벤트</title>
+
+    <style>
+      button {
+        padding: 5px 15px;
+        background-color: #666;
+        color: #000;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: all 0.5s;
+      }
+
+      button:hover {
+        background-color: #888;
+      }
+
+      .gallery {
+        margin-top: 60px;
+      }
+      .gallery img {
+        width: 200px;
+      }
+    </style>
+    <script>
+      window.addEventListener("load", function () {
+        var prependBtn = document.getElementById("prepend");
+        var appendBtn = document.getElementById("append");
+        var gallery = document.querySelector(".gallery");
+
+        prependBtn.addEventListener("click", function () {
+          var lastChild = gallery.lastElementChild;
+          //                      cloneNode() : 복제
+          var newNode = lastChild.cloneNode(true);
+          // 삭제 후 추가를 해야 한다.
+
+          // 삭제
+          gallery.removeChild(lastChild);
+
+          // 추가
+          gallery.insertBefore(newNode, gallery.firstElementChild);
+
+          // var css3 = document.querySelector(".css3");
+          // 노드에 생성된 새로운 노드를 기준 노드 위치 이전 위치에 추가
+          // node.insertBefore(new node, )
+
+          // 노드 삭제
+          // node.removeChild(node);
+          // 형제노드중에 맨 앞에 추가
+          // 부모노드.insertBefore(새로 생성된 노드, 노드 들어갈 위치);
+        });
+
+        appendBtn.addEventListener("click", function () {
+          var firstChild = gallery.firstElementChild;
+          var newNode1 = firstChild.cloneNode(true);
+
+          // 삭제
+          gallery.removeChild(firstChild);
+
+          // 추가
+          gallery.appendChild(newNode1, gallery.lastElementChild);
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class="container">
+      <button id="prepend" title="prepend">prepend</button>
+      <button id="append" title="append">append</button>
+      <div class="gallery">
+        <img src="images/slide1.jpg" alt="slide1" />
+        <img src="images/slide2.jpg" alt="slide2" />
+        <img src="images/slide3.jpg" alt="slide3" />
+        <img src="images/slide4.jpg" alt="slide4" />
+      </div>
+    </div>
+  </body>
+</html>

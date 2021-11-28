@@ -1,0 +1,16 @@
+
+[그라데이션 조절]
+top right : 방향으로 조절
+(숫자)deg : 각도로 조절
+red (숫자)% : 시작 위치 지정
+
+0deg,
+#89cfe7 10%,
+red 30%,
+#fcfe06 50%
+        );
+순서 : (시작위치, 시작하는 색, 끝나는 색) */
+        
+[원형 그라데이션]
+-webkit-radial-gradient : 원형 그라데이션
+방법 : background: -webkit-radial-gradient(red 5%, yellow 25%, #1c8e00 50%);

@@ -1,0 +1,153 @@
+<!-- 내부 스타일 적용 -->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>블록작업</title>
+    <style>
+      /* 기본스타일 */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        /*font-family:"맑은 고딕";*/
+        font-family: "Noto Sans KR", sans-serif;
+        font-size: 12px;
+        color: #333;
+      }
+      img {
+        border: 0;
+      }
+      ul,
+      li {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+
+      /* 레이아웃스타일 */
+      #header {
+        float: left;
+        width: 100%;
+      }
+      #header_top {
+        margin: 0 auto;
+        width: 1000px;
+        height: 115px;
+        background-color: beige;
+      }
+      #header_nav {
+        width: 100%;
+        height: 45px;
+        background-color: burlywood;
+      }
+      /* 메인이미지 */
+      #main_img {
+        float: left;
+        width: 100%;
+        height: 465px;
+        background-color: brown;
+      }
+      /* 내용 */
+      #contents {
+        float: left;
+        width: 100%;
+      }
+      #item {
+        margin: 0 auto;
+        width: 1000px;
+        height: 260px;
+        background-color: deeppink;
+      }
+      #go_btn {
+        margin: 0 auto;
+        width: 1000px;
+        height: 275px;
+        background-color: cornflowerblue;
+      }
+      #movie {
+        width: 100%;
+        height: 300px;
+        background-color: chartreuse;
+      }
+      #style {
+        margin: 0 auto;
+        width: 1000px;
+        height: 260px;
+        background-color: blue;
+      }
+      #banner {
+        margin: 0 auto;
+        width: 1000px;
+        height: 395px;
+        background-color: aquamarine;
+      }
+      #info {
+        width: 100%;
+        height: 165px;
+        background-color: aqua;
+      }
+      /* 하단 */
+      #footer {
+        float: left;
+        width: 100%;
+      }
+      #f_top {
+        margin: 0 auto;
+        width: 1000px;
+        height: 290px;
+        background-color: dodgerblue;
+      }
+      #f_bom {
+        margin: 0 auto;
+        width: 1000px;
+        height: 140px;
+        background-color: lightsteelblue;
+      }
+      .line {
+        width: 100%;
+        height: 2px;
+        background-color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- 상단 부분 -->
+      <div id="header">
+        <!-- 로고 -->
+        <div id="header_top"></div>
+
+        <!-- 네비게이션 -->
+        <div id="header_nav"></div>
+      </div>
+
+      <!-- 메인 이미지 부분 -->
+      <div id="main_img"></div>
+
+      <!-- 내용 부분 -->
+      <div id="contents">
+        <div id="item"></div>
+        <div id="go_btn"></div>
+        <div id="movie"></div>
+        <div id="style"></div>
+        <div id="banner"></div>
+        <div id="info"></div>
+      </div>
+
+      <!-- 하단 부분 -->
+      <div id="footer">
+        <div id="f_top"></div>
+        <div class="line"></div>
+        <div id="f_bom"></div>
+      </div>
+    </div>
+  </body>
+</html>

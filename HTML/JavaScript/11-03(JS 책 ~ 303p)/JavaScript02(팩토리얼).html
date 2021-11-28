@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>팩토리얼</title>
+
+    <script>
+      "use strict";
+      // 1 ~ 100 까지의 합을 출력하는 프로그램
+      var j = 1;
+      var sum1 = 0;
+      // for (j; j <= 100; j++) {
+      //   sum1 += j;
+      // }
+      // while (j <= 100) {
+      //   sum += j;
+      //   j++;
+      // }
+      do {
+        sum1 += j;
+        j++;
+      } while (j <= 100);
+      document.write(`<p>1 ~ 100까지의 합은 ${sum1} 입니다.</p>`);
+
+      // 1 ~ 100 까지의 짝수의 합을 출력하는 프로그램
+      var i = 1;
+      var sum = 0;
+      //   do {
+      //     i++;
+      //     if (i % 2 == 0) {
+      //       sum += i;
+      //     }
+      //   } while (i <= 100);
+
+      //   while (i <= 100) {
+      //     i++;
+      //     if (i % 2 == 0) {
+      //       sum += i;
+      //     }
+      //   }
+
+      for (i; i <= 100; i++) {
+        if (i % 2 == 0) {
+          sum += i;
+        }
+      }
+
+      document.write(`<p>1 ~ 100까지 짝수의 합은 ${sum} 입니다.</p>`);
+    </script>
+  </head>
+  <body></body>
+</html>

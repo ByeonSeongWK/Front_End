@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex : justify-content</title>
+    <style>
+      .wrapper {
+        width: 500px;
+        height: 300px;
+        border: 2px solid red;
+        /* flex를 줘버리면 부모의 크기에 맞게 자식의 크기가 결정 된다. */
+        display: flex;
+      }
+
+      div.wrapper > div {
+        width: 100px;
+        border: 1px solid #000;
+        background-color: paleturquoise;
+      }
+
+      h2 {
+        font-size: 40px;
+        font-weight: bold;
+        padding: 20px;
+      }
+
+      #container1 {
+        display: flex;
+        justify-content: flex-start;
+      }
+      #container2 {
+        display: flex;
+        justify-content: flex-end;
+      }
+      #container3 {
+        display: flex;
+        justify-content: center;
+      }
+      #container4 {
+        display: flex;
+        justify-content: space-between;
+      }
+      #container5 {
+        display: flex;
+        justify-content: space-around;
+      }
+    </style>
+  </head>
+  <body>
+    <!----------------- 1 --------------------->
+    <h2>flex : justify-content : flex-start</h2>
+    <div id="container1" class="wrapper">
+      <div id="box1"><h2>1</h2></div>
+      <div id="box2"><h2>2</h2></div>
+      <div id="box3"><h2>3</h2></div>
+    </div>
+    <!----------------- 2 ------------------->
+    <h2>flex : justify-content : flex-end</h2>
+    <div id="container2" class="wrapper">
+      <div id="box1"><h2>1</h2></div>
+      <div id="box2"><h2>2</h2></div>
+      <div id="box3"><h2>3</h2></div>
+    </div>
+    <!----------------- 3 ----------------->
+    <h2>flex : justify-content : center</h2>
+    <div id="container3" class="wrapper">
+      <div id="box1"><h2>1</h2></div>
+      <div id="box2"><h2>2</h2></div>
+      <div id="box3"><h2>3</h2></div>
+    </div>
+    <!----------------- 4 ------------------------>
+    <h2>flex : justify-content : space-between</h2>
+    <div id="container4" class="wrapper">
+      <div id="box1"><h2>1</h2></div>
+      <div id="box2"><h2>2</h2></div>
+      <div id="box3"><h2>3</h2></div>
+    </div>
+    <!----------------- 5 ----------------------->
+    <h2>flex : justify-content : space-around</h2>
+    <div id="container5" class="wrapper">
+      <div id="box1"><h2>1</h2></div>
+      <div id="box2"><h2>2</h2></div>
+      <div id="box3"><h2>3</h2></div>
+    </div>
+
+    <!-- 
+      ㆍjustify-content
+        플렉스 요소의 수평 방향 정렬 방식을 설정합니다.
+
+        flex-start : 기본 설정, 플렉스 요소는 플렉스 컨테이너의 앞쪽에서부터 배치됩니다.
+        flex-end : 플렉스 요소는 플렉스 컨테이너의 뒤쪽에서 부터 배치됩니다.
+        center : 플렉스 요소는 플렉스 컨테이너의 가운데서부터 배치됩니다.
+        space-between : 플레스 요소는 요소들 사이에만 여유 공간을 두고 배치됩니다.
+        space-around : 플렉스 요소는 앞, 뒤 그리고 요소들 사이에 모두 여유 공간을 두고 배치됩니다.
+     -->
+  </body>
+</html>

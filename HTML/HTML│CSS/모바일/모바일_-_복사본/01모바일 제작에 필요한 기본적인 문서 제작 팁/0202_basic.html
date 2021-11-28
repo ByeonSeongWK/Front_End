@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>figure, figcation 요소</title>
+<link rel="stylesheet" href="css/default.css" />
+<style>
+figure, figcation { /* HTML5 tag */
+	display: block;
+}
+</style>
+</head>
+
+<body>
+<!-- 다음은 설명글 없이 <figure> 태그만 사용한 그림입니다. -->
+<figure>
+	<img src="images/image1.jpg" alt="image1" />
+</figure><br /><br />
+
+<!-- 이번에는 <figcation>을 사용해서 설명글을 붙인 그립니다. 다만 현재까지의 브라우저에서는 <figcation>을 사용하기 위해서는 스타일시트에 figcation { display:block; } 스타일을 추가해야 합니다. -->
+<figure>
+	<img src="images/image2.jpg" alt="image2" />
+	<figcation>image2.jpg</figcation>
+</figure><br /><br />
+
+<!-- <figure> 태그 안에 여러 개의 <img> 태그를 사용하면 다음과 같이 여러 장의 그림에 하나의 설명글을 붙일 수도 있습니다, -->
+<figure>
+	<img src="images/image3.jpg" alt="image3" /><img src="images/image4.jpg" alt="image4" />
+	<figcation>image3.jpg, image4.jpg</figcation>
+</figure>
+</body>
+</html>

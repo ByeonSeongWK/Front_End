@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+*, *:before, *:after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html, body {
+	height: 100%;
+}
+body {
+	line-height: 1;
+	font-family: "Open Sans", sans-serif;
+	font-size: 0.875em;
+	background: #eee;
+	color: #555;
+}
+h1 {
+	padding: 50px 0 40px;
+	text-align: center;
+	font-weight: 500;
+}
+p {
+	margin: 0 0 20px;
+	line-height: 1.5;
+}

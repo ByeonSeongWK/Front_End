@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>상수</title>
+  </head>
+  <body>
+    <h2>상수</h2>
+    <script>
+      "use strict";
+      // strict mode 사용을 한다는 의미이며 코드를 엄격하게 사용하도록 함.
+
+      const num = 10;
+      // num = 20; // 상수는 값을 한번 선언해놓으면 변경할 수 없다.
+      // 오류 : Uncaught TypeError: Assignment to constant variable.
+
+      console.log("콘솔창에 출력 : " + num);
+
+      const num2 = 11.11;
+      const num3 = 10e6; // 10e6 -> 10의 6승
+      console.log("콘솔창에 출력 : " + num2);
+      console.log("콘솔창에 출력 : " + num3);
+    </script>
+  </body>
+</html>

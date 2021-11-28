@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>위치에 의한 선택메소드(children)</title>
+    <script src="../js/jquery.js"></script>
+    <script>
+      $(document).ready(function () {
+        // wrapper 밑 ul에 자식 요소들을 다 선택함
+        // $("#wrapper > ul").children();
+        //  ↓ 위 내용을 변수화 시켜 el에 담았다.
+        var el = $("#wrapper > ul").children();
+        el.css({ color: "red" });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+      </ul>
+    </div>
+  </body>
+</html>

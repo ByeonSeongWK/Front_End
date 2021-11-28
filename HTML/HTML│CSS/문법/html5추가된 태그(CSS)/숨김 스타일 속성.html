@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>숨김 스타일 속성</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-size: 15px;
+      }
+      /* [숨김 스타일 속성] */
+      /*
+      [opacity : 0]
+      ※ opacity는 완전 투명해져도 본인의 자리를 지킨다.
+      ㆍ애니메이션에 사용. 다른건 적용이 안된다.
+       */
+      .box01 {
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+        opacity: 0;
+      }
+      /*
+      [display: none]
+      ※ display는 완전 투명해지면 아예 사라진다.(있다, 없다의 개념)
+       */
+      .box02 {
+        width: 100px;
+        height: 100px;
+        background-color: aquamarine;
+        display: block;
+      }
+      /*      
+      [visibility: hidden]
+      ※ visibility는 opacity와 같다(투명해짐, 없어지는게 아님). 애니메이션에는 적용X
+       */
+      .box03 {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        visibility: hidden;
+      }
+      .box00 {
+        width: 100px;
+        height: 100px;
+        color: #fff;
+        background-color: #000;
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box01">opacity속성 활용</div>
+    <div class="box02">display속성 활용</div>
+    <div class="box03">visibility</div>
+    <div class="box00">opacity</div>
+  </body>
+</html>

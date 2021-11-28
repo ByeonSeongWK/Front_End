@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex : align-items</title>
+    <style>
+      .wrapper {
+        width: 500px;
+        height: 300px;
+        border: 2px solid red;
+        /* flex를 줘버리면 부모의 크기에 맞게 자식의 크기가 결정 된다. */
+        /* display: flex; */
+      }
+
+      div.wrapper > div {
+        width: 100px;
+        border: 1px solid #000;
+        background-color: paleturquoise;
+      }
+
+      h2 {
+        font-size: 20px;
+        font-weight: bold;
+        padding: 20px;
+      }
+
+      #container1 {
+        display: flex;
+        align-items: stretch;
+      }
+      #container2 {
+        display: flex;
+        align-items: flex-start;
+      }
+      #container3 {
+        display: flex;
+        align-items: flex-end;
+      }
+      #container4 {
+        display: flex;
+        align-items: center;
+      }
+      #container5 {
+        display: flex;
+        /* start와 비슷하지만 기준점에 붙은 것(top, left값) */
+        align-items: baseline;
+      }
+    </style>
+  </head>
+  <body>
+    <!----------------- 1 -------------->
+    <h2>flex : align-items : stretch</h2>
+    <div id="container1" class="wrapper">
+      <div id="box1"><h2>1</h2></div>
+      <div id="box2"><h2>2</h2></div>
+      <div id="box3"><h2>3</h2></div>
+    </div>
+    <!----------------- 2 ----------------->
+    <h2>flex : align-items : flex-start</h2>
+    <div id="container2" class="wrapper">
+      <div id="box1"><h2>1</h2></div>
+      <div id="box2"><h2>2</h2></div>
+      <div id="box3"><h2>3</h2></div>
+    </div>
+    <!----------------- 3 --------------->
+    <h2>flex : align-items : flex-end</h2>
+    <div id="container3" class="wrapper">
+      <div id="box1"><h2>1</h2></div>
+      <div id="box2"><h2>2</h2></div>
+      <div id="box3"><h2>3</h2></div>
+    </div>
+    <!----------------- 4 ------------->
+    <h2>flex : align-items : center</h2>
+    <div id="container4" class="wrapper">
+      <div id="box1"><h2>1</h2></div>
+      <div id="box2"><h2>2</h2></div>
+      <div id="box3"><h2>3</h2></div>
+    </div>
+    <!----------------- 5 ---------------->
+    <h2>flex : align-items : baseline</h2>
+    <div id="container5" class="wrapper">
+      <div id="box1"><h2>1</h2></div>
+      <div id="box2"><h2>2</h2></div>
+      <div id="box3"><h2>3</h2></div>
+    </div>
+
+    <!-- 
+      ㆍalign-items
+        플렉스 요소의 수직 방향 정렬 방식을 설정합니다.
+
+        stretch : 기본 설정, 플렉스 요소의 높이가 플렉스 컨테이너의
+                   높이와 같게 변경된 뒤 연이어 배치됩니다.
+        flex-start : 플렉스 요소는 플렉스 컨테이너의 위쪽에 배치됩니다.
+        flex-end : 플렉스 요소는 플렉스 컨테이너의 아래쪽에 배치됩니다.
+        center : 플렉스 요소는 플렉스 컨테이너의 가운데 배치됩니다.
+        baseline : 플렉스 요소는 플렉스 컨테이너의 기준선에 배치됩니다.
+     -->
+  </body>
+</html>

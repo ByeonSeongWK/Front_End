@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>위치에 의한 선택메소드(find)</title>
+    <script src="../js/jquery.js"></script>
+    <script>
+      $(document).ready(function () {
+        // #parentEl 안에 #childEl만 적용
+        var el = $("#parentEl").find("#childEl");
+        el.css({ color: "red" });
+      });
+    </script>
+  </head>
+  <body>
+    <span>
+      find() 메서드를 사용하여 id가 "el"인 엘리먼트를 찾아 색을 바꾸고 그안에
+      아이디가 "nextEl"인 엘리먼트를 찾아 색을 바꿔주세요.
+    </span>
+
+    <div id="wrapper">
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>
+          3
+          <ul id="parentEl">
+            <li>3-1</li>
+            <li>3-2</li>
+            <li id="childEl">3-3</li>
+            <li>3-4</li>
+          </ul>
+        </li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+      </ul>
+    </div>
+  </body>
+</html>
